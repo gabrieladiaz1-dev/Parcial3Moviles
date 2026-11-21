@@ -1,0 +1,142 @@
+{
+  "checks": [
+    {
+      "name": "Historial · consulta a 393 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":393,\"bad\":[]}"
+    },
+    {
+      "name": "Historial · consulta a 393 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Detalle desplegable disponible (Ver receta / Ver resultado)",
+      "ok": true,
+      "detail": "4"
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 393 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":393,\"bad\":[]}"
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 393 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Agenda a 393 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":393,\"bad\":[]}"
+    },
+    {
+      "name": "Agenda a 393 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Historial · consulta a 375 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":375,\"bad\":[]}"
+    },
+    {
+      "name": "Historial · consulta a 375 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 375 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":375,\"bad\":[]}"
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 375 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Agenda a 375 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":375,\"bad\":[]}"
+    },
+    {
+      "name": "Agenda a 375 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Historial · consulta a 320 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":320,\"bad\":[]}"
+    },
+    {
+      "name": "Historial · consulta a 320 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 320 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":320,\"bad\":[]}"
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 320 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Agenda a 320 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":320,\"bad\":[]}"
+    },
+    {
+      "name": "Agenda a 320 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Recetas con campos separados (Concentración, Dosis, Cada, Vía, Durante, Cantidad)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Resultado con parámetros, unidades y referencias",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Resultado solo con observación mostrado como observación",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Agenda NO REALIZADAS con motivo y vencida",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Sin errores de JavaScript",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "01-historial-consulta-393",
+    "02-laboratorio-ordenes-393",
+    "03-agenda-no-realizadas-393",
+    "01-historial-consulta-375",
+    "02-laboratorio-ordenes-375",
+    "03-agenda-no-realizadas-375",
+    "01-historial-consulta-320",
+    "02-laboratorio-ordenes-320",
+    "03-agenda-no-realizadas-320"
+  ],
+  "historial393": "Hospital Universitario\n🔔\nMis pacientes\n\nPacientes asignados y atención reciente\n\n← Volver a la búsqueda\nAP\nEXPEDIENTE CLÍNICO\nAna Paciente\nCódigo PAC-0001\nExpediente EXP-0001\n35 años\nFecha de nacimiento\n1 de enero de 1990\nDUI\n01234567-8\nTeléfono\n7000-0000\nCorreo\nana@example.test\n✚\nInformación clínica\n\nAntecedentes registrados en el expediente\n\nSin antecedentes clínicos registrados.\n\nHospitalización\n\nSin hospitalizaciones registradas.\n\nLaboratorios\nSolicitar ingreso\nOCULTAR HISTORIAL MÉDICO\n\n1 consulta finalizada\n\n← Volver al historial\n🔒 Finalizada · solo lectura\nAna Paciente · miércoles, 11 de noviembre de 2026 · 1:59 a. m. – 2:29 a. m. · 30 min\n🩺 Dra. Ana Médica\nMedicina general\nMotivo: Dolor de garganta\nDatos físicos\nPeso (kg)\n\n61.5\n\nTemperatura (°C)\n\n38.2\n\nEvaluación médica\nSíntomas\n\nFiebre y dolor de garganta\n\nDiagnóstico\n\nFaringitis aguda\n\nCódigo diagnóstico\n\nJ02\n\nObservaciones\n\nFaringe enrojecida\n\nTratamiento\n\nReposo e hidratación\n\nRecetas\n℞\nRECETA\nREC-0001\nEntregada\nFecha\n11 nov 2026, 1:59 a. m.\nMédico\nDra. Ana Médica\nMedicamentos\n2\nOcultar receta\n◇\nAcetaminofén\nConcentración:\n500 mg\nDosis:\n1 Tabletas\nCada:\n8 horas\nVía:\nOral\nDurante:\n5 días\nCantidad:\n15\nIndicaciones:\n\nTomar con alimentos\n\n◇\nAmoxicilina\nConcentración:\n500 mg\nDosis:\n1 cápsulas\nCada:\n12 horas\nVía:\nOral\nDurante:\n7 días\nCantidad:\n14\nIndicaciones:\n\nSin indicaciones adicionales.\n\n℞\nRECETA\nREC-0002\nPendiente de entrega\nFecha\n11 nov 2026, 2:09 a. m.\nMédico\nDra. Ana Médica\nMedicamentos\n1\nOcultar receta\n◇\nLoratadina\nConcentración:\n10 mg\nDosis:\n1 Tableta\nCada:\n24 horas\nVía:\nOral\nDurante:\n3 días\nCantidad:\n3\nIndicaciones:\n\nSin indicaciones adicionales.\n\nExámenes\n✓\nLABORATORIO\nHemograma completo\nResultado publicado\nSolicitado\n11 nov 2026, 1:59 a. m.\nPublicado\n12 nov 2026, 1:59 a. m.\nMotivo e indicaciones\n\nControl de infección\n\nOcultar resultado\nPARÁMETROS ANALIZADOS\nHemoglobina\nReferencia: 12–16\n13.8\ng/dL\nLeucocitos\nReferencia: 4–10\n11.2\n10³/µL\n\nObservación: Levemente elevado\n\nPlaquetas\nReferencia: 150–400\n250\n10³/µL\nComentario del laboratorio\n\nLeucocitos levemente elevados; resto dentro de rango.\n\n✓ Resultado validado y publicado por el laboratorio · completado el 12 nov 2026, 12:59 a. m..\n\n✓\nLABORATORIO\nPrueba rápida de estreptococo\nResultado publicado\nSolicitado\n11 nov 2026, 1:59 a. m.\nPublicado\n11 nov 2026, 3:59 a. m.\nMotivo e indicaciones\n\nFaringitis\n\nOcultar resultado\nObservación del laboratorio\n\nNegativo\n\n✓ Resultado validado y publicado por el laboratorio.\n\n⚗\nLABORATORIO\nGlucosa en ayunas\nEn proceso\nSolicitado\n20 nov 2026, 1:59 a. m.\nMotivo e indicaciones\n\nTamizaje\n\nEl laboratorio está procesando la orden o aún no ha publicado un resultado validado.\n\n⌂\nInicio\n♙\nPacientes\n✚\nConsultas\n⚗\nLaboratorios\n☰\nMás",
+  "agenda": {
+    "hasMissed": true,
+    "text": "Hospital Universitario\n🔔\nConsultas\n\nTu agenda diaria y próximas consultas\n\n⌕\nAGENDA MÉDICA\nConsultas\n\nSábado, 21 De Noviembre\n\n◷\n1\nPENDIENTES\n✓\n0\nFINALIZADAS\n⊘\n3\nNO REALIZADAS\n‹\n📅\nHOY\nsáb, 21 nov 2026\n›\nHoy\n⌕\nConsultas no realizadas\nÚltimos 30 días · más reciente primero\nViernes, 20 De Noviembre\n01:59–02:29\nMR\nMarta Ríos\nNo atendida\n\nExpediente EXP-0003\n\nMotivo de la consulta\n\nDolor lumbar\n\nCita de recepción · Consultorio C-2\n\nVer detalle\n\nLa cita venció sin que se iniciara la consulta.\n\nJueves, 19 De Noviembre\n23:59–00:29\nJP\nJosé Pérez\nCancelada\n\nExpediente EXP-0004\n\nMotivo de la consulta\n\nNo hay datos reales\n\nCita de recepción · Consultorio C-2\n\nVer detalle\n\nCancelada sin motivo registrado.\n\nMiércoles, 18 De Noviembre\n01:59–02:29\nLG\nLuis Gómez\nCancelada\n\nExpediente EXP-0002\n\nMotivo de la consulta\n\nSeguimiento\n\nCita de recepción · Consultorio C-1\n\nVer detalle\n\nMotivo de cancelación: El paciente viajó fuera del país\n\n⌂\nInicio\n♙\nPacientes\n✚\nConsultas\n⚗\nLaboratorios\n☰\nMás"
+  },
+  "historial375": "Hospital Universitario\n🔔\nMis pacientes\n\nPacientes asignados y atención reciente\n\n← Volver a la búsqueda\nAP\nEXPEDIENTE CLÍNICO\nAna Paciente\nCódigo PAC-0001\nExpediente EXP-0001\n35 años\nFecha de nacimiento\n1 de enero de 1990\nDUI\n01234567-8\nTeléfono\n7000-0000\nCorreo\nana@example.test\n✚\nInformación clínica\n\nAntecedentes registrados en el expediente\n\nSin antecedentes clínicos registrados.\n\nHospitalización\n\nSin hospitalizaciones registradas.\n\nLaboratorios\nSolicitar ingreso\nOCULTAR HISTORIAL MÉDICO\n\n1 consulta finalizada\n\n← Volver al historial\n🔒 Finalizada · solo lectura\nAna Paciente · miércoles, 11 de noviembre de 2026 · 1:59 a. m. – 2:29 a. m. · 30 min\n🩺 Dra. Ana Médica\nMedicina general\nMotivo: Dolor de garganta\nDatos físicos\nPeso (kg)\n\n61.5\n\nTemperatura (°C)\n\n38.2\n\nEvaluación médica\nSíntomas\n\nFiebre y dolor de garganta\n\nDiagnóstico\n\nFaringitis aguda\n\nCódigo diagnóstico\n\nJ02\n\nObservaciones\n\nFaringe enrojecida\n\nTratamiento\n\nReposo e hidratación\n\nRecetas\n℞\nRECETA\nREC-0001\nEntregada\nFecha\n11 nov 2026, 1:59 a. m.\nMédico\nDra. Ana Médica\nMedicamentos\n2\nOcultar receta\n◇\nAcetaminofén\nConcentración:\n500 mg\nDosis:\n1 Tabletas\nCada:\n8 horas\nVía:\nOral\nDurante:\n5 días\nCantidad:\n15\nIndicaciones:\n\nTomar con alimentos\n\n◇\nAmoxicilina\nConcentración:\n500 mg\nDosis:\n1 cápsulas\nCada:\n12 horas\nVía:\nOral\nDurante:\n7 días\nCantidad:\n14\nIndicaciones:\n\nSin indicaciones adicionales.\n\n℞\nRECETA\nREC-0002\nPendiente de entrega\nFecha\n11 nov 2026, 2:09 a. m.\nMédico\nDra. Ana Médica\nMedicamentos\n1\nOcultar receta\n◇\nLoratadina\nConcentración:\n10 mg\nDosis:\n1 Tableta\nCada:\n24 horas\nVía:\nOral\nDurante:\n3 días\nCantidad:\n3\nIndicaciones:\n\nSin indicaciones adicionales.\n\nExámenes\n✓\nLABORATORIO\nHemograma completo\nResultado publicado\nSolicitado\n11 nov 2026, 1:59 a. m.\nPublicado\n12 nov 2026, 1:59 a. m.\nMotivo e indicaciones\n\nControl de infección\n\nOcultar resultado\nPARÁMETROS ANALIZADOS\nHemoglobina\nReferencia: 12–16\n13.8\ng/dL\nLeucocitos\nReferencia: 4–10\n11.2\n10³/µL\n\nObservación: Levemente elevado\n\nPlaquetas\nReferencia: 150–400\n250\n10³/µL\nComentario del laboratorio\n\nLeucocitos levemente elevados; resto dentro de rango.\n\n✓ Resultado validado y publicado por el laboratorio · completado el 12 nov 2026, 12:59 a. m..\n\n✓\nLABORATORIO\nPrueba rápida de estreptococo\nResultado publicado\nSolicitado\n11 nov 2026, 1:59 a. m.\nPublicado\n11 nov 2026, 3:59 a. m.\nMotivo e indicaciones\n\nFaringitis\n\nOcultar resultado\nObservación del laboratorio\n\nNegativo\n\n✓ Resultado validado y publicado por el laboratorio.\n\n⚗\nLABORATORIO\nGlucosa en ayunas\nEn proceso\nSolicitado\n20 nov 2026, 1:59 a. m.\nMotivo e indicaciones\n\nTamizaje\n\nEl laboratorio está procesando la orden o aún no ha publicado un resultado validado.\n\n⌂\nInicio\n♙\nPacientes\n✚\nConsultas\n⚗\nLaboratorios\n☰\nMás",
+  "historial320": "Hospital Universitario\n🔔\nMis pacientes\n\nPacientes asignados y atención reciente\n\n← Volver a la búsqueda\nAP\nEXPEDIENTE CLÍNICO\nAna Paciente\nCódigo PAC-0001\nExpediente EXP-0001\n35 años\nFecha de nacimiento\n1 de enero de 1990\nDUI\n01234567-8\nTeléfono\n7000-0000\nCorreo\nana@example.test\n✚\nInformación clínica\n\nAntecedentes registrados en el expediente\n\nSin antecedentes clínicos registrados.\n\nHospitalización\n\nSin hospitalizaciones registradas.\n\nLaboratorios\nSolicitar ingreso\nOCULTAR HISTORIAL MÉDICO\n\n1 consulta finalizada\n\n← Volver al historial\n🔒 Finalizada · solo lectura\nAna Paciente · miércoles, 11 de noviembre de 2026 · 2:00 a. m. – 2:30 a. m. · 30 min\n🩺 Dra. Ana Médica\nMedicina general\nMotivo: Dolor de garganta\nDatos físicos\nPeso (kg)\n\n61.5\n\nTemperatura (°C)\n\n38.2\n\nEvaluación médica\nSíntomas\n\nFiebre y dolor de garganta\n\nDiagnóstico\n\nFaringitis aguda\n\nCódigo diagnóstico\n\nJ02\n\nObservaciones\n\nFaringe enrojecida\n\nTratamiento\n\nReposo e hidratación\n\nRecetas\n℞\nRECETA\nREC-0001\nEntregada\nFecha\n11 nov 2026, 2:00 a. m.\nMédico\nDra. Ana Médica\nMedicamentos\n2\nOcultar receta\n◇\nAcetaminofén\nConcentración:\n500 mg\nDosis:\n1 Tabletas\nCada:\n8 horas\nVía:\nOral\nDurante:\n5 días\nCantidad:\n15\nIndicaciones:\n\nTomar con alimentos\n\n◇\nAmoxicilina\nConcentración:\n500 mg\nDosis:\n1 cápsulas\nCada:\n12 horas\nVía:\nOral\nDurante:\n7 días\nCantidad:\n14\nIndicaciones:\n\nSin indicaciones adicionales.\n\n℞\nRECETA\nREC-0002\nPendiente de entrega\nFecha\n11 nov 2026, 2:10 a. m.\nMédico\nDra. Ana Médica\nMedicamentos\n1\nOcultar receta\n◇\nLoratadina\nConcentración:\n10 mg\nDosis:\n1 Tableta\nCada:\n24 horas\nVía:\nOral\nDurante:\n3 días\nCantidad:\n3\nIndicaciones:\n\nSin indicaciones adicionales.\n\nExámenes\n✓\nLABORATORIO\nHemograma completo\nResultado publicado\nSolicitado\n11 nov 2026, 2:00 a. m.\nPublicado\n12 nov 2026, 2:00 a. m.\nMotivo e indicaciones\n\nControl de infección\n\nOcultar resultado\nPARÁMETROS ANALIZADOS\nHemoglobina\nReferencia: 12–16\n13.8\ng/dL\nLeucocitos\nReferencia: 4–10\n11.2\n10³/µL\n\nObservación: Levemente elevado\n\nPlaquetas\nReferencia: 150–400\n250\n10³/µL\nComentario del laboratorio\n\nLeucocitos levemente elevados; resto dentro de rango.\n\n✓ Resultado validado y publicado por el laboratorio · completado el 12 nov 2026, 1:00 a. m..\n\n✓\nLABORATORIO\nPrueba rápida de estreptococo\nResultado publicado\nSolicitado\n11 nov 2026, 2:00 a. m.\nPublicado\n11 nov 2026, 4:00 a. m.\nMotivo e indicaciones\n\nFaringitis\n\nOcultar resultado\nObservación del laboratorio\n\nNegativo\n\n✓ Resultado validado y publicado por el laboratorio.\n\n⚗\nLABORATORIO\nGlucosa en ayunas\nEn proceso\nSolicitado\n20 nov 2026, 2:00 a. m.\nMotivo e indicaciones\n\nTamizaje\n\nEl laboratorio está procesando la orden o aún no ha publicado un resultado validado.\n\n⌂\nInicio\n♙\nPacientes\n✚\nConsultas\n⚗\nLaboratorios\n☰\nMás"
+}

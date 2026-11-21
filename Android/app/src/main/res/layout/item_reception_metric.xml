@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_dashboard_card"
+ android:orientation="vertical" android:padding="16dp" android:minHeight="100dp">
+ <TextView android:id="@+id/amount" android:layout_width="match_parent" android:layout_height="wrap_content"
+ android:textSize="28sp" android:textStyle="bold" android:textColor="@color/wine_primary" android:text="@string/remote_placeholder"/>
+ <TextView android:id="@+id/label" android:layout_width="match_parent" android:layout_height="wrap_content"
+ android:layout_marginTop="4dp" android:textSize="13sp" android:textColor="@color/text_secondary"/>
+</LinearLayout>

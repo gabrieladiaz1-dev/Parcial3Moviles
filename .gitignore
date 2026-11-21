@@ -1,0 +1,13 @@
+.env
+.env.local
+.env.*.local
+supabase.properties
+local.properties
+node_modules/
+dist/
+dist-staging/
+build/
+.gradle/
+.kotlin/
+.local/
+.DS_Store

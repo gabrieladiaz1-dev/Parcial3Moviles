@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 262 municipios de El Salvador (denominación histórica; hoy distritos tras el Decreto 762), agrupados por departamento. -->
+    <string-array name="municipios_salvador">
+        <!-- Ahuachapán -->
+        <item>Atiquizaya (Ahuachapán)</item>
+        <item>El Refugio (Ahuachapán)</item>
+        <item>San Lorenzo (Ahuachapán)</item>
+        <item>Turín (Ahuachapán)</item>
+        <item>Ahuachapán (Ahuachapán)</item>
+        <item>Apaneca (Ahuachapán)</item>
+        <item>Concepción de Ataco (Ahuachapán)</item>
+        <item>Tacuba (Ahuachapán)</item>
+        <item>Guaymango (Ahuachapán)</item>
+        <item>Jujutla (Ahuachapán)</item>
+        <item>San Francisco Menéndez (Ahuachapán)</item>
+        <item>San Pedro Puxtla (Ahuachapán)</item>
+        <!-- Cabañas -->
+        <item>Guacotecti (Cabañas)</item>
+        <item>San Isidro (Cabañas)</item>
+        <item>Sensuntepeque (Cabañas)</item>
+        <item>Victoria (Cabañas)</item>
+        <item>Dolores (Cabañas)</item>
+        <item>Cinquera (Cabañas)</item>
+        <item>Ilobasco (Cabañas)</item>
+        <item>Jutiapa (Cabañas)</item>
+        <item>Tejutepeque (Cabañas)</item>
+        <!-- Chalatenango -->
+        <item>Citalá (Chalatenango)</item>
+        <item>La Palma (Chalatenango)</item>
+        <item>San Ignacio (Chalatenango)</item>
+        <item>Agua Caliente (Chalatenango)</item>
+        <item>Dulce Nombre de María (Chalatenango)</item>
+        <item>El Paraíso (Chalatenango)</item>
+        <item>La Reina (Chalatenango)</item>
+        <item>Nueva Concepción (Chalatenango)</item>
+        <item>San Fernando (Chalatenango)</item>
+        <item>San Francisco Morazán (Chalatenango)</item>
+        <item>San Rafael (Chalatenango)</item>
+        <item>Santa Rita (Chalatenango)</item>
+        <item>Tejutla (Chalatenango)</item>
+        <item>Arcatao (Chalatenango)</item>
+        <item>Azacualpa (Chalatenango)</item>
+        <item>Cancasque (Chalatenango)</item>
+        <item>Chalatenango (Chalatenango)</item>
+        <item>Comalapa (Chalatenango)</item>
+        <item>Concepción Quezaltepeque (Chalatenango)</item>
+        <item>El Carrizal (Chalatenango)</item>
+        <item>La Laguna (Chalatenango)</item>
+        <item>Las Vueltas (Chalatenango)</item>
+        <item>Las Flores (Chalatenango)</item>
+        <item>Nombre de Jesús (Chalatenango)</item>
+        <item>Nueva Trinidad (Chalatenango)</item>
+        <item>Ojos de Agua (Chalatenango)</item>
+        <item>Potonico (Chalatenango)</item>
+        <item>San Antonio de la Cruz (Chalatenango)</item>
+        <item>San Antonio Los Ranchos (Chalatenango)</item>
+        <item>San Francisco Lempa (Chalatenango)</item>
+        <item>San Isidro Labrador (Chalatenango)</item>
+        <item>San Luis del Carmen (Chalatenango)</item>
+        <item>San Miguel de Mercedes (Chalatenango)</item>
+        <!-- Cuscatlán -->
+        <item>Suchitoto (Cuscatlán)</item>
+        <item>San José Guayabal (Cuscatlán)</item>
+        <item>Oratorio de Concepción (Cuscatlán)</item>
+        <item>San Bartolomé Perulapía (Cuscatlán)</item>
+        <item>San Pedro Perulapán (Cuscatlán)</item>
+        <item>Cojutepeque (Cuscatlán)</item>
+        <item>Candelaria (Cuscatlán)</item>
+        <item>El Carmen (Cuscatlán)</item>
+        <item>El Rosario (Cuscatlán)</item>
+        <item>Monte San Juan (Cuscatlán)</item>
+        <item>San Cristóbal (Cuscatlán)</item>
+        <item>San Rafael Cedros (Cuscatlán)</item>
+        <item>San Ramón (Cuscatlán)</item>
+        <item>Santa Cruz Analquito (Cuscatlán)</item>
+        <item>Santa Cruz Michapa (Cuscatlán)</item>
+        <item>Tenancingo (Cuscatlán)</item>
+        <!-- La Libertad -->
+        <item>Quezaltepeque (La Libertad)</item>
+        <item>San Matías (La Libertad)</item>
+        <item>San Pablo Tacachico (La Libertad)</item>
+        <item>San Juan Opico (La Libertad)</item>
+        <item>Ciudad Arce (La Libertad)</item>
+        <item>Colón (La Libertad)</item>
+        <item>Jayaque (La Libertad)</item>
+        <item>Sacacoyo (La Libertad)</item>
+        <item>Tepecoyo (La Libertad)</item>
+        <item>Talnique (La Libertad)</item>
+        <item>Antiguo Cuscatlán (La Libertad)</item>
+        <item>Huizúcar (La Libertad)</item>
+        <item>Nuevo Cuscatlán (La Libertad)</item>
+        <item>San José Villanueva (La Libertad)</item>
+        <item>Zaragoza (La Libertad)</item>
+        <item>Chiltiupán (La Libertad)</item>
+        <item>Jicalapa (La Libertad)</item>
+        <item>La Libertad (La Libertad)</item>
+        <item>Tamanique (La Libertad)</item>
+        <item>Teotepeque (La Libertad)</item>
+        <item>Santa Tecla (La Libertad)</item>
+        <item>Comasagua (La Libertad)</item>
+        <!-- La Paz -->
+        <item>Cuyultitán (La Paz)</item>
+        <item>Olocuilta (La Paz)</item>
+        <item>San Juan Talpa (La Paz)</item>
+        <item>San Luis Talpa (La Paz)</item>
+        <item>San Pedro Masahuat (La Paz)</item>
+        <item>Tapalhuaca (La Paz)</item>
+        <item>San Francisco Chinameca (La Paz)</item>
+        <item>El Rosario (La Paz)</item>
+        <item>Jerusalén (La Paz)</item>
+        <item>Mercedes La Ceiba (La Paz)</item>
+        <item>Paraíso de Osorio (La Paz)</item>
+        <item>San Antonio Masahuat (La Paz)</item>
+        <item>San Emigdio (La Paz)</item>
+        <item>San Juan Tepezontes (La Paz)</item>
+        <item>San Luis La Herradura (La Paz)</item>
+        <item>San Miguel Tepezontes (La Paz)</item>
+        <item>San Pedro Nonualco (La Paz)</item>
+        <item>Santa María Ostuma (La Paz)</item>
+        <item>Santiago Nonualco (La Paz)</item>
+        <item>San Juan Nonualco (La Paz)</item>
+        <item>San Rafael Obrajuelo (La Paz)</item>
+        <item>Zacatecoluca (La Paz)</item>
+        <!-- La Unión -->
+        <item>Anamorós (La Unión)</item>
+        <item>Bolívar (La Unión)</item>
+        <item>Concepción de Oriente (La Unión)</item>
+        <item>El Sauce (La Unión)</item>
+        <item>Lislique (La Unión)</item>
+        <item>Nueva Esparta (La Unión)</item>
+        <item>Pasaquina (La Unión)</item>
+        <item>Polorós (La Unión)</item>
+        <item>San José (La Unión)</item>
+        <item>Santa Rosa de Lima (La Unión)</item>
+        <item>Conchagua (La Unión)</item>
+        <item>El Carmen (La Unión)</item>
+        <item>Intipucá (La Unión)</item>
+        <item>La Unión (La Unión)</item>
+        <item>Meanguera del Golfo (La Unión)</item>
+        <item>San Alejo (La Unión)</item>
+        <item>Yayantique (La Unión)</item>
+        <item>Yucuaiquín (La Unión)</item>
+        <!-- Morazán -->
+        <item>Arambala (Morazán)</item>
+        <item>Cacaopera (Morazán)</item>
+        <item>Corinto (Morazán)</item>
+        <item>El Rosario (Morazán)</item>
+        <item>Joateca (Morazán)</item>
+        <item>Jocoaitique (Morazán)</item>
+        <item>Meanguera (Morazán)</item>
+        <item>Perquín (Morazán)</item>
+        <item>San Fernando (Morazán)</item>
+        <item>San Isidro (Morazán)</item>
+        <item>Torola (Morazán)</item>
+        <item>Chilanga (Morazán)</item>
+        <item>Delicias de Concepción (Morazán)</item>
+        <item>El Divisadero (Morazán)</item>
+        <item>Gualococti (Morazán)</item>
+        <item>Guatajiagua (Morazán)</item>
+        <item>Jocoro (Morazán)</item>
+        <item>Lolotiquillo (Morazán)</item>
+        <item>Osicala (Morazán)</item>
+        <item>San Carlos (Morazán)</item>
+        <item>San Francisco Gotera (Morazán)</item>
+        <item>San Simón (Morazán)</item>
+        <item>Sensembra (Morazán)</item>
+        <item>Sociedad (Morazán)</item>
+        <item>Yamabal (Morazán)</item>
+        <item>Yoloaiquín (Morazán)</item>
+        <!-- San Miguel -->
+        <item>Ciudad Barrios (San Miguel)</item>
+        <item>Sesori (San Miguel)</item>
+        <item>Nuevo Edén de San Juan (San Miguel)</item>
+        <item>San Gerardo (San Miguel)</item>
+        <item>San Luis de la Reina (San Miguel)</item>
+        <item>Carolina (San Miguel)</item>
+        <item>San Antonio (San Miguel)</item>
+        <item>Chapeltique (San Miguel)</item>
+        <item>San Miguel (San Miguel)</item>
+        <item>Comacarán (San Miguel)</item>
+        <item>Uluazapa (San Miguel)</item>
+        <item>Moncagua (San Miguel)</item>
+        <item>Quelepa (San Miguel)</item>
+        <item>Chirilagua (San Miguel)</item>
+        <item>Chinameca (San Miguel)</item>
+        <item>El Tránsito (San Miguel)</item>
+        <item>Lolotique (San Miguel)</item>
+        <item>Nueva Guadalupe (San Miguel)</item>
+        <item>San Jorge (San Miguel)</item>
+        <item>San Rafael Oriente (San Miguel)</item>
+        <!-- San Salvador -->
+        <item>Aguilares (San Salvador)</item>
+        <item>El Paisnal (San Salvador)</item>
+        <item>Guazapa (San Salvador)</item>
+        <item>Apopa (San Salvador)</item>
+        <item>Nejapa (San Salvador)</item>
+        <item>Ilopango (San Salvador)</item>
+        <item>San Martín (San Salvador)</item>
+        <item>Soyapango (San Salvador)</item>
+        <item>Tonacatepeque (San Salvador)</item>
+        <item>Ayutuxtepeque (San Salvador)</item>
+        <item>Mejicanos (San Salvador)</item>
+        <item>Cuscatancingo (San Salvador)</item>
+        <item>Delgado (San Salvador)</item>
+        <item>San Salvador (San Salvador)</item>
+        <item>San Marcos (San Salvador)</item>
+        <item>Santo Tomás (San Salvador)</item>
+        <item>Santiago Texacuangos (San Salvador)</item>
+        <item>Panchimalco (San Salvador)</item>
+        <item>Rosario de Mora (San Salvador)</item>
+        <!-- San Vicente -->
+        <item>Apastepeque (San Vicente)</item>
+        <item>Santa Clara (San Vicente)</item>
+        <item>San Ildefonso (San Vicente)</item>
+        <item>San Esteban Catarina (San Vicente)</item>
+        <item>San Sebastián (San Vicente)</item>
+        <item>San Lorenzo (San Vicente)</item>
+        <item>Santo Domingo (San Vicente)</item>
+        <item>San Vicente (San Vicente)</item>
+        <item>Guadalupe (San Vicente)</item>
+        <item>San Cayetano Istepeque (San Vicente)</item>
+        <item>Tecoluca (San Vicente)</item>
+        <item>Tepetitán (San Vicente)</item>
+        <item>Verapaz (San Vicente)</item>
+        <!-- Santa Ana -->
+        <item>Masahuat (Santa Ana)</item>
+        <item>Metapán (Santa Ana)</item>
+        <item>Santa Rosa Guachipilín (Santa Ana)</item>
+        <item>Texistepeque (Santa Ana)</item>
+        <item>Santa Ana (Santa Ana)</item>
+        <item>Coatepeque (Santa Ana)</item>
+        <item>El Congo (Santa Ana)</item>
+        <item>Candelaria de la Frontera (Santa Ana)</item>
+        <item>Chalchuapa (Santa Ana)</item>
+        <item>El Porvenir (Santa Ana)</item>
+        <item>San Antonio Pajonal (Santa Ana)</item>
+        <item>San Sebastián Salitrillo (Santa Ana)</item>
+        <item>Santiago de la Frontera (Santa Ana)</item>
+        <!-- Sonsonate -->
+        <item>Juayúa (Sonsonate)</item>
+        <item>Nahuizalco (Sonsonate)</item>
+        <item>Salcoatitán (Sonsonate)</item>
+        <item>Santa Catarina Masahuat (Sonsonate)</item>
+        <item>Sonsonate (Sonsonate)</item>
+        <item>Sonzacate (Sonsonate)</item>
+        <item>Nahulingo (Sonsonate)</item>
+        <item>San Antonio del Monte (Sonsonate)</item>
+        <item>Santo Domingo de Guzmán (Sonsonate)</item>
+        <item>Armenia (Sonsonate)</item>
+        <item>Caluco (Sonsonate)</item>
+        <item>Cuisnahuat (Sonsonate)</item>
+        <item>Izalco (Sonsonate)</item>
+        <item>San Julián (Sonsonate)</item>
+        <item>Santa Isabel Ishuatán (Sonsonate)</item>
+        <item>Acajutla (Sonsonate)</item>
+        <!-- Usulután -->
+        <item>Alegría (Usulután)</item>
+        <item>Berlín (Usulután)</item>
+        <item>El Triunfo (Usulután)</item>
+        <item>Estanzuelas (Usulután)</item>
+        <item>Jucuapa (Usulután)</item>
+        <item>Mercedes Umaña (Usulután)</item>
+        <item>Nueva Granada (Usulután)</item>
+        <item>San Buenaventura (Usulután)</item>
+        <item>Santiago de María (Usulután)</item>
+        <item>California (Usulután)</item>
+        <item>Concepción Batres (Usulután)</item>
+        <item>Ereguayquín (Usulután)</item>
+        <item>Jucuarán (Usulután)</item>
+        <item>Ozatlán (Usulután)</item>
+        <item>Santa Elena (Usulután)</item>
+        <item>San Dionisio (Usulután)</item>
+        <item>Santa María (Usulután)</item>
+        <item>Tecapán (Usulután)</item>
+        <item>Usulután (Usulután)</item>
+        <item>Jiquilisco (Usulután)</item>
+        <item>Puerto El Triunfo (Usulután)</item>
+        <item>San Agustín (Usulután)</item>
+        <item>San Francisco Javier (Usulután)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,1 @@
+ALTER TABLE public.staff_recurring_journeys VALIDATE CONSTRAINT staff_recurring_journeys_specialty_ids_check;

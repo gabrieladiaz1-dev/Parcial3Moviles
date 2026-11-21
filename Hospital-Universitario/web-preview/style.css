@@ -1,0 +1,603 @@
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-synthesis:none;color:#242936;background:#ece8e9;font-size:14px;color-scheme:light;--wine:#770727;--rose:#fbeaf0;--muted:#757e91;--paper:#f8f8fa}
+*{box-sizing:border-box}body{margin:0;min-height:100dvh;display:flex;justify-content:center;align-items:center;gap:90px;padding:24px;background:radial-gradient(ellipse at 20% 30%,#faf4f5,transparent 65%),#ece8e9}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}button:disabled{opacity:.5;cursor:default}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #bf6b84;outline-offset:3px}h1,h2,h3,p{margin:0}button{color:inherit}button.primary{background:var(--wine);color:#fff;border-radius:8px;min-height:43px;padding:12px 18px;width:100%;font-size:12px;font-weight:600}.text-button{background:none;color:var(--wine);padding:9px}.muted{color:var(--muted)}.preview-note{display:grid;gap:20px;width:300px}.preview-brand{font-size:24px;color:var(--wine);font-weight:800;border:1px solid #d9bec7;border-radius:15px;width:57px;height:57px;display:grid;place-content:center;position:relative}.preview-brand span{position:absolute;font-size:15px;right:8px;top:7px}.preview-note>strong{font-size:36px;letter-spacing:-1.5px;line-height:1.12;font-weight:650}.preview-note>span{font-size:14px;color:#6f6165;line-height:1.6}.preview-note small{font-size:12px;color:#827178;line-height:1.6}.design-controls{border-top:1px solid #d8ccd0;padding-top:20px}.design-controls p{font-size:12px;margin-bottom:12px;color:#7b666d}.design-controls button{background:#fff9fb;color:var(--wine);padding:10px 14px;border-radius:8px;margin-right:6px;font-size:12px}.design-controls #live-mode{display:block;background:none;padding-left:0;margin-top:8px;text-decoration:underline}.design-mode #preview-mode{color:var(--wine);font-weight:650}
+.phone{width:411px;height:min(870px,calc(100dvh - 48px));min-height:650px;background:var(--paper);border:9px solid #222022;border-radius:53px;box-shadow:0 30px 85px #3c192d33,0 0 0 1px #8b8185;display:flex;flex-direction:column;position:relative;overflow:hidden;flex-shrink:0}.status{height:36px;flex-shrink:0;display:flex;justify-content:space-between;align-items:center;padding:0 24px;color:var(--wine);font-size:12px;font-weight:600;background:var(--paper)}.island{display:none}.authenticated .status{background:var(--wine);color:white}.home-indicator{height:17px;background:white;flex-shrink:0;position:relative}.home-indicator:after{content:"";position:absolute;width:123px;height:4px;border-radius:4px;background:#242936;left:50%;transform:translateX(-50%);bottom:7px}#app{flex:1;min-height:0;display:flex;flex-direction:column}.portal{flex:1;min-height:0;display:flex;flex-direction:column}.hospital-header{padding:16px 24px 48px;background:var(--wine);color:white;flex-shrink:0;min-height:160px}.brand-line{display:flex;align-items:center;justify-content:space-between;margin-bottom:23px;font-size:14px;font-weight:500;line-height:17px}.bell{color:white;background:none;font-size:17px;line-height:17px;padding:0 5px}.hospital-header h1{font-size:25px;line-height:30px;font-weight:600;letter-spacing:-.5px}.hospital-header>p{font-size:12px;line-height:16px;margin-top:8px;font-weight:400}.searchbox{margin:-29px 16px 0;background:white;border-radius:13px;height:52px;padding:0 16px;display:flex;align-items:center;gap:8px;position:relative;flex-shrink:0;color:var(--muted)}.searchbox input{border:0;background:none;width:100%;height:100%;min-width:0;font-size:12px;color:#242936}.searchbox input:focus{outline:0}.searchbox:focus-within{box-shadow:0 0 0 2px #d2a2b1}.screen-content{flex:1;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#ddd2d7 transparent;padding:22px 17px 26px;display:flex;flex-direction:column;gap:8px}.section-title{font-size:16px;font-weight:600;line-height:21px;letter-spacing:-.15px;margin:0 2px 8px}.section-title:not(:first-child){margin-top:18px}.metric-grid,.shortcut-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.metric{background:white;border-radius:14px;padding:16px 14px;min-height:98px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;gap:18px}.metric strong{color:var(--wine);font-weight:600;font-size:25px;line-height:30px}.metric span{font-size:10px;color:var(--muted)}.shortcut{background:white;border-radius:14px;min-height:78px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:14px}.shortcut>span{font-size:20px;line-height:23px;color:var(--wine)}.shortcut strong{font-size:11px;font-weight:550}.card{padding:12px 14px;background:white;border-radius:13px;min-height:51px;flex-shrink:0}.card-body{min-width:0;flex:1}.card h3{font-size:12px;line-height:16px;font-weight:600;margin-bottom:4px}.card p{font-size:10px;line-height:15px;color:var(--muted);overflow-wrap:anywhere}.card .badge{margin-top:6px}.icon-card{display:flex;gap:10px;align-items:flex-start}.card-icon{width:29px;height:32px;display:grid;place-content:center;border-radius:8px;background:var(--rose);color:var(--wine);font-size:19px;flex-shrink:0}.badge{display:block;width:fit-content;min-width:100px;max-width:100%;border-radius:20px;background:#e3f6ea;font-size:9px;font-weight:500;line-height:13px;padding:4px 10px;color:#242936}.badge.warning{background:#fff2d9}.badge.blue{background:#e7f1fd}.ticket-card{padding:25px 14px 20px;background:white;border-radius:14px;display:flex;align-items:center;flex-direction:column;gap:22px;margin-bottom:8px}.ticket-card>p{font-size:12px;line-height:18px;color:var(--muted);text-align:center}.ticket-card strong{font-size:44px;line-height:55px;color:var(--wine);font-weight:600;letter-spacing:1px}.ticket-card .badge{min-width:122px;text-align:center}.ticket-card~.card p{color:var(--wine);font-size:11px;font-weight:550}.profile-card{background:#fff;border-radius:14px;display:flex;gap:16px;align-items:center;padding:17px 14px;min-height:125px;margin-bottom:6px}.avatar{border-radius:50%;width:68px;height:68px;flex-shrink:0;display:grid;place-content:center;color:var(--wine);background:var(--rose);font-size:24px;font-weight:600}.profile-card h3{font-size:16px;font-weight:600;line-height:21px}.profile-card p{font-size:11px;color:var(--muted);margin:9px 0 13px}.profile-card .badge{min-width:140px}.bottom-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;background:white;padding:7px 12px 0;min-height:58px;flex-shrink:0}.bottom-nav button{border-radius:12px;background:white;color:var(--muted);padding:7px 1px;font-size:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-width:0}.bottom-nav button[aria-current]{background:var(--rose);color:var(--wine)}.nav-icon{font-size:19px;line-height:20px}.menu-row{background:white;border-radius:13px;text-align:left;padding:16px 14px;font-size:12px;width:100%}.logout{background:none;color:var(--wine);font-weight:600;padding:20px;width:100%;font-size:12px}.scope-note{font-size:11px;line-height:17px;color:var(--muted);padding:8px 3px}.rose-note{font-size:10px;line-height:16px;padding:12px;background:var(--rose);color:var(--wine);margin-top:14px}.filters{font-size:10px;color:var(--muted);margin-bottom:4px}.form-field{display:grid;gap:8px;margin:6px 2px}.form-field label{font-size:12px;font-weight:550}.form-field input,.form-field textarea{border:0;background:white;border-radius:12px;padding:15px 12px;color:var(--muted);width:100%;font-size:11px;min-height:52px;resize:vertical}.form-field textarea{min-height:66px}.form-field input:disabled,.form-field textarea:disabled{opacity:1}.loading{font-size:11px;color:var(--muted);text-align:center;padding:6px}.login{padding:29px 27px 28px;overflow-y:auto;flex:1}.mark{color:var(--wine);font-size:45px;margin-bottom:21px}.eyebrow{font-size:10px;letter-spacing:1.8px;color:var(--wine);font-weight:650}.login h1{font-size:32px;line-height:1.16;font-weight:650;letter-spacing:-1.1px;white-space:pre-line;margin:13px 0 30px}.login h2{font-size:22px;letter-spacing:-.5px;margin-bottom:9px}.login>.muted{font-size:12px;line-height:19px;margin-bottom:25px}.login form,.role-picker form{display:grid;gap:10px}.login label{font-size:12px;font-weight:600;margin-top:5px}.login input,.role-picker input,.role-picker select{padding:15px 13px;border:1px solid #e5dde0;border-radius:10px;background:white;color:#242936;font-size:12px;width:100%}.reveal{text-align:right;font-size:11px;padding:3px 0 7px}.login-footer{text-align:center;color:var(--muted);font-size:11px;line-height:18px;margin-top:24px}.role-picker{padding:55px 27px;display:grid;gap:22px;overflow:auto}.role-picker h2{font-size:25px;line-height:1.2}.role-picker p{font-size:13px;line-height:1.6;color:var(--muted)}#notice{font-size:11px;line-height:17px;color:#922741;background:#fff0f3;padding:10px 17px;max-height:120px;overflow:auto;margin:0}#notice[hidden]{display:none}
+@media(min-height:930px){.phone{height:870px}}@media(max-width:850px){body{gap:30px}.preview-note{width:230px}.preview-note>strong{font-size:30px}}@media(max-width:680px){body{padding:14px;display:block}.preview-note{width:100%;max-width:411px;margin:0 auto 14px;gap:8px}.preview-brand,.preview-note>strong,.preview-note>span,.preview-note>small:last-child{display:none}.design-controls{border:0;padding:0}.design-controls p{display:none}.design-controls #live-mode{display:inline-block}.preview-note small{font-size:10px}.phone{margin:auto;height:calc(100dvh - 130px);min-height:620px}}@media(max-width:430px){body{padding:0}.preview-note{padding:10px 14px;margin:0}.phone{width:100%;border:0;border-radius:0;box-shadow:none;height:calc(100dvh - 105px);min-height:600px}.home-indicator{height:max(17px,env(safe-area-inset-bottom))}}@media(prefers-reduced-motion:no-preference){button{transition:background .15s ease,opacity .15s ease}}
+
+.schedule-next{padding:17px 14px}.schedule-next h3{font-size:16px;line-height:21px;color:var(--wine);margin-bottom:15px}.schedule-next p{font-size:14px;font-weight:600;color:#242936;margin-bottom:12px}.schedule-row .card-body{display:grid;grid-template-columns:1fr 100px;gap:3px}.schedule-row h3,.schedule-row p{grid-column:1}.schedule-row .badge{grid-column:2;grid-row:1 / span 2;margin:0;align-self:center}.history-detail{display:block;font-size:9px;color:var(--muted);margin-top:7px}
+.module-form,.module-filters{display:grid;gap:12px;margin:6px 0 16px;min-width:0}.module-field{display:grid;gap:6px;font-size:12px;min-width:0}.module-field input,.module-field select,.module-field textarea{width:100%;min-width:0;max-width:100%;border:1px solid #dedde2;border-radius:8px;background:#fff;padding:11px;color:var(--ink,#242936);font-size:12px}.module-field textarea{min-height:80px;resize:vertical}.module-detail{display:grid;gap:4px;margin:9px 0;font-size:11px;overflow-wrap:anywhere}.module-detail strong{font-weight:600}.module-detail p{white-space:pre-wrap;font-size:11px;line-height:1.5}.module-action{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 10px;margin:5px 5px 0 0;border:1px solid #d4c5cb;background:#fff;color:var(--wine);border-radius:8px;font-size:11px;text-decoration:none;max-width:100%;overflow-wrap:anywhere}.module-toggle{display:flex;align-items:center;gap:10px;min-height:44px;font-size:12px}.module-toggle input{width:18px;height:18px;accent-color:var(--wine)}.card details{margin-top:10px;font-size:11px}.card summary{cursor:pointer;min-height:28px;color:var(--wine)}.module-date{margin-top:7px}.module-form button{white-space:normal}.module-form,.module-field{letter-spacing:0}
+
+/* Autenticacion redisena 2026-10-30 */
+.auth-view{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;background:var(--paper)}
+.auth-header{background:var(--wine);color:#fff;padding:18px 24px 46px;border-bottom-right-radius:28px;flex-shrink:0}
+.auth-brand{display:flex;align-items:center;gap:8px;margin-bottom:20px;font-size:14px;font-weight:500}
+.auth-header h1{font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-.5px}
+.auth-header p{font-size:12px;line-height:16px;margin-top:8px;opacity:.9}
+.auth-card{background:#fff;border-radius:14px;margin:-28px 16px 0;padding:16px;flex-shrink:0}
+.auth-card form{display:grid;gap:14px}
+.auth-field{display:grid;gap:8px;min-width:0}
+.auth-field label{font-size:13px;font-weight:600}
+.auth-field input{width:100%;min-width:0;padding:14px;border:0;border-radius:12px;background:var(--paper);color:#242936;font-size:13px}
+.auth-input{display:flex;gap:6px;align-items:center;background:var(--paper);border-radius:12px;min-width:0}
+.auth-input input{background:none;border-radius:12px}
+.field-reveal{background:none;color:var(--muted);font-size:11px;font-weight:600;padding:0 10px;white-space:nowrap}
+.auth-row{display:flex;justify-content:flex-end}
+.field-link{background:none;color:var(--wine);font-size:11px;font-weight:600;padding:0}
+.auth-inline{font-size:11px;line-height:16px;color:var(--muted)}
+.auth-notice{background:var(--rose);color:var(--wine);border-radius:12px;padding:12px;font-size:11px;line-height:17px}
+.auth-error{color:#b3261e;font-size:11px;line-height:16px}
+.auth-link-row{display:flex;justify-content:center;align-items:center;gap:4px;padding:16px 16px 0;font-size:11px;color:var(--muted)}
+.link-button{background:none;color:var(--wine);font-size:11px;font-weight:600;padding:0}
+.auth-footer{text-align:center;color:var(--muted);font-size:11px;line-height:18px;padding:16px 16px 24px}
+
+/* Dashboard del paciente 2026-10-30 */
+.dash-greeting{display:flex;justify-content:space-between;align-items:center;gap:14px;background:#fff;border-radius:18px;padding:16px;box-shadow:0 6px 18px rgba(36,41,54,.06)}
+.dash-text{display:grid;gap:6px;min-width:0}
+.dash-text h2{font-size:20px;font-weight:700;letter-spacing:-.3px}
+.dash-text p{font-size:12px;color:var(--muted)}
+.dash-avatar{flex-shrink:0;width:54px;height:54px;border-radius:50%;display:grid;place-content:center;background:var(--rose);color:var(--wine);font-size:17px;font-weight:600;border:2px solid rgba(164,19,60,.25)}
+.dash-date{background:linear-gradient(135deg,var(--wine),#4d041a);color:#fff;border-radius:18px;padding:18px;display:grid;gap:10px;box-shadow:0 8px 20px rgba(119,7,39,.25)}
+.dash-row{display:flex;align-items:center;gap:12px}
+.dash-row-icon{font-size:15px;opacity:.9}
+.dash-stack{display:grid;gap:2px;min-width:0}
+.dash-stack strong{font-size:15px;font-weight:600}
+.dash-label{font-size:10px;font-weight:700;letter-spacing:1.4px;opacity:.8}
+.dash-date hr{border:0;height:1px;background:rgba(255,255,255,.25);margin:2px 0}
+.dash-cita-day{font-size:13px;opacity:.95}
+.dash-time{font-size:32px;font-weight:700;line-height:1.1}
+.dash-medico{font-size:12px;opacity:.9}
+.dash-empty{font-size:14px;font-weight:600}
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.doctor-directory{display:grid;gap:18px;min-width:0}
+.directory-hero{display:grid;gap:10px;padding:22px;border-radius:22px;color:#fff;background:linear-gradient(135deg,var(--wine),#4d041a);box-shadow:0 10px 28px rgba(119,7,39,.14)}
+.directory-hero>small{font-size:10px;font-weight:700;letter-spacing:1.4px}.directory-hero h2{font-size:24px;line-height:1.2;letter-spacing:-.5px}.directory-hero p{font-size:13px;line-height:1.6;opacity:.9}.directory-count{justify-self:start;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:7px 12px;font-size:12px;font-weight:600}
+.directory-search{display:flex;align-items:end;gap:10px;background:white;padding:16px;border-radius:16px;border:1px solid var(--rose)}.directory-search .module-field{flex:1;min-width:0}.directory-search .primary{width:auto;min-height:46px;padding:12px 18px;flex-shrink:0}.directory-search input{width:100%;min-width:0;box-sizing:border-box}
+.directory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px}.directory-patient{display:flex;gap:12px;align-items:center;width:100%;min-width:0;text-align:left;background:#fff;border:1px solid var(--rose);border-radius:18px;padding:17px;box-shadow:0 5px 16px rgba(36,41,54,.035)}.directory-patient:hover,.directory-patient:focus-visible{border-color:var(--wine);outline:2px solid var(--rose);outline-offset:2px}.directory-avatar{width:48px;height:48px;flex-shrink:0;border-radius:50%;display:grid;place-content:center;color:var(--wine);background:var(--rose);font-size:17px;font-weight:700}.directory-patient-text{display:grid;gap:6px;min-width:0;flex:1;overflow-wrap:anywhere}.directory-patient-text strong{font-size:15px;line-height:1.4}.directory-patient-text span{font-size:12px;color:var(--wine);font-weight:600}.directory-patient-text small{font-size:12px;color:var(--muted)}.directory-patient-text b{font-size:11px;color:var(--wine);margin-top:4px}.directory-chevron{font-size:24px;color:var(--wine)}
+.directory-selected{display:flex;align-items:center;gap:16px;background:#fff;padding:22px;border-radius:20px;border:1px solid var(--rose)}.directory-selected .directory-avatar{width:60px;height:60px;font-size:22px}.directory-selected>div{display:grid;gap:6px;min-width:0;overflow-wrap:anywhere}.directory-selected small{font-size:10px;letter-spacing:1px;color:var(--muted)}.directory-selected h2{font-size:21px;line-height:1.3}.directory-selected strong{color:var(--wine);font-size:13px}.directory-selected p{font-size:12px;color:var(--muted)}
+.directory-contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;background:white;padding:17px;border-radius:16px}.directory-contact>div{display:grid;gap:5px;min-width:0;overflow-wrap:anywhere}.directory-contact small{font-size:11px;color:var(--muted)}.directory-contact span{font-size:13px}.directory-back,.directory-record-toggle{border:0;background:var(--rose);border-radius:12px;padding:14px;color:var(--wine);text-align:left;font-weight:600;min-height:44px}.directory-record,.directory-labs{display:grid;gap:14px;padding:18px;background:#fff;border-radius:18px;border:1px solid var(--rose);min-width:0}.directory-record .module-detail{padding:10px 0;border-bottom:1px solid var(--rose)}.directory-labs>p{font-size:13px;color:var(--muted);line-height:1.5}
+@media(max-width:420px){.directory-search{align-items:stretch;flex-direction:column}.directory-search .primary{width:100%}.directory-grid{grid-template-columns:1fr}.directory-hero{padding:20px}.directory-hero h2{font-size:22px}}
+.attention-form,.attention-card{display:grid;gap:16px;min-width:0}
+.attention-card{padding:18px;overflow-wrap:anywhere}
+.attention-card h2{color:var(--wine);font-size:18px}
+.attention-card>p,.attention-card>small{font-size:13px;color:var(--muted)}
+.attention-personal{display:grid;gap:4px}.attention-personal small{color:var(--muted)}
+.attention-symptoms{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:10px}
+.attention-symptom{min-height:48px;padding:12px;border:1px solid var(--rose);border-radius:12px;background:white;color:var(--wine);text-align:left}
+.attention-symptom[aria-pressed=true]{background:var(--rose);border-color:var(--wine)}
+.attention-card input,.attention-card select,.attention-card textarea{min-width:0;width:100%;box-sizing:border-box}
+.dash-greeting h2,.dash-card strong,.dash-medico{overflow-wrap:anywhere}
+.dash-card{min-width:0}
+@media(max-width:340px){.dash-grid{gap:8px}.dash-card{padding:12px}.dash-avatar{width:44px;height:44px}.dash-text h2{font-size:19px}}
+.dash-card{display:grid;gap:12px;justify-items:start;background:#fff;border-radius:14px;padding:14px;min-height:92px;text-align:left;border:1px solid rgba(164,19,60,.18);transition:transform .12s ease,opacity .12s ease}
+.dash-card:active{transform:scale(.97);opacity:.85}
+.dash-icon{width:40px;height:40px;border-radius:50%;display:grid;place-content:center;background:var(--rose);color:var(--wine);font-size:16px}
+.dash-card strong{font-size:13px;font-weight:600}
+
+/* Agendar cita 2026-10-30 */
+.sched-card{display:grid;gap:14px;background:#fff;border-radius:18px;padding:16px;box-shadow:0 6px 18px rgba(36,41,54,.06);animation:sched-in .25s ease}
+@keyframes sched-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.sched-head{display:flex;align-items:center;gap:8px}
+.sched-head-icon{width:28px;height:28px;border-radius:50%;display:grid;place-content:center;background:var(--rose);color:var(--wine);font-size:13px}
+.sched-head strong{font-size:15px;font-weight:600}
+.sched-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sched-field{display:grid;gap:5px;min-width:0}
+.sched-field label{font-size:11px;font-weight:600;color:var(--muted)}
+.sched-field input{width:100%;padding:10px 12px;border:1px solid rgba(164,19,60,.22);border-radius:12px;font:inherit;font-size:13px;background:var(--paper);transition:border-color .15s ease,box-shadow .15s ease}
+.sched-field input:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 3px rgba(119,7,39,.12);background:#fff}
+.sched-hint{font-size:12px;color:var(--muted)}
+.sched-sub{font-size:13px;font-weight:600}
+.sched-wrap{display:grid;gap:12px}
+.sched-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
+.sched-chip{display:flex;align-items:center;justify-content:center;gap:6px;padding:10px 12px;border-radius:999px;border:1px solid rgba(164,19,60,.25);background:#fff;font-size:12px;font-weight:500;text-align:center;transition:transform .12s ease,background .15s ease,color .15s ease,border-color .15s ease}
+.sched-chip:active{transform:scale(.95)}
+.sched-chip.is-selected{background:var(--wine);border-color:var(--wine);color:#fff;font-weight:600;box-shadow:0 4px 12px rgba(119,7,39,.25)}
+.sched-reason{width:100%;min-height:100px;padding:12px;border:1px solid rgba(164,19,60,.22);border-radius:12px;font:inherit;font-size:13px;background:var(--paper);resize:vertical;transition:border-color .15s ease,box-shadow .15s ease}
+.sched-reason:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 3px rgba(119,7,39,.12);background:#fff}
+.sched-slots{display:grid;gap:8px;animation:sched-in .2s ease}
+.sched-slot{display:grid;gap:3px;padding:12px;border-radius:14px;border:1px solid rgba(164,19,60,.25);background:#fff;text-align:center;transition:transform .12s ease,background .2s ease,color .2s ease,border-color .2s ease}
+.sched-slot:active{transform:scale(.97)}
+.sched-slot-day{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--muted)}
+.sched-slot strong{font-size:12px;font-weight:600}
+.sched-slot.is-selected{background:linear-gradient(135deg,var(--wine),#4d041a);border-color:transparent;color:#fff;box-shadow:0 6px 16px rgba(119,7,39,.25)}
+.sched-slot.is-selected .sched-slot-day{color:rgba(255,255,255,.85)}
+.sched-success{display:flex;gap:12px;align-items:flex-start;background:var(--rose);border-radius:14px;padding:14px;animation:sched-in .25s ease}
+.sched-success-icon{width:26px;height:26px;flex-shrink:0;border-radius:50%;display:grid;place-content:center;background:#fff;color:#A4133C;font-weight:700}
+.sched-success-text{display:grid;gap:4px;min-width:0}
+.sched-success-text strong{font-size:15px;font-weight:600}
+.sched-success-text p{font-size:12px;color:var(--muted)}
+.sched-submit{width:100%}
+
+/* Agendar cita: misma jerarquía y paleta que SwiftUI. */
+.sched-intro{display:grid;gap:10px;padding:22px;border-radius:22px;background:linear-gradient(135deg,var(--wine),#4d041a);color:white;box-shadow:0 8px 24px #77072720}
+.sched-eyebrow{font-size:10px;font-weight:700;letter-spacing:1.4px;opacity:.8}
+.sched-intro h2{font-size:24px;line-height:1.15;letter-spacing:-.6px}
+.sched-intro p{font-size:13px;line-height:1.6;opacity:.9}
+.sched-intro small{font-size:10px;line-height:1.5;opacity:.8}
+.sched-fields>.sched-hint,.sched-field:last-child{grid-column:1/-1}
+.sched-hint{line-height:1.6}
+.sched-summary{display:grid;gap:8px;padding:16px;border:1px solid #a4133c30;border-radius:18px;background:var(--rose)}
+.sched-summary strong{color:var(--wine);font-size:14px}.sched-summary p{font-size:13px;line-height:1.6}.sched-summary small{color:var(--muted);line-height:1.5}
+.sched-chip,.sched-slot{min-height:44px}.sched-slot.is-selected::after{content:'✓';font-weight:700}
+.sched-card:focus-within{box-shadow:0 6px 22px #77072712}
+.sched-reason{min-height:120px;line-height:1.6}
+@media(prefers-reduced-motion:reduce){.sched-card,.sched-success,.sched-intro,.sched-chip,.sched-slot{animation:none!important;transition:none!important}}
+
+/* Formulario equivalente al apilado nativo; horarios con espacio para la franja. */
+.sched-fields{grid-template-columns:minmax(0,1fr)}
+.sched-slots .sched-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.sched-chip.is-selected::before{content:"\2713";font-weight:700}
+.sched-chip:focus-visible,.sched-slot:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.sched-slots{animation:none!important}.sched-chip:active,.sched-slot:active{transform:none}}
+
+/* Doctor: cards y accesos compartidos con el dashboard del paciente. */
+.doctor-today{display:grid;gap:10px}.doctor-today .dash-time{font-size:36px}
+.doctor-history,.doctor-schedule{display:grid;gap:14px}.doctor-history .section-title,.doctor-schedule .section-title{margin:0}
+.doctor-field{display:grid;gap:6px;font-size:12px;font-weight:600;min-width:0}
+.doctor-field input{width:100%;min-width:0;min-height:44px;border:1px solid #a4133c40;border-radius:12px;padding:10px;background:var(--paper);font:inherit;color:inherit}
+.doctor-patients,.doctor-results{display:grid;gap:10px}
+.doctor-patient{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px;padding:12px;border:1px solid transparent;border-radius:12px;background:var(--paper);text-align:left;color:var(--wine)}
+.doctor-patient div{display:grid;gap:4px}.doctor-patient.is-selected{background:var(--rose);border-color:var(--wine)}
+.doctor-patient:active{opacity:.8}.doctor-toggle{display:flex;gap:10px;align-items:center;min-height:44px;font-size:13px}.doctor-toggle input{width:20px;height:20px;accent-color:var(--wine)}
+.doctor-dates{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.doctor-visit{display:grid;gap:8px;padding:14px;border:1px solid var(--rose);border-radius:14px;background:white;font-size:13px;line-height:1.5}
+.doctor-status{font-size:11px;color:var(--wine)}.doctor-shift{display:flex;align-items:flex-start;gap:12px;padding:8px 0;font-size:13px}.doctor-shift>div{display:grid;gap:4px}.doctor-shift p{font-size:12px;color:var(--muted)}.doctor-shift small,.doctor-clock{color:var(--wine)}
+.doctor-history button:focus-visible,.doctor-schedule button:focus-visible,.doctor-field input:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+
+/* Doctor: destinos visibles distribuidos en todo el ancho. */
+.bottom-nav.doctor-nav{grid-template-columns:repeat(5,minmax(0,1fr))}
+
+/* Agenda de Consultas: paleta y cards compartidas con el panel del paciente. */
+.consult-count{display:flex;gap:8px;align-items:baseline}.consult-count strong{font-size:36px}.consult-count span{font-size:12px}
+.consult-days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.consult-day{min-height:44px;border-radius:12px;background:var(--paper);color:var(--wine);font-size:12px;font-weight:600}.consult-day.is-selected{background:var(--rose);box-shadow:inset 0 0 0 1px #77072735}
+.consult-demo{padding:14px;border-radius:14px;background:var(--rose);color:var(--wine);font-size:12px;line-height:1.6}
+.consult-card{border:1px solid #a4133c25}.consult-head{display:flex;gap:12px;align-items:center}.consult-head h3{font-size:15px;line-height:1.4}.consult-avatar{width:40px;height:40px;flex-shrink:0;border-radius:50%;background:var(--rose);color:var(--wine);display:grid;place-content:center;font-size:12px;font-weight:700}
+.consult-time{font-size:15px;color:var(--wine)}.consult-status{justify-self:start;padding:6px 10px;border-radius:999px;background:var(--rose);color:var(--wine);font-size:11px;font-weight:600}
+.consult-day:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+
+/* Ticket de consulta: vino de marca y azul #2196f3 de la captura de referencia. */
+.consult-demographics{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.consult-field{display:grid;gap:5px;min-width:0;text-align:left}.consult-field>span{font-size:11px;color:var(--muted);font-weight:600}.consult-field p{font-size:13px;line-height:1.6;overflow-wrap:anywhere;color:#242936}
+.consult-ticket{display:grid;justify-items:center;gap:22px;border-top:1px dashed #a4133c40;padding:22px 0 0;margin-top:8px;min-width:0}.consult-ticket h2{font-size:27px;font-weight:700;line-height:1.2;text-align:center}
+.consult-ticket-check{width:82px;height:82px;border-radius:50%;display:grid;place-content:center;background:var(--wine);color:white;font-size:44px;font-weight:700}
+.consult-ticket-date{display:grid;gap:8px;text-align:center;background:var(--rose);padding:18px;border-radius:16px;width:100%;line-height:1.5}.consult-ticket-date span{font-size:11px;color:var(--muted)}.consult-ticket-date strong{font-size:15px}
+.consult-ticket-fields{display:grid;gap:18px;width:100%;padding:18px;background:var(--paper);border-radius:16px}
+.consult-ticket-primary{background:#2196f3;color:white;border-radius:12px;min-height:54px;width:100%;font-weight:600;padding:12px;font-size:15px}.consult-ticket-primary:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+
+/* Laboratorios de diseño, integrados al expediente seleccionado. */
+.clinical-lab-card,.clinical-lab-form,.clinical-lab-list{display:grid;gap:14px}.clinical-lab-card .section-title{margin:0}.clinical-lab-form{margin:0}
+.clinical-lab-card select,.clinical-lab-form select,.clinical-lab-form textarea{width:100%;min-width:0;min-height:44px;border:1px solid #a4133c40;border-radius:12px;background:var(--paper);font:inherit;padding:10px;color:inherit}.clinical-lab-form textarea{min-height:110px;resize:vertical}
+.clinical-lab-state{justify-self:start;display:inline-flex;border-radius:999px;padding:6px 10px;background:var(--rose);color:var(--wine);font-size:11px;font-weight:600}.clinical-lab-state.is-completed{background:#e3f6ea}
+.clinical-lab-list details{display:grid;gap:10px}.clinical-lab-list summary{cursor:pointer;min-height:44px;padding:12px 0;font-weight:600;color:var(--wine)}.clinical-lab-list details .consult-field{margin-top:10px}
+
+.clinical-lab-state.is-processing{background:#e7f1fd}.clinical-lab-state.is-pending{background:#fff2d9}.clinical-lab-state.is-rejected{background:#fde2e2}.applicant-periods{display:flex;gap:10px}.applicant-nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px}.applicant-nav .applicant-tab{flex:1 1 0;min-width:0;border:0;border-radius:10px;padding:10px 8px;background:#fff;color:var(--wine);font-size:13px;font-weight:600}.applicant-nav .applicant-tab.is-active{background:var(--wine);color:#fff}.applicant-nav .text-button{width:100%}.period-choice[aria-pressed="true"]{border-color:var(--wine);box-shadow:inset 0 0 0 1px var(--wine)}
+
+.clinical-result-table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}.clinical-result-table th,.clinical-result-table td{padding:8px 4px;border-bottom:1px solid #77072720;text-align:left;overflow-wrap:anywhere}.clinical-result-table th{color:var(--wine);font-weight:600}
+
+/* Tickets internos: permanecen dentro de .screen-content y del marco del teléfono. */
+.clinical-landing{display:grid;gap:10px;padding:22px;border-radius:22px;background:linear-gradient(135deg,var(--wine),#4d041a);color:white;margin-bottom:10px;box-shadow:0 8px 22px #77072720}.clinical-landing h2{font-size:24px;line-height:1.2}.clinical-landing p{font-size:12px;line-height:1.7;opacity:.9}
+.clinical-ticket{display:grid;gap:22px;width:100%;min-width:0;padding:20px;border:1px solid #77072715;border-radius:24px;background:white;box-shadow:0 12px 28px #77072710;box-sizing:border-box}
+.clinical-ticket-nav{display:flex;align-items:center;justify-content:space-between;gap:12px}.clinical-ticket-nav>span{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px}.clinical-ticket-nav .text-button{padding-left:0;font-weight:600;min-height:44px}
+.clinical-ticket-icon{justify-self:center;display:grid;place-content:center;width:82px;height:82px;border-radius:50%;background:var(--wine);color:white;font-size:42px;font-weight:700}
+.clinical-ticket-title{font-size:27px!important;line-height:1.2;text-align:center;letter-spacing:-.6px}.clinical-ticket-patient{text-align:center;font-size:15px;color:var(--muted);font-weight:600}
+.clinical-ticket-context{display:grid;gap:8px;text-align:center;padding:18px;border-radius:16px;background:var(--rose);font-size:13px;overflow-wrap:anywhere}.clinical-ticket-context strong{font-size:16px}.clinical-ticket-note{font-size:10px;text-align:center;color:var(--muted);line-height:1.5}
+.clinical-ticket>.clinical-lab-form{gap:18px}.clinical-ticket .clinical-lab-card{padding:16px;border:1px solid #77072712;box-shadow:none}.clinical-ticket .primary{background:#2196f3;border-radius:12px;min-height:54px;font-size:15px;font-weight:600}
+.clinical-ticket .clinical-lab-form>.doctor-field{font-size:12px}.clinical-ticket input,.clinical-ticket select,.clinical-ticket textarea{min-width:0;width:100%;box-sizing:border-box}.clinical-ticket .consult-field{padding-bottom:4px}
+
+.clinical-flow .hospital-header{padding-bottom:24px;min-height:140px}.clinical-flow .screen-content{gap:16px}
+
+.clinical-ticket-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.clinical-ticket-group{display:grid;gap:14px;min-width:0;border:0;border-top:1px dashed #77072735;margin:0;padding:18px 0 0}.clinical-ticket-group legend{font-size:11px;font-weight:700;color:var(--wine);letter-spacing:.4px;padding:0 8px 0 0}
+.clinical-ticket .clinical-lab-form>.primary{box-shadow:0 6px 14px #2196f330}.clinical-ticket .doctor-field input,.clinical-ticket .doctor-field select,.clinical-ticket .doctor-field textarea{border-radius:12px;background:#f8f8fa}
+
+/* Pacientes: búsqueda contextual, coincidencias y cronología dentro del ticket. */
+.patient-matches{display:grid;gap:12px}.patient-match-count{font-size:12px;color:var(--muted);padding:4px 0}
+.patient-match-card{display:flex;align-items:flex-start;gap:12px;min-width:0;padding:16px;text-align:left;border:1px solid #77072722;border-radius:18px;background:linear-gradient(135deg,#fff,#fff9fb);box-shadow:0 5px 16px #77072708}.patient-match-card:active{opacity:.8}.patient-match-card:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+.patient-match-avatar{display:grid;place-content:center;flex-shrink:0;width:44px;height:44px;border-radius:15px;background:var(--rose);color:var(--wine);font-weight:700;font-size:13px}
+.patient-match-info{display:grid;gap:8px;min-width:0}.patient-match-info strong{font-size:17px;color:#242936}.patient-match-info small{font-size:11px;color:var(--muted);line-height:1.5}.patient-match-progress{font-size:11px;color:var(--wine);font-weight:600}.patient-match-link{font-size:12px;font-weight:700;color:var(--wine)}
+.patient-history-row{position:relative;display:grid;gap:10px;border-left:3px solid var(--wine);padding:14px 14px 14px 18px;background:var(--paper);border-radius:0 14px 14px 0;font-size:13px}.patient-history-row:before{content:'';position:absolute;left:-6px;top:18px;width:9px;height:9px;border-radius:50%;background:var(--wine);border:2px solid white}.patient-history-date{font-size:11px;color:var(--wine);font-weight:600}.patient-history-row p{font-size:12px;line-height:1.6;color:var(--muted)}
+
+.patient-visit-state{justify-self:start;font-size:11px;color:var(--wine);background:var(--rose);padding:5px 10px;border-radius:999px}
+
+/* Perfil: únicamente nombre y apellido del registro. */
+.identity-intro{display:flex;align-items:center;gap:14px;padding:10px 0 18px}.identity-intro h2{font-size:22px;font-weight:700;line-height:1.3}.identity-icon{display:grid;place-content:center;width:48px;height:48px;flex-shrink:0;border-radius:50%;background:var(--rose);color:var(--wine);font-size:25px}
+.identity-field{gap:10px}.identity-field>span{font-size:12px;font-weight:600;color:var(--muted)}.identity-field>strong{font-size:18px;font-weight:600;overflow-wrap:anywhere;line-height:1.5}
+
+/* Expediente propio del Paciente: mismo ticket interno, sin controles clínicos. */
+.patient-own-chart>.section-title{margin:0!important;font-size:17px;color:#242936}.patient-own-chart>.card{border:1px solid #77072712;border-radius:16px;padding:18px;background:#fff}.patient-own-chart .module-detail{padding-bottom:8px}.patient-own-chart .module-detail strong{font-size:12px;color:var(--muted)}.patient-own-chart .module-detail p{font-size:14px;line-height:1.6;color:#242936}
+
+/* Historial médico del Paciente: composición cronológica de la referencia. */
+.patient-history-card{position:relative;display:grid;gap:6px;width:100%;padding:18px 18px 18px 24px;margin:0 0 10px;text-align:left;border:1px solid #2429360f;border-radius:16px;background:#fff;box-shadow:0 3px 12px #2429360a;color:#242936}
+.patient-history-card:before{content:'';position:absolute;left:0;top:10px;bottom:10px;width:5px;background:#e3f6ea;border-radius:3px}.patient-history-card:focus-visible{outline:3px solid var(--wine);outline-offset:3px}.patient-history-card:active{opacity:.8}
+.patient-history-date{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:6px}.patient-history-date strong{font-size:16px;font-weight:700}.patient-history-date time{font-size:14px;color:var(--muted);white-space:nowrap;font-weight:500}
+.patient-history-specialty{font-size:12px;color:var(--muted);line-height:1.6}.patient-history-doctor{font-size:15px;font-weight:600;line-height:1.5}.patient-history-reason{display:grid;gap:4px;margin-top:7px}.patient-history-reason>span{font-size:10px;font-weight:600;color:var(--muted)}.patient-history-reason p{font-size:13px;line-height:1.6;overflow-wrap:anywhere}.patient-history-notice{font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:8px}
+
+/* Recetas del Paciente: composición por medicamento de receta.png. */
+.patient-rx-date{font-size:13px;color:var(--muted);font-weight:600;margin:8px 0 4px}
+.patient-rx-card{display:grid;gap:16px;padding:20px;border-radius:20px;border:1px solid var(--rose);background:#fff;margin-bottom:12px;min-width:0}
+.patient-rx-state{justify-self:start;border-radius:7px;padding:6px 12px;font-size:13px;font-weight:600;color:var(--wine)}.patient-rx-state.is-collected{background:#e3f6ea}.patient-rx-state.is-pending{background:#fff2d9}.patient-rx-state.is-unknown{background:var(--rose)}
+.patient-rx-title{display:flex;gap:10px;align-items:flex-start;color:#242936}.patient-rx-title>span{font-size:25px;line-height:1}.patient-rx-title h3{font-size:16px;font-weight:700;line-height:1.6;overflow-wrap:anywhere}
+.patient-rx-line{display:flex;justify-content:space-between;gap:14px;border-bottom:1px dashed #757e9170;padding:0 0 10px;color:var(--muted);font-size:13px;line-height:1.5}.patient-rx-line strong{font-size:14px}.patient-rx-line>span{text-align:right;overflow-wrap:anywhere;min-width:0}
+.patient-rx-observations{display:grid;gap:7px;font-size:13px;line-height:1.6;color:var(--muted)}.patient-rx-observations strong{font-size:14px}.patient-rx-observations p{overflow-wrap:anywhere}
+
+/* Cita asignada: entrada única y ticket interno; selección de turno AM/PM. */
+.patient-assigned-entry{display:flex;align-items:center;gap:16px;width:100%;padding:20px;text-align:left;border:1px solid var(--rose);border-radius:22px;background:#fff;box-shadow:0 8px 24px #77072708;min-height:104px}
+.patient-assigned-entry-icon{display:grid;place-items:center;flex-shrink:0;width:56px;height:56px;background:var(--rose);color:var(--wine);border-radius:17px;font-size:30px}.patient-assigned-entry-text{display:grid;gap:7px;flex:1;min-width:0}.patient-assigned-entry-text strong{font-size:18px;color:inherit}.patient-assigned-entry-text small{font-size:12px;color:var(--muted);line-height:1.5}.patient-assigned-entry-arrow{font-size:28px;color:var(--wine)}
+.patient-assigned-ticket .clinical-ticket-icon{width:92px;height:92px;font-size:46px}.patient-assigned-intro{text-align:center;font-size:13px;line-height:1.6;color:var(--muted)}.patient-assigned-group{display:grid;gap:16px;border:1px solid var(--rose);padding:18px;border-radius:18px;min-width:0}.patient-assigned-group h3{font-size:15px;font-weight:600}.patient-assigned-management{font-size:13px;min-width:0}.patient-assigned-management summary{padding:12px 0;color:var(--wine);cursor:pointer}
+.sched-preference-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:12px}.sched-preference-option{display:grid;align-content:start;gap:10px;padding:14px;min-height:136px;text-align:left;background:var(--paper);border:1px solid var(--rose);border-radius:16px;color:var(--muted);transition:background .18s,border-color .18s,transform .18s}.sched-preference-option.is-selected{background:var(--rose);border:2px solid var(--wine);padding:13px;color:var(--wine)}.sched-preference-option strong{font-size:16px}.sched-preference-option small{font-size:11px;line-height:1.5}.sched-preference-top{display:flex;align-items:center;justify-content:space-between;font-size:23px}.sched-preference-mark{width:19px;height:19px;border:1px solid currentColor;border-radius:50%;display:grid;place-content:center;font-size:12px}.is-selected .sched-preference-mark{color:white;background:var(--wine);border-color:var(--wine)}.patient-assigned-entry:focus-visible,.sched-preference-option:focus-visible{outline:3px solid var(--wine);outline-offset:3px}.patient-assigned-entry:active,.sched-preference-option:active{transform:scale(.99)}
+@media(prefers-reduced-motion:reduce){.sched-preference-option{transition:none}.patient-assigned-entry:active,.sched-preference-option:active{transform:none}}
+
+/* Perfil del Paciente y guía pública: paleta y cards existentes. */
+.patient-profile-hero,.hospital-info-hero{padding:26px;border-radius:24px;background:linear-gradient(135deg,var(--wine),#4d041a);color:white;display:grid;gap:14px}.patient-profile-hero{text-align:center;justify-items:center}.patient-profile-hero h2{font-size:23px;line-height:1.3;overflow-wrap:anywhere}.patient-profile-hero p{font-size:13px}.patient-profile-avatar{display:grid;place-items:center;width:80px;height:80px;border-radius:50%;background:white;color:var(--wine);font-size:27px;font-weight:700}.patient-profile-contact{gap:0}.patient-profile-contact h2{margin-bottom:8px}.profile-contact-row{display:flex;gap:14px;align-items:flex-start;padding:17px 0;border-bottom:1px solid var(--rose)}.profile-contact-row:last-child{border-bottom:0;padding-bottom:4px}.profile-contact-icon{display:grid;place-items:center;width:42px;height:42px;flex-shrink:0;background:var(--rose);color:var(--wine);border-radius:13px;font-size:21px}.profile-contact-row>div{display:grid;gap:7px;min-width:0}.profile-contact-row strong{font-size:14px;font-weight:500;overflow-wrap:anywhere}.profile-contact-row>div>span{font-size:11px;font-weight:600;color:var(--muted)}
+.hospital-info-hero h2{font-size:25px;line-height:1.25;letter-spacing:-.4px}.hospital-info-hero p{font-size:13px;line-height:1.6}.hospital-info-hero small{font-size:11px}.hospital-info-emblem{display:grid;place-items:center;background:var(--rose);color:var(--wine);width:48px;height:48px;border-radius:15px;font-size:29px}.hospital-info-card{display:grid;gap:16px}.hospital-info-card h3{font-size:19px}.hospital-location-heading{display:grid;grid-template-columns:44px 1fr;align-items:center;gap:6px 12px;padding:16px;background:var(--rose);border-radius:16px}.hospital-location-pin{grid-row:span 2;font-size:38px;color:var(--wine)}.hospital-location-heading strong{font-size:14px}.hospital-location-heading small{font-size:11px;color:var(--muted)}.hospital-info-copy{font-size:13px;line-height:1.7}.info-action{display:flex;align-items:center;justify-content:center;min-height:48px;padding:12px 16px;border-radius:12px;background:var(--wine);color:white;font-weight:600;text-decoration:none;text-align:center}.hospital-contact-number{font-size:24px;color:var(--wine);letter-spacing:.4px}.info-text-link,.info-source{color:var(--wine);font-weight:600;line-height:1.5;text-underline-offset:3px}.info-text-link{font-size:13px}.info-source{font-size:11px}.hospital-specialties{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.hospital-specialty{display:grid;align-content:start;gap:12px;background:var(--rose);border-radius:16px;padding:14px;min-height:108px}.hospital-specialty>span{font-size:23px;color:var(--wine)}.hospital-specialty strong{font-size:13px;line-height:1.4;overflow-wrap:anywhere}.info-action:focus-visible,.info-text-link:focus-visible,.info-source:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+
+/* Cronología de laboratorios del expediente y detalle interno. */
+.clinical-lab-timeline{display:grid;gap:14px}.clinical-lab-history-card{position:relative;display:grid;gap:14px;padding:18px;border:1px solid var(--rose);border-radius:18px;background:white;min-width:0}.clinical-lab-history-card:before{content:"";position:absolute;left:0;top:20px;bottom:20px;width:3px;border-radius:3px;background:var(--wine)}.clinical-lab-history-heading{display:flex;align-items:flex-start;gap:14px}.clinical-lab-history-heading>div:last-child{min-width:0;display:grid;gap:7px}.clinical-lab-history-heading h3{font-size:15px;line-height:1.45}.clinical-lab-date-badge{display:grid;justify-items:center;gap:3px;flex-shrink:0;min-width:55px;padding:10px;background:var(--rose);color:var(--wine);border-radius:14px}.clinical-lab-date-badge strong{font-size:23px}.clinical-lab-date-badge span{font-size:11px;font-weight:600}.clinical-lab-open{min-height:44px;background:transparent;color:var(--wine);font-weight:600;text-align:left;border-top:1px solid var(--rose);padding:12px 0 0}.clinical-lab-open:focus-visible{outline:3px solid var(--wine);outline-offset:3px}.clinical-lab-detail-name{font-size:20px;line-height:1.4}.clinical-result-value{display:grid;gap:8px;padding:16px;background:var(--rose);border-radius:14px}.clinical-result-value>span{font-size:13px;font-weight:600}.clinical-result-value>strong{font-size:20px;color:var(--wine);overflow-wrap:anywhere}.clinical-result-value>small{font-size:11px;color:var(--muted);line-height:1.5}
+
+/* Identidad y datos personales del expediente: solo lectura. */
+.record-person-identity{display:flex;align-items:center;gap:14px;padding:16px;border-radius:18px;background:var(--rose)}.record-person-avatar{display:grid;place-items:center;width:58px;height:58px;flex-shrink:0;border-radius:18px;background:var(--wine);color:white;font-size:22px;font-weight:700}.record-person-identity>div{display:grid;gap:6px;min-width:0}.record-person-identity h3{font-size:19px;line-height:1.4;overflow-wrap:anywhere}.record-person-identity p{font-size:11px;color:var(--muted);line-height:1.5}.record-person-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.record-person-field{display:grid;align-content:start;gap:7px;min-height:76px;padding:12px;border-radius:13px;background:var(--paper)}.record-person-field>span,.record-person-contact>div>span{font-size:11px;font-weight:600;color:var(--muted)}.record-person-field strong,.record-person-contact strong{font-size:14px;font-weight:500;line-height:1.5;overflow-wrap:anywhere}.record-person-contact{display:flex;align-items:flex-start;gap:12px;padding:5px 0}.record-person-contact-icon{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;border-radius:11px;background:var(--rose);color:var(--wine);font-size:19px}.record-person-contact>div{display:grid;gap:6px;min-width:0}
+
+/* Detalle de examen: identidad mínima primero, informe después. */
+.lab-detail-identity{display:flex;align-items:center;gap:14px;min-width:0}.lab-detail-identity .consult-field{min-width:0}.lab-detail-identity .consult-field p{font-size:18px;font-weight:600}.lab-detail-contact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px;background:var(--rose);border-radius:14px}.lab-detail-contact>div{min-width:0;overflow-wrap:anywhere}.lab-detail-patient .consult-field,.lab-detail-exam .consult-field{margin:0;min-width:0}.lab-detail-patient strong,.lab-detail-exam p{overflow-wrap:anywhere}.lab-detail-result .clinical-result-value{border:1px solid var(--rose);padding:18px;gap:10px}.lab-detail-result .clinical-result-value>strong{font-size:25px}.lab-detail-result .clinical-result-value>small:last-child{border-top:1px solid #77072718;padding-top:10px}.clinical-result-label{text-transform:uppercase;letter-spacing:.6px;font-size:10px!important}.lab-detail-result .clinical-result-value>span{font-size:14px;line-height:1.5}
+
+.record-person-content{display:grid;gap:16px;min-width:0}
+
+/* Solicitante: controles adaptables y texto íntegro en anchos de iPhone. */
+.applicant-nav{flex-shrink:0;padding:0 16px 24px}
+.applicant-nav button,.applicant-periods button{min-height:44px;white-space:normal;overflow-wrap:anywhere}
+.applicant-periods>*{flex:1;min-width:0}
+.auth-card:has(#ap-specialty) select,.auth-card:has(#ap-specialty) textarea{width:100%;min-width:0;max-width:100%;padding:14px;border:1px solid var(--rose);border-radius:12px;background:var(--paper);font:inherit}
+.auth-card:has(#ap-specialty) textarea{min-height:96px;resize:vertical}
+.auth-card:has(#ap-specialty),.auth-card:has(.applicant-periods),.auth-card:has(.doctor-visit){overflow-wrap:anywhere}
+/* Admission requests share the native wine/white treatment and never imply a bed reservation. */
+.admission-form-card{background:#fff;border:1px solid #eedee4;border-radius:22px;padding:20px;display:grid;gap:16px;box-shadow:0 8px 28px #600b2410}
+.admission-form-card fieldset{border:0;margin:0;padding:0;display:grid;gap:16px;min-width:0}
+.admission-form-card h2,.admission-form-card h3{margin:0;color:var(--wine,#7a183e)}
+.admission-form-card textarea{min-height:110px;resize:vertical}
+.admission-form-card fieldset:disabled{opacity:.7}
+.admission-list-header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.admission-detail{width:100%;padding-top:12px;overflow-wrap:anywhere}
+.admission-detail summary{cursor:pointer;color:var(--wine,#7a183e);font-weight:600;padding:8px 0}
+.admission-event{border-left:3px solid #ead3dd;padding-left:12px;font-size:12px;color:#76656d}
+@media(max-width:420px){.admission-form-card{padding:16px}.admission-module .directory-patient{width:100%;white-space:normal;text-align:left}}
+.lab-test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.lab-test-card{display:grid;grid-template-columns:24px 1fr;gap:6px 10px;background:#faf7f8;border:1px solid #eadde2;border-radius:16px;padding:16px;text-align:left;min-height:92px;color:var(--wine)}
+.lab-test-card.is-selected{background:#fbeaf0;border-color:var(--wine)}
+.lab-test-card small{grid-column:2;color:var(--muted)}.lab-test-check{grid-row:span 2;font-size:20px}
+.lab-order-card{display:grid;gap:10px;padding:20px;border:1px solid #eadde2;border-radius:20px;background:white;overflow-wrap:anywhere}
+.lab-order-card h3{font-size:16px}.lab-order-card summary{color:var(--wine);cursor:pointer;padding:8px 0;font-weight:600}
+.lab-state{justify-self:start;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:600;background:#fff3cc;color:#87691e}
+.lab-state.is-processing{background:#e6f0ff;color:#3c6395}.lab-state.is-completed{background:#e5f4eb;color:#35714c}
+@media(max-width:420px){.lab-test-grid{grid-template-columns:1fr}.lab-order-card{padding:16px}}
+
+/* Doctor: consultation workspace and personal notification inbox. */
+.doctor-dashboard-bell{border:1px solid #e9d4dc;border-radius:16px;background:#fff5f8;color:#76243f;min-width:48px;min-height:48px;font-size:21px;cursor:pointer}
+.notification-count{font:700 11px system-ui;display:inline-grid;place-items:center;min-width:19px;height:19px;border-radius:50%;background:#fff;color:#76243f;margin-left:4px}
+.doctor-alert-heading{padding:24px;border-radius:22px;background:linear-gradient(135deg,#642039,#923952);color:white}
+.doctor-alert-heading h2{margin:12px 0 8px}.doctor-alert-heading p{font-size:13px;line-height:1.6}.doctor-alert-symbol{font-size:30px}
+.doctor-alert-card{border-left:4px solid transparent!important;border-radius:18px!important;overflow-wrap:anywhere}.doctor-alert-card.is-unread{border-left-color:#8c3655!important;background:#fff9fb!important}
+.doctor-due-notice{padding:18px;border-radius:16px;background:#fff5df;border:1px solid #edd49d;line-height:1.6}
+.consultation-patient{padding:24px;border-radius:22px;background:#fff;border:1px solid #ecdce2;box-shadow:0 8px 28px #59233508}
+.consultation-patient h2{margin:12px 0 4px}.consultation-patient>strong{display:inline-block;padding:7px 12px;border-radius:20px;color:#285e4d;background:#e6f4ed;margin:10px 0}
+.consultation-history,.consultation-complete{border:1px solid #e7d8df;border-radius:18px;background:white;padding:18px;line-height:1.6}
+.consultation-history summary,.consultation-complete summary{font-weight:700;color:#76243f;cursor:pointer;min-height:30px}
+.consultation-history .module-detail p,.consultation-editor textarea{white-space:pre-wrap;overflow-wrap:anywhere}
+.consultation-section{min-width:0;border:1px solid #eadce1;border-radius:18px;padding:20px;margin:12px 0;background:#fff}
+.consultation-section legend{padding:0 8px;color:#76243f;font-weight:700;font-size:16px}.consultation-section .scope-note{margin:0 0 16px}
+.consultation-measures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.consultation-editor textarea{min-height:100px;resize:vertical}.consultation-editor .module-field{margin-bottom:14px}
+.consultation-complete{background:#f6faf7;border-color:#d5e7dc}.consultation-complete p{font-size:13px;color:#4d6154}
+@media(max-width:380px){.consultation-measures{grid-template-columns:1fr}.consultation-section{padding:14px}.consultation-patient{padding:18px}}
+
+.doctor-header-alert{background:#fff4d9!important;color:#633c13!important;border-radius:12px;padding:10px 14px;font-size:13px!important;line-height:1.5}
+
+/* Panel general Doctor: una identidad, resumen compacto y avisos anclados. */
+.portal{position:relative}.doctor-day-summary{padding:20px;border-radius:20px;background:linear-gradient(125deg,#760d30,#550b29);color:#fff;box-shadow:0 8px 24px #63162d12}
+.doctor-day-summary .dash-label{opacity:.8;font-size:10px;letter-spacing:1.2px}.doctor-day-summary h3{font-size:16px;margin:10px 0 18px;text-transform:capitalize}
+.doctor-day-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.doctor-day-stats>div{display:flex;flex-direction:column;gap:6px;padding:12px 8px;border-radius:12px;background:#ffffff12}.doctor-day-stats strong{font-size:28px;line-height:1.2}.doctor-day-stats span{font-size:11px}
+.doctor-next-visit{padding:20px;background:#fff;border:1px solid #eddee4;border-radius:20px;box-shadow:0 5px 20px #4b102305}.doctor-next-visit .dash-label{font-size:10px;letter-spacing:1px;color:var(--wine);font-weight:700}.doctor-next-visit h3{font-size:18px;margin:12px 0 8px;color:var(--ink)}.doctor-next-visit p{font-size:13px;line-height:1.6;color:var(--muted)}.doctor-next-visit .module-action{margin-top:14px}
+.notification-backdrop{position:absolute;inset:0;z-index:40;background:#24142120;border:0;border-radius:0;cursor:default}.notification-popover{position:absolute;z-index:41;top:62px;right:12px;width:calc(100% - 24px);max-width:370px;max-height:calc(100% - 90px);display:flex;flex-direction:column;background:#fff;color:var(--ink);border:1px solid #eadce2;border-radius:20px;box-shadow:0 18px 60px #35132133;overflow:hidden;text-align:left}.notification-popover:before{content:'';position:absolute;right:24px;top:0;width:34px;height:3px;background:var(--wine);border-radius:0 0 4px 4px}
+.notification-popover-head{display:flex;align-items:center;justify-content:space-between;padding:20px 18px 14px;border-bottom:1px solid #f0e7eb;flex-shrink:0}.notification-popover-head h2{font-size:18px;margin:0 0 4px}.notification-popover-head p{font-size:12px;color:var(--muted)}.notification-close{background:#f7eff2;color:var(--wine);width:36px;height:36px;border-radius:50%;font-size:25px}.notification-popover-list{overflow:auto;overscroll-behavior:contain;padding:12px;display:grid;gap:10px;min-height:70px;max-height:380px}.notification-item{position:relative;border:1px solid #eee7ea;border-radius:14px;padding:14px;background:#faf9fa;overflow-wrap:anywhere}.notification-item.unread{background:#fff6f9;border-color:#edd4df;border-left:3px solid var(--wine)}.notification-item h3{font-size:13px;line-height:1.5;margin:0 0 6px}.notification-item p{font-size:12px;line-height:1.6;color:#58606c;margin-bottom:8px}.notification-item time{display:block;font-size:10px;color:var(--muted)}.notification-read{display:block;margin-top:10px;background:none;color:var(--wine);font-size:11px;font-weight:700;padding:6px 0}.notification-read-state{display:block;color:#537465;font-size:10px;margin-top:10px}.notification-refresh{flex-shrink:0;border-top:1px solid #f0e7eb;background:#fff;color:var(--wine);font-size:12px;font-weight:600;padding:15px}.notification-empty{padding:28px 12px;text-align:center;font-size:13px;line-height:1.7;color:var(--muted)}
+.notification-count[hidden],.doctor-header-alert[hidden]{display:none}
+@media(max-width:360px){.doctor-day-stats span{font-size:10px}.doctor-day-stats>div{padding:10px 6px}.dash-greeting .dash-avatar{width:44px;height:44px;flex-shrink:0}}
+
+/* Doctor: agenda por secciones y consulta médica A–E (paridad SwiftUI, 2026-11-19) */
+.consult-counters{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.consult-counters div{background:#ffffff26;border-radius:12px;padding:9px 10px;display:grid;gap:2px}.consult-counters strong{font-size:17px}.consult-counters span{font-size:10px;font-weight:600}
+.consult-filters{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.consult-filters .consult-day{flex:1 1 auto;min-width:88px}
+.consult-section-head{display:flex;align-items:center;justify-content:space-between;margin-top:14px}.consult-section-head .section-title{margin:0 2px}.consult-section-count{min-width:28px;text-align:center;padding:3px 10px;border-radius:999px;background:var(--rose);color:var(--wine);font-size:11px;font-weight:700}
+.consult-card{display:grid;gap:8px}.consult-card.is-active{border:2px solid var(--wine)}.consult-card.is-active .consult-status{background:var(--wine);color:#fff}.consult-when{display:flex;align-items:baseline;gap:8px}.consult-when small{color:var(--muted);font-size:11px;text-transform:capitalize}.consult-record{font-size:11px;font-weight:600;color:var(--wine)}.consult-head .consult-status{margin-left:auto}
+.consult-ticket-primary.consult-open,button.primary.consultation-open,button.primary.consultation-finish-button,button.primary.consultation-action{background:var(--wine);color:#fff;border-radius:14px;min-height:54px;font-size:14px;font-weight:700;letter-spacing:.3px}
+.consultation-status{background:var(--rose)!important;color:var(--wine)!important}
+.clinical-card{display:grid;gap:4px}.clinical-section-title{display:flex;align-items:center;gap:10px;font-size:16px;margin-bottom:8px}.clinical-section-letter{background:var(--wine);color:#fff;border-radius:999px;padding:3px 9px;font-size:11px;font-weight:700}
+.consultation-info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}
+.consultation-save-state{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:14px;background:var(--rose);color:var(--wine);font-size:12px;font-weight:600;position:sticky;top:0;z-index:2}.consultation-save-state .module-action{margin:0}.consultation-save-state[data-state=failed]{background:#fff0f3;color:#922741}.consultation-save-state[data-state=saved]{background:#e6f4ed;color:#285e4d}
+.consultation-vital .module-field{margin-bottom:4px}.consultation-issue{color:#922741;font-size:10px;line-height:1.4}.consultation-bmi{margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--rose);color:var(--wine);font-size:12px;font-weight:600}
+.consultation-note{display:grid;gap:4px;margin-bottom:10px}.consultation-required{color:var(--wine);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.consultation-finish{display:grid;gap:8px;margin:16px 0}.consultation-finish .module-action{width:100%;margin:0}
+.consultation-confirm{position:sticky;bottom:0;z-index:3;display:grid;gap:12px;padding:20px;border-radius:20px;background:#fff;border:2px solid var(--wine);box-shadow:0 -10px 30px #59233522;margin-top:12px}.consultation-confirm h2,.consultation-confirm h3{font-size:17px;line-height:1.35;color:var(--wine)}.consultation-confirm p{font-size:12px;line-height:1.55;color:#4b5263}.consultation-confirm-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.consultation-confirm-actions .module-action{margin:0;min-height:48px}
+.consultation-conflict,.consultation-leave,.consultation-done{display:grid;gap:8px;padding:16px;border-radius:16px;background:#fff;border:1px solid var(--wine);margin:10px 0}.consultation-conflict h3,.consultation-leave h3,.consultation-done h3{color:var(--wine);font-size:15px}
+.consultation-panel{display:grid;gap:10px;padding:16px;border-radius:18px;background:#fff;border:1px solid #eadce1}.consultation-panel>h2{font-size:18px;color:var(--wine)}
+@media(max-width:380px){.consultation-info-grid,.consultation-confirm-actions{grid-template-columns:1fr}}
+/* Rediseño del formulario de consulta (paridad con DoctorConsultationFormComponents.swift): paciente, cita y bloques A–C */
+.consultation-patient{display:grid;gap:14px;padding:22px;border:0;border-radius:24px;color:#fff;background:linear-gradient(135deg,var(--wine),#4d041a);box-shadow:0 12px 28px #77072730}
+.consultation-patient-top{display:flex;align-items:center;gap:14px;min-width:0}.consultation-patient-top>div{display:grid;gap:4px;min-width:0}.consultation-patient h2{margin:0;font-size:21px;line-height:1.25;overflow-wrap:anywhere}
+.consultation-patient .consult-avatar{width:62px;height:62px;font-size:20px;background:#fff;color:var(--wine);box-shadow:0 0 0 4px #ffffff40}
+.consultation-kicker{font-size:10px;font-weight:800;letter-spacing:1.2px;opacity:.8;text-transform:uppercase}
+.consultation-pills{display:flex;flex-wrap:wrap;gap:8px}.consultation-pill{padding:7px 12px;border-radius:999px;background:#ffffff26;border:1px solid #ffffff40;font-size:11px;font-weight:600}
+.consultation-patient .consultation-status{margin:0;padding:7px 12px;border-radius:999px;background:#fff!important;color:var(--wine)!important;font-size:11px}
+.consultation-section.clinical-card,.consultation-finish.clinical-card,.consultation-history.clinical-card{border:0;border-radius:22px;padding:20px;background:#fff;box-shadow:0 6px 20px #24293610}
+.consultation-block-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}.consultation-block-head .scope-note{padding:2px 0 0;margin:0}.consultation-block-head h3{font-size:16px;color:#242936;margin:0}
+.consultation-block-icon{position:relative;flex-shrink:0;width:44px;height:44px;border-radius:13px;display:grid;place-content:center;font-size:20px;background:linear-gradient(135deg,var(--wine),#4d041a)}
+.consultation-block-letter{position:absolute;right:-6px;bottom:-6px;width:20px;height:20px;border-radius:50%;display:grid;place-content:center;background:#fff;color:var(--wine);font-size:10px;font-weight:800;border:2px solid var(--rose)}
+.consultation-info-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.consultation-tile{display:flex;gap:10px;align-items:flex-start;padding:12px;border-radius:14px;background:var(--paper);min-width:0}.consultation-tile .module-detail{margin:0}.consultation-tile .module-detail strong{font-size:10px;font-weight:500;color:var(--muted)}.consultation-tile .module-detail p{font-size:12px;font-weight:600;color:#242936}
+.consultation-tile-icon{flex-shrink:0;width:32px;height:32px;border-radius:9px;display:grid;place-content:center;background:var(--rose);font-size:15px}
+.consultation-reason{display:grid;gap:8px;margin-top:14px}.consultation-reason strong{font-size:13px}.consultation-reason p{padding:14px 14px 14px 16px;border-radius:14px;background:#fbeaf08c;border-left:4px solid var(--wine);font-size:13px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
+.consultation-reported{display:grid;gap:8px;padding:12px;border-radius:12px;background:var(--paper);margin-bottom:8px}.consultation-reported .consultation-kicker{color:var(--muted);letter-spacing:.3px;text-transform:none;font-weight:600;font-size:11px}
+.consultation-chips{display:flex;flex-wrap:wrap;gap:6px}.consultation-chip{padding:6px 11px;border-radius:999px;background:var(--rose);color:var(--wine);font-size:12px;font-weight:600}
+.consultation-measures{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.consultation-measure{position:relative;display:grid;gap:6px;padding:14px;border-radius:16px;border:1px solid var(--rose);background:#fff;min-width:0}
+.consultation-measure-icon{position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;display:grid;place-content:center;background:var(--rose);font-size:14px}
+.consultation-measure .module-field{margin:0;font-weight:600;font-size:13px}.consultation-measure .module-field span{padding-right:36px}
+.consultation-measure input{font-size:24px!important;font-weight:600;padding:10px 12px!important;border-radius:12px!important;background:var(--paper)!important;font-variant-numeric:tabular-nums}
+.consultation-unit{justify-self:start;padding:3px 10px;border-radius:999px;background:var(--rose);color:var(--wine);font-weight:700;font-size:12px}
+.consultation-issue[data-state=hint]{color:var(--muted)}.consultation-issue[data-state=error]{color:#922741;font-weight:600}
+.consultation-bmi[hidden]{display:none}
+.consultation-note{position:relative;padding:4px 0 14px;border-bottom:1px solid #f0e6ea;margin-bottom:14px}.consultation-note:last-child{border-bottom:0;margin-bottom:0}
+.consultation-note .consultation-required{position:absolute;right:0;top:4px;padding:4px 8px;border-radius:999px;text-transform:none;letter-spacing:0;font-size:10px}
+.consultation-required[data-state=missing]{background:var(--rose);color:var(--wine)}.consultation-required[data-state=done]{background:#e3f6ea;color:#21804d}
+.consultation-note .module-field>span{font-size:14px;font-weight:600;color:#242936}.consultation-note textarea{min-height:120px!important;font-size:13px!important;line-height:1.55;border-radius:12px!important;background:var(--paper)!important;padding:14px!important}
+.consultation-service{display:grid;gap:4px;padding:14px;border-radius:16px;border:1.5px solid var(--rose);margin-bottom:10px}.consultation-service .scope-note{padding:0}
+.consultation-service-badge{justify-self:start;padding:3px 8px;border-radius:999px;background:var(--rose);color:var(--wine);font-size:10px;font-weight:700}
+.consultation-blockers{display:grid;gap:4px;padding:14px;border-radius:14px;background:var(--rose);color:var(--wine);font-size:12px}.consultation-ready{color:#21804d;font-weight:700;font-size:13px}
+@media(max-width:380px){.consultation-patient{padding:18px}.consultation-section.clinical-card,.consultation-finish.clinical-card{padding:16px}}
+/* Expedientes (paridad con DoctorRecordsView.swift y PatientHistoryView.swift) */
+.doctor-records{display:grid;gap:14px;min-width:0}
+.record-search{display:flex;align-items:center;gap:10px;min-height:58px;padding:0 16px;border-radius:18px;background:#fff;border:1.5px solid var(--rose);box-shadow:0 6px 18px #24293610}.record-search:focus-within{border-color:var(--wine);box-shadow:0 0 0 3px #77072720}
+.record-search input{flex:1;min-width:0;border:0;background:none;font-size:15px;color:#242936;padding:14px 0}.record-search input:focus{outline:0}.record-search-icon{color:var(--wine);font-size:20px}.record-search-status{font-size:11px;color:var(--muted)}
+.record-results{display:grid;gap:10px}.record-count{font-size:12px;font-weight:600;color:var(--muted);padding:2px}
+.record-result{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:16px;border-radius:18px;background:#fff;border:1px solid var(--rose);min-width:0}.record-result:hover,.record-result:focus-visible{border-color:var(--wine)}
+.record-result-text{display:grid;gap:7px;flex:1;min-width:0}.record-result-text strong{font-size:15px;color:#242936;overflow-wrap:anywhere}
+.record-chips{display:flex;flex-wrap:wrap;gap:6px}.record-chip{padding:4px 9px;border-radius:999px;background:var(--rose);color:var(--wine);font-size:11px;font-weight:600}
+.record-state{padding:3px 8px;border-radius:999px;font-size:10px;font-weight:700}.record-state.is-ok{background:#e3f6ea;color:#21804d}.record-state.is-warn{background:#fff2d9;color:#8a5a00}
+.record-header{display:grid;gap:14px;padding:22px;border-radius:24px;color:#fff;background:linear-gradient(135deg,var(--wine),#4d041a);box-shadow:0 12px 28px #77072730}
+.record-header-top{display:flex;align-items:center;gap:14px;min-width:0}.record-header-top>div{display:grid;gap:4px;min-width:0}.record-header h2{font-size:21px;line-height:1.25;overflow-wrap:anywhere}
+.record-header .consult-avatar{width:68px;height:68px;font-size:22px;background:#fff;color:var(--wine);box-shadow:0 0 0 4px #ffffff40}
+.record-header-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}.record-header-grid>div{display:grid;gap:2px;padding:10px;border-radius:12px;background:#ffffff24;min-width:0}.record-header-grid small{font-size:10px;opacity:.8}.record-header-grid strong{font-size:12px;overflow-wrap:anywhere}
+.record-actions{display:flex;flex-wrap:wrap;gap:8px}.record-actions .module-action{flex:1 1 140px;margin:0}
+button.primary.record-history-toggle{border-radius:16px;min-height:60px;font-size:14px;font-weight:800;letter-spacing:.4px;background:linear-gradient(135deg,var(--wine),#4d041a)}
+.record-timeline{display:grid;gap:12px;position:relative;padding-left:18px;border-left:2px solid var(--rose);margin-left:6px}
+.record-entry{position:relative;display:grid;gap:8px;width:100%;text-align:left;padding:14px;border-radius:16px;background:#fff;border:1px solid var(--rose)}.record-entry:before{content:'';position:absolute;left:-26px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 3px var(--rose)}
+.record-entry-top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}.record-entry-top strong{font-size:13px;color:#242936}.record-entry-top time{font-size:12px;font-weight:700;color:var(--wine)}.record-entry-doctor{font-size:11px;color:var(--muted)}
+.record-entry-line{display:grid;gap:2px}.record-entry-line span{font-size:10px;font-weight:700;color:var(--muted)}.record-entry-line p{font-size:12px;line-height:1.5;color:#242936;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.record-visit{display:grid;gap:12px}.record-visit-head{display:grid;gap:6px;padding:18px;border-radius:20px;color:#fff;background:linear-gradient(135deg,var(--wine),#4d041a);font-size:12px}.record-visit-head strong{font-size:15px}
+.record-visit-group{display:grid;gap:4px;padding:16px;border-radius:18px;background:#fff;box-shadow:0 6px 18px #24293610}.record-visit-group h3{font-size:14px;color:#242936;margin-bottom:4px}
+.patient-history-detail .record-visit-group{box-shadow:none;border:1px solid var(--rose)}
+.record-empty{display:grid;justify-items:center;gap:8px;text-align:center;padding:24px;border-radius:20px;background:#fff}.record-empty-icon{width:64px;height:64px;border-radius:50%;display:grid;place-content:center;background:var(--rose);font-size:28px}.record-empty strong{font-size:15px}
+/* Agenda de dos filtros (paridad con DoctorConsultationAgendaView.swift) */
+.agenda-hero{display:grid;gap:14px;padding:18px;border-radius:22px;color:#fff;background:linear-gradient(135deg,var(--wine),#4d041a);box-shadow:0 10px 26px #77072730}
+.agenda-hero-top{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}.agenda-hero-top>div{display:grid;gap:2px}.agenda-hero h2{font-size:26px;line-height:1.1}.agenda-hero-date{font-size:11px;font-weight:600;opacity:.9;text-align:right;text-transform:capitalize}
+.agenda-indicators{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.agenda-indicator{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center;text-align:left;padding:10px 12px;min-height:60px;border-radius:14px;background:#ffffff26;color:#fff}
+.agenda-indicator.is-selected{background:#fff;color:var(--wine)}.agenda-indicator-icon{grid-row:1 / span 2;font-size:18px}.agenda-indicator strong{font-size:22px;line-height:1;font-variant-numeric:tabular-nums}.agenda-indicator small{font-size:9px;font-weight:800;letter-spacing:.6px}
+.agenda-datebar{display:flex;align-items:center;gap:6px;padding:6px;border-radius:16px;background:#fff;border:1px solid var(--rose)}
+.agenda-step{width:40px;height:40px;flex-shrink:0;border-radius:50%;background:var(--rose);color:var(--wine);font-size:20px;font-weight:700}
+.agenda-date{position:relative;flex:1;min-width:0;display:flex;align-items:center;gap:8px;padding:0 8px;min-height:44px;cursor:pointer}.agenda-date-text{display:grid;min-width:0}.agenda-date-text small{font-size:9px;font-weight:800;color:var(--wine)}.agenda-date-text strong{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.agenda-date input{position:absolute;inset:0;opacity:0;width:100%;cursor:pointer}.agenda-date-icon{font-size:16px}
+.agenda-today{flex-shrink:0;padding:0 14px;min-height:40px;border-radius:999px;background:linear-gradient(135deg,var(--wine),#4d041a);color:#fff;font-weight:700;font-size:12px}.agenda-today:disabled{background:var(--paper);color:var(--muted);opacity:1}
+.agenda-search{display:flex;align-items:center;gap:10px;min-height:46px;padding:0 14px;border-radius:14px;background:#fff;border:1px solid var(--rose)}.agenda-search:focus-within{border-color:var(--wine)}.agenda-search input{flex:1;min-width:0;border:0;background:none;font-size:13px}.agenda-search input:focus{outline:0}.agenda-search-icon{color:var(--wine);font-size:18px}
+.agenda-list{display:grid;gap:10px}.agenda-order{font-size:11px;color:var(--muted)}.agenda-finished-at{font-size:11px;font-weight:700;color:#21804d}
+.agenda-list .consult-card .consult-time{font-size:18px;font-weight:800}
+/* Ingresos, laboratorio y recetas del médico (paridad visual con DoctorModuleView.swift) */
+button.primary.admission-new{border-radius:16px;min-height:56px;font-size:14px;font-weight:800;background:linear-gradient(135deg,var(--wine),#4d041a)}
+.admission-steps{display:grid;gap:16px;padding:20px;border-radius:22px;background:#fff;border:0;box-shadow:0 6px 20px #24293610}.admission-steps>h2{font-size:18px;color:#242936}
+.admission-steps fieldset{border:0;padding:0;margin:0;display:grid;gap:14px;min-width:0}
+.admission-steps .consultation-section{margin:0;padding:16px;border:1px solid var(--rose);box-shadow:none}
+.admission-steps select,.lab-selection select,.rx-form select,.rx-patient-card select{appearance:none;-webkit-appearance:none;padding:13px 40px 13px 14px!important;border-radius:12px!important;border:1.5px solid var(--rose)!important;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23770727' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center!important;font-weight:600;color:#242936!important}
+.admission-steps textarea,.lab-selection textarea,.rx-form textarea{border-radius:12px!important;background:var(--paper)!important;border:1px solid transparent!important;padding:14px!important;min-height:96px;font-size:13px!important}
+.admission-steps textarea:focus,.lab-selection textarea:focus,.rx-form textarea:focus,.rx-form input:focus,.lab-selection input:focus{outline:0;border-color:var(--wine)!important;background:#fff!important}
+.admission-patient{display:flex;align-items:center;gap:12px;padding:12px;border-radius:14px;background:var(--paper)}.admission-patient>div{display:grid;gap:2px;flex:1;min-width:0}.admission-patient strong{font-size:14px}.admission-patient small{font-size:11px;color:var(--wine);font-weight:600}
+.admission-steps .record-result small{font-size:11px;color:var(--muted)}
+.admission-list-header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}.admission-list-header h2{font-size:16px}.admission-list-header .module-action{margin:0;border-radius:999px}
+.admission-card{border-radius:18px;border:1px solid var(--rose);box-shadow:0 4px 14px #24293608;position:relative}.admission-card.is-urgent{border-color:var(--wine)}.admission-card.is-urgent:before{content:'Urgente';position:absolute;top:12px;right:12px;font-size:9px;font-weight:800;color:#fff;background:var(--wine);padding:3px 8px;border-radius:999px}
+.admission-detail summary{color:var(--wine);font-weight:600;cursor:pointer;padding:8px 0}
+.lab-selection{display:grid;gap:14px;padding:20px;border-radius:22px;background:#fff;border:0;box-shadow:0 6px 20px #24293610}.lab-selection>h2{font-size:18px}
+.lab-selection fieldset{border:0;padding:0;margin:0;display:grid;gap:12px;min-width:0}
+.lab-selection input[type=search]{border-radius:14px!important;background:var(--paper)!important;border:1px solid transparent!important;padding:13px 14px!important;font-size:13px!important}
+.lab-test-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.lab-test-card{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:10px;text-align:left;padding:12px;min-height:64px;border-radius:14px;background:#fff;border:1px solid var(--rose)}
+.lab-test-card .lab-test-check{grid-row:1 / span 2;font-size:18px;color:var(--muted)}.lab-test-card strong{font-size:13px;color:#242936}.lab-test-card small{font-size:11px;color:var(--muted)}
+.lab-test-card.is-selected{background:var(--rose);border:1.5px solid var(--wine)}.lab-test-card.is-selected .lab-test-check{color:var(--wine)}
+.lab-summary-title{font-size:13px;color:var(--wine)}
+.lab-order-card{display:grid;gap:6px;padding:16px;border-radius:18px;background:#fff;box-shadow:0 4px 14px #24293608;border:1px solid var(--rose)}.lab-order-card.has-result{border-color:#bfe3cc}
+.lab-order-top{display:flex;align-items:center;gap:10px}.lab-order-top h3{font-size:14px;color:#242936}.lab-order-icon{width:36px;height:36px;flex-shrink:0;border-radius:11px;display:grid;place-content:center;background:var(--rose);font-size:16px}.lab-order-card.has-result .lab-order-icon{background:#e3f6ea;color:#21804d;font-weight:800}
+.lab-order-card>p{font-size:13px}.lab-order-card>small{font-size:11px;color:var(--muted)}.lab-order-card summary{color:var(--wine);font-weight:600;cursor:pointer;padding:8px 0}
+.lab-state{justify-self:start;padding:4px 10px;border-radius:999px;font-size:10px;font-weight:700;background:#fff2d9;color:#8a5a00}.lab-state.is-processing{background:#e7f1fd;color:#1b5fa8}.lab-state.is-completed{background:#e3f6ea;color:#21804d}
+.rx-form{display:grid;gap:12px;padding:20px;border-radius:22px;background:#fff;box-shadow:0 6px 20px #24293610;margin:0}
+.rx-form input{border-radius:12px!important;background:var(--paper)!important;border:1px solid transparent!important;padding:12px!important}
+.rx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.rx-grid .module-field{margin:0}
+.rx-form button.primary{border-radius:14px;min-height:48px}
+.rx-review-head{display:grid;gap:4px;margin-top:6px}.rx-review-head>h3{font-size:13px;color:var(--wine)}
+.rx-line{border-left:4px solid var(--wine);border-radius:14px}.rx-issued{border-radius:16px;border:1px solid var(--rose)}
+.rx-patient-card{display:grid;gap:8px;padding:18px;border-radius:20px;background:#fff;box-shadow:0 6px 20px #24293610}.rx-patient-card .module-detail{padding:6px 0;border-bottom:1px solid var(--paper)}
+/* Paciente: citas con detalles a la vista, avisos propios y solicitud única (paridad con iOS) */
+.appointment-live{display:grid;gap:12px;padding:16px;border-radius:20px;background:#fff;border:1px solid var(--rose);box-shadow:0 4px 14px #24293608}
+.appointment-live.is-featured{padding:18px;border:1.5px solid #77072759;box-shadow:0 10px 24px #2429360f}.appointment-live.is-active{border-color:var(--wine)}
+.appointment-live-top{display:flex;align-items:flex-start;gap:12px}
+.appointment-live-day{flex-shrink:0;width:56px;height:60px;border-radius:16px;display:grid;place-content:center;text-align:center;background:var(--rose);color:var(--wine)}.appointment-live-day strong{font-size:22px;line-height:1}.appointment-live-day small{font-size:10px;font-weight:800}
+.is-featured .appointment-live-day{width:66px;height:70px;background:linear-gradient(135deg,var(--wine),#4d041a);color:#fff}.is-featured .appointment-live-day strong{font-size:28px}
+.appointment-live-text{display:grid;gap:3px;flex:1;min-width:0}.appointment-live-kicker{font-size:9px;font-weight:800;letter-spacing:1px;color:var(--wine)}.appointment-live-text h3{font-size:15px;color:#242936}.is-featured .appointment-live-text h3{font-size:18px}
+.appointment-live-text p{font-size:11px;color:var(--muted);text-transform:capitalize}.appointment-live-time{font-size:13px;color:var(--wine)}
+.appointment-live-state{flex-shrink:0;padding:4px 8px;border-radius:999px;font-size:10px;font-weight:700;background:var(--rose);color:var(--wine)}.appointment-live-state.is-in_progress{background:var(--wine);color:#fff}.appointment-live-state.is-completed{background:#e3f6ea;color:#21804d}.appointment-live-state.is-cancelled,.appointment-live-state.is-no_show{background:var(--paper);color:var(--muted)}
+.appointment-live-details{display:grid;gap:10px;padding:14px;border-radius:14px;background:var(--paper)}.appointment-live-details>div{display:grid;grid-template-columns:22px 1fr;column-gap:8px}.appointment-live-icon{grid-row:1 / span 2;font-size:14px}.appointment-live-details small{font-size:10px;color:var(--muted)}.appointment-live-details p{font-size:13px;color:#242936;overflow-wrap:anywhere}
+.appointment-live-note{font-size:12px;color:var(--muted)}.appointment-cancel-button{justify-self:start;color:#b3261e!important;padding-left:0}
+.appointment-cancel{display:grid;gap:8px}.appointment-cancel textarea{border-radius:12px;border:1px solid var(--rose);padding:12px;min-height:70px;font-size:13px}
+.attention-blocked{border:1.5px solid var(--rose);margin-bottom:8px}.attention-blocked p{max-width:340px}
+.notification-icon{float:left;width:30px;height:30px;border-radius:50%;display:grid;place-content:center;background:#fff;margin-right:10px;font-size:14px}
+/* Mi horario del médico (paridad con ContentView.schedule) */
+.schedule-hero .schedule-nav{display:flex;gap:8px;margin-top:6px}.schedule-step{width:38px;height:38px;border-radius:50%;background:#fff;color:var(--wine);font-size:20px;font-weight:700}.schedule-now{padding:0 14px;min-height:38px;border-radius:999px;background:#fff;color:var(--wine);font-weight:700;font-size:12px}
+.schedule-day{display:grid;gap:10px;padding:16px;border-radius:18px;background:#fff;border:1px solid var(--rose)}.schedule-day.is-today{border:1.5px solid var(--wine)}
+.schedule-day-head{display:flex;align-items:center;gap:8px}.schedule-day-head>div{display:grid;flex:1}.schedule-day-head strong{font-size:15px}.schedule-day-head small{font-size:11px;color:var(--muted)}
+.schedule-today{padding:3px 10px;border-radius:999px;background:var(--wine);color:#fff;font-size:10px;font-weight:700}.schedule-hours{font-size:12px;font-weight:600;color:var(--wine)}.schedule-free{font-size:13px;font-weight:600;color:var(--muted)}
+.schedule-line{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:10px;font-size:13px}.schedule-line strong{font-variant-numeric:tabular-nums;white-space:nowrap}
+.schedule-icon{width:34px;height:34px;border-radius:10px;display:grid;place-content:center;background:var(--rose)}.schedule-line.is-break .schedule-icon{background:#e3f6ea}.schedule-line.is-break strong{color:#21804d}.schedule-line.is-block strong{color:var(--wine)}.schedule-line.is-absence .schedule-icon{background:#fff2d9}.schedule-line.is-absence strong{color:#8a5a00}.schedule-line.is-shift .schedule-icon{background:var(--paper)}
+/* Solicitar atención (solo diseño; misma lógica) y solicitud reciente */
+.attention-form{display:grid;gap:14px}.attention-card{border-radius:20px!important;padding:18px!important;border:1px solid var(--rose);box-shadow:0 6px 18px #24293610;display:grid;gap:10px}
+.attention-card>h2{font-size:16px;color:#242936}.attention-card>p{font-size:12px;color:var(--muted)}
+.attention-personal{display:grid;gap:2px;padding:10px 12px;border-radius:12px;background:var(--paper)}.attention-personal small{font-size:10px;color:var(--muted)}.attention-personal strong{font-size:13px}
+.attention-symptoms{display:flex;flex-wrap:wrap;gap:8px}.attention-symptom{min-height:40px!important;padding:8px 14px!important;border-radius:999px!important;border:1px solid var(--rose)!important;background:var(--rose)!important;color:var(--wine)!important;font-weight:600}
+.attention-symptom[aria-pressed=true]{background:linear-gradient(135deg,var(--wine),#4d041a)!important;color:#fff!important;border-color:transparent!important}
+.attention-card select,.attention-card textarea{border-radius:12px!important;border:1.5px solid var(--rose)!important;padding:12px!important;background:#fff!important}
+.attention-card button.primary{border-radius:16px;min-height:52px;font-size:14px;font-weight:800;background:linear-gradient(135deg,var(--wine),#4d041a)}
+.attention-request{display:grid;gap:8px;padding:16px;border-radius:18px;background:#fff;border:1px solid var(--rose);box-shadow:0 4px 14px #24293608}
+.attention-request-head{display:flex;justify-content:space-between;gap:10px}.attention-request-head>div{display:grid;gap:2px}.attention-request-head small{font-size:11px;color:var(--muted)}
+.attention-request-state{align-self:start;padding:4px 10px;border-radius:999px;font-size:10px;font-weight:700;background:#fff2d9;color:#8a5a00}.attention-request-state.is-agendada{background:#e3f6ea;color:#21804d}.attention-request-state.is-rechazada,.attention-request-state.is-cancelada{background:var(--paper);color:var(--muted)}
+.attention-request>small{font-size:11px;color:var(--muted)}.attention-older summary{cursor:pointer;color:var(--wine);font-weight:700;padding:10px 0}.attention-older{display:grid;gap:10px}
+.schedule-line.is-gap .schedule-icon{background:var(--paper)}.schedule-line.is-gap strong{color:var(--muted)}
+/* Solicitar atención: tres pasos limpios (paridad con PatientAttentionLiveView.swift). */
+.req-hero{display:grid;gap:8px;padding:20px;border-radius:24px;color:#fff;background:linear-gradient(140deg,#8d0b31,#5b0420 70%,#43031a);box-shadow:0 14px 30px #77072733}
+.req-hero-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.req-hero-top small{font-size:10px;font-weight:800;letter-spacing:1.4px;opacity:.85}
+.req-refresh{border:1px solid #ffffff55;background:#ffffff1f;color:#fff;border-radius:999px;padding:6px 12px;font-size:11px;font-weight:700;min-height:0;cursor:pointer}
+.req-hero h2{margin:0;font-size:22px;line-height:1.2;color:#fff}.req-hero>p{margin:0;font-size:13px;line-height:1.45;opacity:.9}
+.req-steps{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.req-steps li{display:flex;align-items:center;gap:6px;padding:8px;border-radius:12px;background:#ffffff1a;min-width:0}
+.req-steps span{flex:none;width:20px;height:20px;border-radius:50%;background:#fff;color:var(--wine);font-size:11px;font-weight:800;display:grid;place-items:center}
+.req-steps em{font-style:normal;font-size:11px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.req-notice{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:16px;background:#fff7e8;border:1px solid #f3dfb5}
+.req-notice-icon{flex:none;width:22px;height:22px;border-radius:50%;background:#e2a33a;color:#fff;font-weight:800;font-size:13px;display:grid;place-items:center}
+.req-notice p{margin:0;font-size:12px;line-height:1.45;color:#6f5420}
+.req-confirmation{display:flex;gap:10px;align-items:center;padding:12px 14px;border-radius:16px;background:#e9f6ee;border:1px solid #bfe3cc;color:#1f6b3d}
+.req-confirmation span{flex:none;width:22px;height:22px;border-radius:50%;background:#2f8a52;color:#fff;font-weight:800;display:grid;place-items:center}.req-confirmation p{margin:0;font-size:12px;font-weight:600}
+.attention-card.req-card{gap:14px!important;padding:18px!important;border-radius:22px!important;border:1px solid #f1e3e8!important;background:#fff!important;box-shadow:0 6px 18px #3c192d0d!important}
+.req-step-head{display:flex;align-items:flex-start;gap:12px}.req-step-head>div{flex:1;min-width:0;display:grid;gap:3px}
+.req-step-head h2{margin:0;font-size:16px!important;color:#242936!important;line-height:1.25}.req-step-head p{margin:0;font-size:12px;color:var(--muted)}
+.req-step-number{flex:none;width:30px;height:30px;border-radius:10px;background:var(--rose);color:var(--wine);font-weight:800;font-size:14px;display:grid;place-items:center}
+.req-count{flex:none;align-self:center;padding:4px 10px;border-radius:999px;background:var(--paper);color:var(--muted);font-size:10px;font-weight:700;white-space:nowrap}.req-count.is-on{background:var(--rose);color:var(--wine)}
+.req-person-head{display:flex;align-items:center;gap:12px}.req-person-head>div{display:grid;gap:2px;min-width:0}
+.req-person-head h2{margin:0;font-size:11px!important;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted)!important}
+.req-person-head strong{font-size:16px;color:#242936}.req-person-head small{font-size:11px;color:var(--muted)}
+.req-avatar{flex:none;width:46px;height:46px;border-radius:50%;background:linear-gradient(140deg,#8d0b31,#5b0420);color:#fff;font-weight:800;font-size:16px;display:grid;place-items:center}
+.req-facts{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.req-fact{min-width:0;padding:10px 12px;border-radius:12px;background:var(--paper)}.req-fact.is-wide{grid-column:1/-1}
+.req-fact dt{font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--muted)}.req-fact dd{margin:2px 0 0;font-size:13px;font-weight:600;color:#242936;overflow-wrap:anywhere}
+.req-missing{display:grid;gap:10px;padding-top:4px}.req-missing-title{margin:0;font-size:12px;font-weight:700;color:var(--wine)}
+.req-chips{display:flex!important;flex-wrap:wrap;gap:8px!important}
+.attention-symptom.req-chip{min-height:38px!important;padding:8px 14px!important;border-radius:999px!important;border:1.5px solid #ecdde3!important;background:#fff!important;color:#3a3f4c!important;font-size:13px!important;font-weight:600!important;cursor:pointer}
+.attention-symptom.req-chip[aria-pressed=true]{background:var(--wine)!important;border-color:var(--wine)!important;color:#fff!important}
+.attention-symptom.req-chip[aria-pressed=true]::before{content:"✓ ";font-weight:800}
+.req-tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.req-tile{min-height:52px;padding:10px 12px;border-radius:14px;border:1.5px solid #ecdde3;background:#fff;color:#242936;font-size:13px;font-weight:700;text-align:left;cursor:pointer;line-height:1.25;overflow-wrap:anywhere}
+.req-tile.is-selected{border-color:var(--wine);background:var(--rose);color:var(--wine);box-shadow:inset 0 0 0 1px var(--wine)}
+.req-tile:disabled{background:var(--paper);color:#a3a9b6;font-weight:600;font-size:12px;cursor:not-allowed;border-style:dashed}
+.req-label{margin:0;font-size:12px;font-weight:700;color:#3a3f4c}
+.req-segment{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;border-radius:14px;background:var(--paper)}
+.req-segment-option{min-height:40px;border:0;border-radius:10px;background:transparent;color:#5d6475;font-size:13px;font-weight:700;cursor:pointer}
+.req-segment-option.is-selected{background:#fff;color:var(--wine);box-shadow:0 2px 8px #3c192d1f}
+.req-card .module-field{display:grid;gap:6px}.req-card .module-field>span{font-size:12px;font-weight:700;color:#3a3f4c}
+.req-card textarea{min-height:104px;padding:12px 14px!important;border-radius:14px!important;border:1.5px solid #ecdde3!important;background:#fff;font:inherit;font-size:13px;line-height:1.45;resize:vertical}
+.req-card textarea:focus{outline:none;border-color:var(--wine)!important;box-shadow:0 0 0 3px #77072722}
+.req-counter{justify-self:end;margin-top:-8px;font-size:10px;color:var(--muted)}
+.req-issue{margin:0;padding:10px 12px;border-radius:12px;background:#fdecee;color:#a1122f;font-size:12px;font-weight:600}
+.req-submit{min-height:54px!important;border-radius:16px!important;font-size:15px!important;font-weight:800!important;background:linear-gradient(135deg,#8d0b31,#4d041a)!important;box-shadow:0 10px 22px #77072740}
+.req-submit:disabled{opacity:.55;box-shadow:none}
+.req-hint{margin:0;font-size:11px!important;line-height:1.45;color:var(--muted)!important}.req-center{text-align:center}
+@media(max-width:360px){.req-tiles,.req-facts{grid-template-columns:1fr}.req-steps em{font-size:10px}}
+.req-steps em{white-space:normal;overflow:visible;font-size:10.5px;line-height:1.15}.req-step-head .req-count{justify-self:start;margin-top:4px}
+/* Mi turno: el número integrado en la tarjeta de cada cita activa, con sus datos (misma tarjeta original). */
+.turn-card{gap:14px!important;border:1px solid #f1e3e8;box-shadow:0 6px 18px #3c192d0d}.turn-card>strong{font-size:42px;font-weight:600;color:var(--wine);font-variant-numeric:tabular-nums;line-height:1}
+.turn-pending{font-size:11px;color:var(--muted)}
+.turn-details{align-self:stretch;margin:4px 0 0;padding:12px 14px;border-radius:12px;background:var(--paper);display:grid;gap:8px}
+.turn-details-title{margin:0;font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
+.turn-details>div{display:flex;justify-content:space-between;gap:12px;font-size:12px}.turn-details dt{color:var(--muted)}.turn-details dd{margin:0;font-weight:600;color:#242936;text-align:right;overflow-wrap:anywhere}
+.turn-history{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;background:#fff;border:1px solid #f1e3e8}
+.turn-history-number{flex:none;min-width:46px;padding:6px 8px;border-radius:10px;background:var(--paper);color:#5d6475;font-weight:800;font-size:14px;text-align:center;font-variant-numeric:tabular-nums}
+.turn-history>div{flex:1;min-width:0;display:grid;gap:2px}.turn-history strong{font-size:13px;color:#242936}.turn-history small{font-size:11px;color:var(--muted)}
+.turn-history-state{flex:none;padding:4px 10px;border-radius:999px;font-size:10px;font-weight:700;background:var(--paper);color:var(--muted)}
+.turn-history-state.is-completed{background:#e9f6ee;color:#1f6b3d}.turn-history-state.is-cancelled{background:#fdecee;color:#a1122f}.turn-history-state.is-no_show{background:#fff3e0;color:#8a5a12}
+.appointment-live.is-request .appointment-live-day strong{font-size:20px}
+.appointment-live.is-request .appointment-live-text p{text-transform:none}
+/* Perfil · Seguridad: cambio de contraseña (paciente y médico; paridad con PasswordChangeCard.swift). */
+.password-card{display:grid;gap:14px;padding:18px!important;border-radius:20px!important;border:1px solid #f1e3e8!important;background:#fff!important}
+.password-card-head{display:flex;align-items:center;gap:12px}.password-card-head>div{display:grid;gap:2px}
+.password-card-head h2{margin:0;font-size:16px;color:#242936}.password-card-head p{margin:0;font-size:12px;color:var(--muted)}
+.password-card-icon{flex:none;width:40px;height:40px;border-radius:12px;background:var(--rose);display:grid;place-items:center;font-size:18px}
+.password-form{display:grid;gap:12px}.password-field{display:grid;gap:5px}.password-field>span{font-size:12px;font-weight:700;color:#3a3f4c}
+.password-field input{min-height:44px;padding:10px 12px;border-radius:12px;border:1.5px solid #ecdde3;background:var(--paper);font:inherit;font-size:14px;width:100%;box-sizing:border-box}
+.password-field input:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 3px #77072722;background:#fff}
+.password-toggle{justify-self:start;font-size:12px!important;padding:0!important;min-height:0!important}
+.password-rule{margin:0;font-size:11px;color:var(--muted)}.password-issue{margin:0;font-size:12px;font-weight:600;color:var(--wine)}
+.password-error{margin:0;padding:10px 12px;border-radius:12px;background:#fdecee;color:#a1122f;font-size:12px;font-weight:600}
+.password-success{margin:0;padding:10px 12px;border-radius:12px;background:#e9f6ee;color:#1f6b3d;font-size:12px;font-weight:600}
+.password-submit{min-height:50px!important;border-radius:14px!important;font-weight:800!important;background:linear-gradient(135deg,#8d0b31,#4d041a)!important}
+.password-submit:disabled{opacity:.55}
+/* Menú «Más» del paciente agrupado y Habitaciones con hospitalización (paridad iOS, 20 nov) */
+.more-group{display:grid;gap:8px;margin-bottom:14px}.more-group-title{font-size:10px;letter-spacing:1.4px;font-weight:700;color:var(--wine);margin:2px 4px}.more-list{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 0 #eadfe3}
+.more-row{display:flex;align-items:center;gap:12px;width:100%;min-height:58px;padding:10px 14px;background:#fff;text-align:left}.more-row+.more-row{border-top:1px solid #f1e8eb}.more-row:hover{background:#fdf6f8}
+.more-row-icon{width:34px;height:34px;flex-shrink:0;border-radius:10px;display:grid;place-content:center;background:var(--rose);color:var(--wine);font-size:16px;font-weight:700}
+.more-row-text{display:grid;gap:2px;flex:1;min-width:0}.more-row-text strong{font-size:13px;font-weight:600;color:#242936}.more-row-text small{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.more-row-chevron{color:#b9a5ac;font-size:18px}
+.more-actions{display:grid;gap:2px;margin-top:4px}
+.stay-hero{display:grid;gap:6px;text-align:left;width:100%;padding:18px;border-radius:20px;color:#fff;background:linear-gradient(135deg,#8e0d33,#5c0420);flex-shrink:0}.stay-hero.is-past{background:linear-gradient(135deg,#5d6475,#3b4150)}.stay-hero small{font-size:10px;letter-spacing:1.3px;font-weight:700;opacity:.85}.stay-hero h2{font-size:22px;font-weight:650}.stay-hero p{font-size:12px;opacity:.9}
+.stay-pill{width:fit-content;background:#fff;color:var(--wine);font-size:11px;font-weight:700;border-radius:20px;padding:4px 10px}.stay-hero .stay-facts{background:rgba(255,255,255,.12);border-radius:12px;padding:10px;margin-top:6px}.stay-hero .stay-facts dt{color:#fff;opacity:.75}.stay-hero .stay-facts dd{color:#fff}.stay-more{font-size:12px;font-weight:600;justify-self:end}
+.stay-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}.stay-facts div{min-width:0}.stay-facts dt{font-size:10px;color:var(--muted)}.stay-facts dd{margin:2px 0 0;font-size:12px;font-weight:600;color:#242936;overflow-wrap:anywhere}
+.stay-section{background:#fff;border-radius:16px;padding:14px;display:grid;gap:10px;flex-shrink:0}.stay-section h3{font-size:13px;color:var(--wine)}.stay-section .card{background:var(--paper)}
+.stay-past{display:flex;align-items:center;gap:10px;width:100%;background:#fff;border-radius:14px;padding:12px;text-align:left;flex-shrink:0}.stay-past .badge{min-width:0}
+.stay-empty{background:#fff;border-radius:18px;padding:28px 18px;text-align:center;display:grid;gap:8px;justify-items:center;flex-shrink:0}.stay-empty-icon{font-size:26px;width:56px;height:56px;border-radius:50%;background:var(--rose);color:var(--wine);display:grid;place-content:center}.stay-empty h3{font-size:14px}.stay-empty p{font-size:12px;color:var(--muted);line-height:1.5}.stay-back{justify-self:start;align-self:flex-start;padding-left:0}
+
+/* Solicitar ambulancia (paciente) 2026-11-21 · paridad con PatientAmbulanceView.swift */
+.amb-hero .amb-hero-icon{font-size:22px;line-height:1}
+.amb-warning{background:#fdecee;border-color:#f3c3cb}.amb-warning .req-notice-icon{background:#b3261e}.amb-warning p{color:#6e1a22;font-weight:600}
+.amb-call{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:10px;background:#b3261e;color:#fff;font-size:12px;font-weight:700;text-decoration:none}
+.amb-confirmation{margin:0;padding:12px 14px;border-radius:14px;background:#e3f6ea;color:#1f6b3d;font-size:12px;line-height:1.45;font-weight:600}
+.amb-error{margin:0;padding:12px 14px;border-radius:14px;background:#fdecee;color:#a1122e;font-size:12px;line-height:1.45;font-weight:600}
+.amb-unit-note{margin:0;padding:12px 14px;border-radius:14px;background:#fff7e8;border:1px solid #f3dfb5;color:#6f5420;font-size:12px;line-height:1.45}
+.amb-form{display:grid;gap:14px;min-width:0}.amb-form textarea{resize:vertical;min-height:64px}
+.amb-identity{display:grid;gap:2px;padding:12px;border-radius:12px;background:var(--paper)}.amb-identity small{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.4px}.amb-identity strong{font-size:14px;color:#242936;overflow-wrap:anywhere}
+.amb-location{display:grid;gap:8px}.amb-location .module-action{justify-self:start}.amb-location-ok{margin:0;padding:10px 12px;border-radius:12px;background:#e3f6ea;color:#1f6b3d;font-size:12px;font-weight:600;overflow-wrap:anywhere}
+.amb-hint{margin:0;color:#a1122e;font-size:12px;line-height:1.4;font-weight:600}
+.amb-submit{width:100%;min-height:50px;border-radius:14px;font-size:15px;font-weight:700}
+.amb-sync{margin:0;color:var(--muted);font-size:11px;line-height:1.45}
+.amb-section-title{margin:6px 0 0;font-size:14px;color:#242936}
+.amb-track{border:1px solid #eddee4}
+.amb-track-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.amb-track-head>div{min-width:0;display:grid;gap:2px}
+.amb-track-head small{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.3px}.amb-track-head h2{margin:0;font-size:18px;line-height:1.25;color:var(--wine)}
+.amb-track-message{margin:0;font-size:13px;line-height:1.45;color:#242936}
+.amb-badge{flex:none;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:700;background:var(--rose);color:var(--wine);white-space:nowrap}
+.amb-badge.is-asignada,.amb-badge.is-en_camino,.amb-badge.is-en_atencion{background:#e8f0fe;color:#1a4fa0}.amb-badge.is-finalizada{background:#e3f6ea;color:#1f6b3d}
+.amb-badge.is-cancelada,.amb-badge.is-rechazada{background:#eef0f3;color:#4b5263}.amb-badge.is-pendiente,.amb-badge.is-en_revision{background:#fff2d9;color:#7a5410}
+.amb-steps{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.amb-steps li{display:grid;grid-template-columns:18px 1fr;gap:10px;position:relative;padding-bottom:12px}.amb-steps li:last-child{padding-bottom:0}
+.amb-steps li:not(:last-child)::before{content:"";position:absolute;left:8px;top:16px;bottom:0;width:2px;background:#e6e1e3}
+.amb-dot{width:18px;height:18px;border-radius:50%;border:2px solid #d5d0d2;background:#fff;margin-top:1px}.amb-steps li.is-done .amb-dot{border-color:var(--wine);background:var(--wine);box-shadow:inset 0 0 0 3px #fff}
+.amb-steps li div{display:grid;gap:1px;min-width:0}.amb-steps strong{font-size:13px;color:#242936}.amb-steps small{font-size:11px;color:var(--muted)}.amb-steps li.is-pending strong{color:var(--muted);font-weight:600}
+.amb-facts{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;border-radius:14px;background:var(--paper)}
+.amb-facts div{min-width:0}.amb-facts dt{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.3px}.amb-facts dd{margin:2px 0 0;font-size:12px;color:#242936;overflow-wrap:anywhere;line-height:1.35}
+.amb-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.amb-actions .module-action{margin:0}.amb-cancel{color:#a1122e!important}
+.amb-cancel-form{display:grid;gap:10px;padding:12px;border-radius:14px;border:1px solid #f3c3cb;background:#fffafa}
+.amb-previous{display:grid;gap:4px;padding:12px 14px;background:#fff;border-radius:14px}.amb-previous p{margin:0;font-size:12px;color:var(--muted)}
+.amb-previous-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.amb-previous-head strong{font-size:13px}.amb-previous-place{overflow-wrap:anywhere}
+@media(max-width:360px){.amb-facts{grid-template-columns:1fr}.amb-track-head{flex-direction:column}.amb-badge{align-self:flex-start}}
+.dash-ambulance{display:flex;align-items:center;gap:12px;width:100%;margin-top:10px;padding:14px;background:#fff;border:1px solid var(--rose);border-radius:16px;text-align:left;color:#242936}
+.dash-ambulance-icon{flex:none;width:44px;height:44px;border-radius:12px;background:var(--wine);color:#fff;font-size:20px;font-weight:800;display:grid;place-items:center}
+.dash-ambulance-text{flex:1;min-width:0;display:grid;gap:2px}.dash-ambulance-text strong{font-size:14px}.dash-ambulance-text small{font-size:11px;color:var(--muted);line-height:1.35}
+.dash-ambulance-chevron{flex:none;color:var(--muted);font-size:20px}
+
+/* Tarjetas clínicas compartidas paciente/médico (clinical-cards.js) 2026-11-21 · paridad Design/ClinicalCardViews.swift */
+.cc-card{display:grid;gap:12px;padding:16px;border:1px solid var(--rose);border-radius:18px;background:#fff;min-width:0;margin-bottom:10px;box-shadow:0 4px 14px rgba(36,41,54,.05)}
+.cc-head{display:flex;align-items:flex-start;gap:10px;min-width:0}
+.cc-icon{flex:none;width:36px;height:36px;border-radius:10px;background:var(--rose);color:var(--wine);display:grid;place-items:center;font-weight:800;font-size:16px}
+.cc-title{flex:1;min-width:0;display:grid;gap:1px}.cc-title small{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--muted)}.cc-title h4{margin:0;font-size:15px;line-height:1.3;color:#242936;overflow-wrap:anywhere}
+.cc-badge{flex:none;border-radius:999px;padding:4px 10px;font-size:11px;font-weight:700;white-space:nowrap;background:var(--rose);color:var(--wine)}
+.cc-badge.is-done{background:#e3f6ea;color:#1f6b3d}.cc-badge.is-pending{background:#fff2d9;color:#7a5410}.cc-badge.is-processing,.cc-badge.is-partial{background:#e8f0fe;color:#1a4fa0}.cc-badge.is-closed,.cc-badge.is-unknown{background:#eef0f3;color:#4b5263}
+.cc-facts{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px 12px;padding:10px 12px;border-radius:12px;background:var(--paper)}
+.cc-facts div{min-width:0}.cc-facts dt{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.3px}.cc-facts dd{margin:2px 0 0;font-size:12px;color:#242936;overflow-wrap:anywhere}
+.cc-reason{display:grid;gap:3px;font-size:12px;color:var(--muted)}.cc-reason strong{font-size:12px;color:#242936}.cc-reason p{margin:0;overflow-wrap:anywhere;line-height:1.45}
+.cc-toggle{justify-self:start;margin:0}
+.cc-detail{display:grid;gap:10px;padding-top:4px;border-top:1px dashed #e3dde0;min-width:0}.cc-detail .patient-rx-card{margin:0;padding:16px;border-radius:16px}
+.cc-detail h5{margin:4px 0 0;font-size:12px;font-weight:800;letter-spacing:.5px;color:var(--wine);text-transform:uppercase}
+.cc-param{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:10px 12px;border-radius:12px;background:var(--paper);min-width:0}
+.cc-param-name{display:grid;gap:2px;min-width:0}.cc-param-name strong{font-size:13px;color:#242936;overflow-wrap:anywhere}.cc-param-name small{font-size:11px;color:var(--muted)}
+.cc-param-value{display:grid;justify-items:end;align-content:start}.cc-param-value strong{font-size:15px;color:var(--wine)}.cc-param-value small{font-size:11px;color:var(--muted)}
+.cc-param-note{grid-column:1/-1;margin:0;font-size:11px;color:var(--muted)}
+.cc-observation{display:grid;gap:4px;padding:12px;border-radius:12px;background:#fbf7f8;border:1px solid var(--rose)}.cc-observation strong{font-size:12px;color:var(--wine)}.cc-observation p{margin:0;font-size:13px;line-height:1.5;color:#242936;overflow-wrap:anywhere}
+.cc-validation{margin:0;font-size:11px;font-weight:600;color:#1f6b3d}.cc-note{margin:0;font-size:12px;color:var(--muted);line-height:1.45}
+.agenda-day-group{margin:10px 0 2px;font-size:12px;font-weight:800;letter-spacing:.4px;color:var(--wine);text-transform:capitalize}
+.consult-card.is-cancelled,.consult-card.is-missed{border:1px solid #eef0f3;opacity:.97}.consult-missed-note{margin:0;padding:8px 10px;border-radius:10px;background:#f6f7f9;color:#4b5263;font-size:12px;line-height:1.4}
+@media(max-width:360px){.cc-head{flex-wrap:wrap}.cc-badge{order:3}.cc-param{grid-template-columns:1fr}.cc-param-value{justify-items:start}}

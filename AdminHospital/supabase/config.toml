@@ -1,0 +1,4 @@
+[functions.manage-employees]
+# The handler validates the bearer token with auth.getUser and checks active admin
+# in PostgreSQL. Gateway JWT validation is incompatible with some signing keys.
+verify_jwt = false

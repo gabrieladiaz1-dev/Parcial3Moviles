@@ -1,0 +1,167 @@
+{
+  "checks": [
+    {
+      "name": "Inicio muestra el acceso «Solicitar ambulancia»",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Más → Servicios del hospital muestra «Ambulancia»",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Encabezado, descripción y advertencia de emergencia visibles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Nombre del paciente precargado y no editable",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Una sola barra de navegación inferior",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Formulario iPhone SE (1.ª gen.): sin desbordamiento horizontal a 320 pt",
+      "ok": true,
+      "detail": "{\"scrollWidth\":320,\"overflowing\":[]}"
+    },
+    {
+      "name": "Formulario iPhone SE (1.ª gen.): botones y estados sin texto cortado a 320 pt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Formulario iPhone SE: sin desbordamiento horizontal a 375 pt",
+      "ok": true,
+      "detail": "{\"scrollWidth\":375,\"overflowing\":[]}"
+    },
+    {
+      "name": "Formulario iPhone SE: botones y estados sin texto cortado a 375 pt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Formulario iPhone 15: sin desbordamiento horizontal a 393 pt",
+      "ok": true,
+      "detail": "{\"scrollWidth\":393,\"overflowing\":[]}"
+    },
+    {
+      "name": "Formulario iPhone 15: botones y estados sin texto cortado a 393 pt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Formulario iPhone Pro Max: sin desbordamiento horizontal a 430 pt",
+      "ok": true,
+      "detail": "{\"scrollWidth\":430,\"overflowing\":[]}"
+    },
+    {
+      "name": "Formulario iPhone Pro Max: botones y estados sin texto cortado a 430 pt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Validación visible y botón deshabilitado con datos incompletos",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Texto aumentado (zoom 130 %): sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":393,\"overflowing\":[]}"
+    },
+    {
+      "name": "Ambulancia ocupada o en mantenimiento: aviso sin prometer asignación",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Seguimiento pendiente: número, estado, dirección, última actualización y cancelación",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Sin tiempos estimados de llegada",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Seguimiento pendiente: sin desbordamiento horizontal a 320 pt",
+      "ok": true,
+      "detail": "{\"scrollWidth\":320,\"overflowing\":[]}"
+    },
+    {
+      "name": "Seguimiento pendiente: botones y estados sin texto cortado a 320 pt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "En camino: solo con salida registrada; sin cancelación del paciente",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Seguimiento en camino: sin desbordamiento horizontal a 430 pt",
+      "ok": true,
+      "detail": "{\"scrollWidth\":430,\"overflowing\":[]}"
+    },
+    {
+      "name": "Seguimiento en camino: botones y estados sin texto cortado a 430 pt",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Esquema oscuro del sistema: se respeta el estilo claro fijo del proyecto (texto legible)",
+      "ok": true,
+      "detail": "rgb(255, 255, 255)"
+    },
+    {
+      "name": "Estado vacío: formulario sin historial",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Error de conexión: mensaje y reintento",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Conexión lenta: estado de carga sin formulario prematuro",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Sin errores de JavaScript en la página",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Ninguna llamada salió a Supabase real (todas simuladas en la página)",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "00-inicio-acceso-ambulancia",
+    "00-mas-servicios",
+    "01-formulario-320",
+    "01-formulario-393",
+    "01-formulario-430",
+    "02-formulario-validacion",
+    "03-texto-aumentado",
+    "04-ambulancia-ocupada",
+    "05-seguimiento-pendiente",
+    "05-seguimiento-pendiente-320",
+    "06-cancelar-solicitud",
+    "07-seguimiento-en-camino",
+    "08-esquema-oscuro",
+    "09-sin-solicitudes",
+    "10-error-conexion",
+    "11-conexion-lenta"
+  ]
+}

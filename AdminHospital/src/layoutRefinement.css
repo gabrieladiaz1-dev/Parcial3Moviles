@@ -1,0 +1,63 @@
+/* Readability needs room to breathe: labels never determine random control heights. */
+#root :where(.hospital-filter-pills,.agenda-status-filter,.hospital-search-field,.agenda-daily-search){min-width:0}
+#root :where(.hospital-filter-pills,.agenda-status-filter){container-type:inline-size}
+#root :where(.hospital-filter-pills>div,.agenda-status-filter>div){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:1fr;gap:9px;align-items:stretch}
+#root :where(.hospital-filter-pills>div[data-options="2"],.agenda-status-filter>div[data-options="2"]){grid-template-columns:repeat(2,minmax(0,1fr))}
+#root :where(.hospital-filter-pills>div[data-options="3"],.hospital-filter-pills>div[data-options="6"],.agenda-status-filter>div[data-options="6"]){grid-template-columns:repeat(3,minmax(0,1fr))}
+#root :where(.hospital-filter-pill,.agenda-filter-chip){min-width:0;width:100%;height:100%;min-height:46px;padding:10px 12px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:15px;font-weight:600;line-height:1.35;border-radius:10px;white-space:normal;text-align:center;text-wrap:balance}
+#root :where(.hospital-filter-pill i,.agenda-filter-chip i){width:6px;height:6px;flex-shrink:0}
+#root :where(.hospital-filter-pills>span,.agenda-status-filter>span){display:block;min-height:24px;margin-bottom:10px;font-size:16px;font-weight:600}
+#root :where(.hospital-polished-filters){display:grid;grid-template-columns:minmax(0,1.7fr) minmax(210px,1fr);gap:22px;align-items:start;padding:24px;background:#fffcfe}
+#root :where(.hospital-polished-filters.hospital-inventory-filters){grid-template-columns:minmax(0,1.5fr) minmax(180px,1fr) minmax(180px,1fr)}
+#root :where(.hospital-filter-wide){grid-column:1/-1;order:5;padding-top:19px;border-top:1px solid #ecdee6}
+#root :where(.hospital-polished-filters>label:first-child){grid-column:auto}
+#root :where(.agenda-daily-filters){display:grid;grid-template-columns:minmax(0,1fr);padding:25px 28px;gap:22px}
+#root :where(.agenda-daily-search){max-width:680px;gap:10px}
+#root :where(.agenda-status-filter){padding-top:19px;border-top:1px solid #ecdee6}
+#root :where(.hospital-search-field>span,.agenda-daily-search>span){display:flex;align-items:center;position:relative}
+#root :where(.hospital-search-field svg,.agenda-daily-search svg){top:auto;left:15px;flex:none}
+#root :where(.hospital-search-field input,.agenda-daily-search input){padding-left:43px;min-height:49px;width:100%;font-size:16px}
+#root :where(.hospital-badge,.hospital-bed-tag,.agenda-state,.employee-status,.patient-record-state){line-height:1.35}
+#root :where(.hospital-status,.hospital-bed-tag,.agenda-state,.employee-status){display:inline-flex;align-items:center;justify-content:center;gap:7px;flex:0 0 auto;max-width:100%;min-height:32px;padding:7px 11px;font-size:14px;font-weight:600;white-space:nowrap;vertical-align:middle}
+#root :where(.hospital-card-footer,.hospital-bed-heading){gap:12px;align-items:center}
+#root :where(.hospital-card-top>div,.hospital-bed-heading>strong,.patient-result header>div){min-width:0;overflow-wrap:anywhere}
+#root :where(.hospital-bed-heading>strong){font-size:17px;line-height:1.4}
+#root :where(.hospital-card-footer>strong){font-size:15px}
+#root :where(.hospital-admission-card){display:flex;flex-direction:column;gap:0;padding:23px;border-radius:18px}
+#root :where(.hospital-admission-card .hospital-card-footer){margin-top:auto;padding-top:18px}
+#root :where(.hospital-admission-card .hospital-reason-preview){margin-bottom:19px}
+#root :where(.hospital-card-top h4,.assigned-room h3){font-size:18px;line-height:1.45;margin-bottom:7px}
+#root :where(.hospital-card-meta){gap:12px;margin-top:18px}
+#root :where(.hospital-card-meta>span){min-width:0;line-height:1.5}
+#root :where(.hospital-date-display){display:inline-flex;max-width:100%;padding:6px 9px;gap:7px;line-height:1.45;align-items:flex-start;border-radius:8px}
+#root :where(.hospital-date-display time){font-size:14px;line-height:1.45;white-space:normal;overflow-wrap:normal}
+#root :where(.hospital-date-display>svg){margin-top:2px;flex:none}
+#root :where(.hospital-patient-banner){display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:19px;padding:27px}
+#root :where(.hospital-patient-emblem){width:64px;height:64px;border-radius:19px}
+#root :where(.hospital-patient-identity h3){font-size:clamp(24px,2vw,30px);line-height:1.3;margin:6px 0 9px}
+#root :where(.hospital-patient-identity p){font-size:16px;line-height:1.55;gap:8px}
+#root :where(.hospital-patient-overview>div){min-width:0;align-items:flex-start;padding:22px 20px;gap:12px}
+#root :where(.hospital-patient-overview>div>div){min-width:0}
+#root :where(.hospital-patient-overview dt){font-size:14px;line-height:1.4;margin-bottom:8px}
+#root :where(.hospital-patient-overview dd){font-size:17px;line-height:1.5}
+#root :where(.hospital-clinical-panel dl){gap:18px;padding:22px}
+#root :where(.hospital-clinical-panel dl>div){min-width:0}
+#root :where(.hospital-clinical-panel dt){font-size:15px;font-weight:550;line-height:1.45;margin-bottom:9px}
+#root :where(.hospital-clinical-panel dd){font-size:17px;line-height:1.75}
+#root :where(.hospital-stats>.hospital-stat){min-height:135px;gap:12px;padding:18px}
+#root :where(.hospital-stat>span){margin-top:auto;min-height:42px;display:flex;align-items:flex-end;font-size:14px;line-height:1.45}
+#root :where(.hospital-tabs button,.reception-tabs button){min-width:0;line-height:1.45;gap:10px}
+#root :where(.hospital-stat>strong){font-variant-numeric:tabular-nums}
+@media(max-width:1100px){#root :where(.hospital-polished-filters.hospital-inventory-filters){grid-template-columns:minmax(0,1fr) minmax(0,1fr)}#root :where(.hospital-inventory-filters>.hospital-search-field){grid-column:1/-1}}
+@media(max-width:760px){#root :where(.hospital-polished-filters,.hospital-polished-filters.hospital-inventory-filters){grid-template-columns:minmax(0,1fr);padding:19px;gap:20px}#root :where(.hospital-filter-pills>div,.agenda-status-filter>div){grid-template-columns:repeat(2,minmax(0,1fr))}#root :where(.hospital-patient-banner){grid-template-columns:48px minmax(0,1fr);padding:22px;gap:14px}#root :where(.hospital-patient-emblem){width:48px;height:48px;border-radius:14px}#root :where(.hospital-patient-banner>.hospital-status){grid-column:2;justify-self:start;margin:0}#root :where(.hospital-patient-identity){flex-basis:auto}#root :where(.agenda-daily-filters){padding:21px}#root :where(.hospital-filter-pill,.agenda-filter-chip){font-size:15px;padding:10px 9px}#root :where(.hospital-patient-overview>div){padding:18px}#root :where(.hospital-admission-card){padding:20px}}
+@media(max-width:400px){#root :where(.hospital-filter-pill,.agenda-filter-chip){font-size:14px;gap:5px}#root :where(.hospital-bed-heading){align-items:flex-start}#root :where(.hospital-bed-heading>.hospital-bed-tag){margin-left:0}}
+@media(max-width:1100px){#root :where(.hospital-polished-filters:not(.hospital-inventory-filters)){grid-template-columns:minmax(0,1fr)}}
+@container(max-width:540px){#root :where(.hospital-filter-pills>div,.agenda-status-filter>div){grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container(max-width:340px){#root :where(.hospital-filter-pills>div,.agenda-status-filter>div){grid-template-columns:minmax(0,1fr)}}
+#root :where(button>svg,a>svg,[class*="-avatar"]>svg,[class*="-emblem"]>svg){display:block;flex-shrink:0;vertical-align:middle}
+#root :where(.hospital-filter-pill,.agenda-filter-chip,.hospital-status,.hospital-bed-tag,.agenda-state){align-items:center}
+#root .walkin-registration .walkin-find>label{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px 9px;align-items:center;text-align:left}
+#root .walkin-registration .walkin-find>label>svg{grid-column:1;grid-row:1;align-self:center;justify-self:start}
+#root .walkin-registration .walkin-find>label>input{grid-column:1/-1;width:100%;min-width:0}
+#root .walkin-form-banner small{color:#f8d9e8}
+#root .walkin-registration .walkin-field-help{font-size:14px!important;line-height:1.55;color:#826374!important}

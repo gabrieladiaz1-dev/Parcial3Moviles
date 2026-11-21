@@ -1,0 +1,94 @@
+.patient-directory { border: 1px solid #e8dbe3; border-radius: 21px; background: #fff; color: #624756; box-shadow: 0 7px 25px #50273c08; font-family: 'Segoe UI', system-ui, sans-serif; }
+.patient-directory input, .patient-directory button, .patient-record-dialog input, .patient-record-dialog button { font-family: inherit; }
+.patient-directory-header { display: flex; align-items: center; gap: 16px; padding: 27px; border-bottom: 1px solid #f0e4eb; border-radius: 20px 20px 0 0; background: linear-gradient(115deg, #fff, #fcf2f7); }
+.patient-directory-emblem { display: grid; place-items: center; flex-shrink: 0; width: 55px; height: 58px; border-radius: 17px; background: linear-gradient(135deg, #a34469, #800b2c); color: white; box-shadow: 0 5px 13px #800b2c1a; }
+.patient-directory-eyebrow { display: block; color: #a46f89; font-size: 9px; letter-spacing: .12em; font-weight: 700; }
+.patient-directory-header h3 { color: #5d2a42; font-size: 24px; font-weight: 700; letter-spacing: -.025em; margin: 6px 0; }
+.patient-directory-header p { color: #8d7381; font-size: 13px; line-height: 1.8; }
+.patient-directory-search { padding: 27px 27px 19px; }
+.patient-directory-search > label { display: block; color: #735266; font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.patient-directory-search > div { display: flex; align-items: center; gap: 12px; padding: 0 17px; border: 1px solid #d5b9c9; border-radius: 13px; background: #fffcfd; color: #a26987; box-shadow: 0 3px 8px #50273c06; }
+.patient-directory-search > div:focus-within { border-color: #9e3c69; box-shadow: 0 0 0 4px #800b2c0b; background: white; }
+.patient-directory-search svg { flex-shrink: 0; }
+.patient-directory-search input { width: 100%; min-width: 0; padding: 17px 0; border: 0; outline: none !important; background: transparent; font-size: 16px; color: #573147; }
+.patient-directory-search input::placeholder { color: #ad95a3; font-size: 14px; }
+.patient-directory-search button { color: #a57b92; font-size: 24px; padding: 4px; }
+.patient-directory-search > p { font-size: 11px; color: #927b89; margin-top: 9px; line-height: 1.7; }
+.patient-directory-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 13px; padding: 0 27px 19px; }
+.patient-directory-toolbar p { font-size: 12px; color: #917184; }
+.patient-directory-toolbar > button { display: inline-flex; align-items: center; gap: 7px; padding: 10px 13px; border: 1px solid #e5cbd9; border-radius: 9px; background: white; color: #8f3a62; font-size: 11px; font-weight: 600; }
+.patient-directory-toolbar > button:disabled { opacity: .45; }
+.patient-duplicate-notice { display: flex; align-items: flex-start; gap: 10px; padding: 14px; margin: 0 27px 19px; border: 1px solid #e8d6b7; border-radius: 11px; background: #fffbf3; color: #9c7a4b; font-size: 12px; line-height: 1.8; }
+.patient-duplicate-notice > svg { flex-shrink: 0; margin-top: 3px; }
+.patient-directory-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; padding: 0 27px 27px; }
+.patient-result { display: flex; flex-direction: column; min-width: 0; border: 1px solid #e7d7e1; border-radius: 15px; background: white; box-shadow: 0 3px 10px #50273c05; }
+.patient-result > header { display: flex; align-items: center; gap: 10px; padding: 18px; background: linear-gradient(120deg, #fff, #fdf8fb); border-radius: 14px 14px 0 0; }
+.patient-result-avatar { display: grid; place-items: center; flex-shrink: 0; width: 42px; height: 46px; border: 1px solid #e9d3df; border-radius: 12px; background: #f8eaf2; color: #9b4d76; font-size: 14px; font-weight: 700; }
+.patient-result > header > div { flex: 1; min-width: 0; }
+.patient-result h4 { font-size: 17px; font-weight: 650; line-height: 1.5; color: #5c3147; overflow-wrap: anywhere; }
+.patient-result header p { margin-top: 5px; font-size: 10px; color: #917383; }
+.patient-match-reason { display: inline-block; margin-top: 6px; color: #937383; font-size: 10px; line-height: 1.5; }
+.patient-record-state { display: flex; align-items: center; gap: 12px; margin: 0 18px 4px; padding: 15px; border-radius: 11px; border: 1px solid #e6c99e; background: #fff8eb; color: #956323; line-height: 1.5; }
+.patient-record-state svg { flex-shrink: 0; }
+.patient-record-state.available { border-color: #bcdcca; background: #edf8f1; color: #286e4d; }
+.patient-record-state-icon { display: grid; place-items: center; flex-shrink: 0; width: 41px; height: 43px; background: #fff; border-radius: 12px; border: 1px solid #ead3b3; }
+.available .patient-record-state-icon { border-color: #c4e0d0; }
+.patient-record-state > div { min-width: 0; }
+.patient-record-state strong { display: block; font-size: 15px; font-weight: 700; }
+.patient-record-state > div > span { display: block; margin-top: 3px; font-size: 12px; overflow-wrap: anywhere; }
+.patient-record-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0 27px 20px; padding: 13px 15px; border: 1px solid #eadde5; border-radius: 11px; background: #fdfafb; }
+.patient-record-summary > span { font-size: 11px; font-weight: 600; color: #937386; }
+.patient-record-summary > div { display: flex; flex-wrap: wrap; gap: 11px; margin-left: auto; }
+.patient-record-summary > div > span { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; }
+.patient-record-summary .has-record { color: #327953; }
+.patient-record-summary .no-record { color: #9c6f32; }
+.patient-result-email { grid-column: 1 / -1; }
+.patient-result dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; padding: 15px 18px 20px; }
+.patient-result dt { color: #927486; font-size: 11px; }
+.patient-result dd { color: #604453; font-size: 13px; line-height: 1.7; margin-top: 5px; overflow-wrap: anywhere; }
+.patient-result-duplicate { display: flex; gap: 7px; align-items: center; margin: 0 18px 15px; color: #a17a41; font-size: 10px; }
+.patient-result > footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 13px 18px; margin-top: auto; background: #fdfafb; border-top: 1px solid #f0e4eb; border-radius: 0 0 14px 14px; }
+.patient-result footer > span { font-size: 9px; color: #a08495; }
+.patient-result footer > button, .patient-search-empty > button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 9px 12px; border: 1px solid #dcc0d0; border-radius: 9px; color: #88375f; background: white; font-size: 11px; font-weight: 600; }
+.patient-search-empty { grid-column: 1 / -1; display: grid; justify-items: center; gap: 13px; padding: 42px 20px; color: #b4849f; text-align: center; }
+.patient-search-empty h4 { color: #7b5068; font-size: 18px; font-weight: 600; }
+.patient-search-empty p { max-width: 440px; font-size: 12px; line-height: 1.9; color: #9d8592; }
+.patient-record-dialog { position: fixed; inset: 0; margin: auto; width: min(640px, calc(100% - 28px)); max-height: calc(100dvh - 36px); overflow-y: auto; padding: 0; border: 1px solid #e5cfdc; border-radius: 21px; background: white; color: #6c455c; box-shadow: 0 30px 90px #40172c55; font-family: 'Segoe UI', system-ui, sans-serif; }
+.patient-record-dialog::backdrop { background: #32122299; backdrop-filter: blur(4px); }
+.patient-record-dialog > header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 24px; background: linear-gradient(115deg, #64132e, #943d63); color: #f5d7e6; font-size: 9px; letter-spacing: .1em; }
+.patient-record-dialog header button { font-size: 24px; color: white; }
+.patient-record-content { padding: 25px; }
+.patient-record-content h3 { font-size: 23px; font-weight: 700; color: #69334f; line-height: 1.5; }
+.patient-record-content > p { font-size: 12px; color: #9d7a8e; line-height: 1.9; margin-top: 9px; }
+.patient-record-details { display: grid; gap: 7px; padding: 16px; margin: 20px 0; border: 1px solid #ead3e0; background: #fcf5f9; border-radius: 11px; }
+.patient-record-details strong { color: #893a64; font-size: 15px; overflow-wrap: anywhere; }
+.patient-record-details span { color: #aa7d96; font-size: 11px; }
+.patient-record-content h4 { font-size: 13px; font-weight: 650; margin-top: 20px; }
+.patient-record-content li { margin-top: 14px; padding: 14px; border: 1px solid #eee1e9; border-radius: 10px; font-size: 12px; line-height: 1.8; }
+.patient-record-content li strong { display: block; color: #97637f; text-transform: capitalize; }
+.patient-record-content li time { display: block; font-size: 10px; color: #ad93a1; margin: 5px 0; }
+.patient-record-content li p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.patient-record-content > small { display: block; margin-top: 20px; color: #9b8492; font-size: 10px; line-height: 1.8; }
+.patient-record-dialog > footer { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 9px; padding: 17px 25px; background: #fcf8fa; border-top: 1px solid #ecdee6; }
+.patient-record-dialog footer button { padding: 11px 14px; border: 1px solid #dfc4d3; border-radius: 10px; background: white; color: #95637f; font-size: 12px; }
+.patient-record-dialog footer button:last-child { background: #800b2c; border-color: #800b2c; color: white; }
+.patient-record-dialog button:disabled { opacity: .4; cursor: not-allowed; }
+.patient-record-dialog :focus-visible { outline: 3px solid #ba7188; outline-offset: 3px; }
+.patient-registration-review label { display: flex; align-items: flex-start; gap: 10px; padding: 13px; margin-top: 20px; border: 1px solid #e5cedc; border-radius: 10px; background: #fcf6f9; font-size: 12px; line-height: 1.8; }
+.patient-registration-review input { margin-top: 4px; accent-color: #800b2c; flex-shrink: 0; }
+@media (max-width: 1100px) { .patient-directory-results { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) {
+  .patient-directory-header { padding: 21px 17px; gap: 12px; }
+  .patient-directory-header h3 { font-size: 20px; }
+  .patient-directory-search { padding: 23px 17px 19px; }
+  .patient-directory-toolbar { padding-inline: 17px; }
+  .patient-directory-toolbar > button { width: 100%; justify-content: center; }
+  .patient-directory-results { padding: 0 16px 20px; }
+  .patient-result > header { flex-wrap: wrap; }
+  .patient-record-state { margin: 0 15px 4px; padding: 13px; }
+  .patient-record-summary { margin-inline: 17px; }
+  .patient-record-summary > div { margin-left: 0; }
+  .patient-duplicate-notice { margin-inline: 17px; }
+  .patient-result footer > button { width: 100%; }
+  .patient-record-dialog footer button { flex: 1; }
+}

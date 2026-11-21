@@ -1,0 +1,603 @@
+<resources>
+    <string name="app_name">Hospital Universitario</string>
+    <string name="hospital_title">Hospital Universitario</string>
+    <string name="hospital_subtitle">San Gabriel</string>
+    <string name="hospital_platform">Plataforma de atención hospitalaria</string>
+    <string name="welcome_title">Bienvenido de nuevo</string>
+    <string name="welcome_subtitle">Inicia sesión con tu cuenta institucional</string>
+    <string name="label_email">Correo electrónico</string>
+    <string name="hint_email">nombre@hospital.edu</string>
+    <string name="label_password">Contraseña</string>
+    <string name="hint_password">••••••••••</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="login_button">Iniciar sesión    →</string>
+    <string name="authorized_access">Acceso exclusivo para personal autorizado</string>
+    <string name="app_footer">Una app · Acceso según tu rol</string>
+    <string name="msg_login_simulated">Inicio de sesión simulado. Autenticación no configurada.</string>
+    <string name="msg_forgot_password">Recuperación de contraseña no disponible en este modo.</string>
+    <string name="error_email_required">Por favor ingresa tu correo electrónico</string>
+    <string name="error_email_invalid">Correo institucional inválido</string>
+    <string name="error_password_required">Por favor ingresa tu contraseña</string>
+    <string name="error_invalid_credentials">Correo o contraseña incorrectos</string>
+
+    <!-- Dashboard / Receptionist screen strings -->
+    <string name="hospital_san_gabriel">Hospital San Gabriel</string>
+    <string name="greeting_ana">Buenos días, Ana</string>
+    <string name="reception_panel_date">Panel de recepción · Miércoles 21 de octubre</string>
+    <string name="search_hint">Buscar servicios y pacientes...</string>
+    <string name="section_summary">Resumen de hoy</string>
+    <string name="stat_appointments">Citas programadas</string>
+    <string name="stat_waiting">En espera</string>
+    <string name="stat_admissions">Ingresos hoy</string>
+    <string name="stat_beds">Camas libres</string>
+    <string name="section_quick_access">Accesos rápidos</string>
+    <string name="action_register_patient">Registrar paciente</string>
+    <string name="action_schedule_appointment">Agendar cita</string>
+    <string name="action_register_admission">Registrar ingreso</string>
+    <string name="action_view_rooms">Ver habitaciones</string>
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_patients">Pacientes</string>
+    <string name="nav_appointments">Citas</string>
+    <string name="nav_turns">Turnos</string>
+    <string name="nav_more">Más</string>
+    <string name="msg_feature_in_development">Módulo en desarrollo</string>
+
+    <!-- Cierre de sesión -->
+    <string name="dialog_logout_title">Cerrar sesión</string>
+    <string name="dialog_logout_message">¿Seguro que deseas cerrar la sesión actual?</string>
+    <string name="dialog_logout_cancel">Cancelar</string>
+    <string name="dialog_logout_confirm">Cerrar sesión</string>
+
+    <!-- Patients Screen Strings -->
+    <string name="patients_title">Pacientes</string>
+    <string name="patients_subtitle">Registro, búsqueda y consulta de pacientes</string>
+    <string name="search_patients_hint">Buscar pacientes...</string>
+    <string name="registered_patients_title">Pacientes registrados</string>
+    <string name="patients_filter_todos">Todos ▾</string>
+    <string name="patients_filter_activos">Activos ▾</string>
+
+    <string name="patient_1_name">Carlos Mendoza</string>
+    <string name="patient_1_meta">EXP-001284 · Activo</string>
+
+    <string name="patient_2_name">María López</string>
+    <string name="patient_2_meta">EXP-001285 · Hospitalizada</string>
+
+    <string name="patient_3_name">Juan Pérez</string>
+    <string name="patient_3_meta">EXP-001286 · En triage</string>
+
+    <string name="patient_4_name">Lucía García</string>
+    <string name="patient_4_meta">EXP-001287 · Seguimiento</string>
+
+    <string name="patient_5_name">Roberto Díaz</string>
+    <string name="patient_5_meta">EXP-001288 · Hospitalizado</string>
+
+    <string name="btn_view_record">Ver expediente</string>
+    <string name="btn_new_patient">+ Nuevo paciente</string>
+    <string name="msg_view_record">Abriendo expediente para</string>
+    <string name="msg_new_patient">Formulario de registro de nuevo paciente</string>
+
+    <!-- Appointments Screen Strings -->
+    <string name="appointments_title">Citas</string>
+    <string name="appointments_subtitle">Agenda y programación de consultas</string>
+    <string name="search_appointments_hint">Buscar citas...</string>
+    <string name="appointments_date_title">Miércoles, 21 de octubre</string>
+    <string name="appointments_date_nav">‹    Hoy    ›                    Todos  ▾</string>
+
+    <string name="apt_1_time_name">08:00 am · María López</string>
+    <string name="apt_1_meta">Medicina interna · Dr. Ramírez</string>
+    <string name="status_confirmed">Confirmada</string>
+
+    <string name="apt_2_time_name">09:30 am · Carlos Mendoza</string>
+    <string name="apt_2_meta">Cardiología · Dra. Castillo</string>
+    <string name="status_waiting">En espera</string>
+
+    <string name="apt_3_time_name">11:00 am · Lucía García</string>
+    <string name="apt_3_meta">Pediatría · Dra. Torres</string>
+
+    <string name="apt_4_time_name">01:30 pm · Juan Pérez</string>
+    <string name="apt_4_meta">Consulta general · Dr. Méndez</string>
+    <string name="status_inprogress">En curso</string>
+
+    <string name="apt_5_time_name">03:00 pm · Roberto Díaz</string>
+    <string name="apt_5_meta">Medicina interna · Dr. Ramírez</string>
+    <string name="status_pending">Pendiente</string>
+
+    <string name="btn_new_appointment">+ Agendar cita</string>
+    <string name="msg_new_appointment">Formulario para agendar nueva cita</string>
+    <string name="msg_appointment_details">Detalle de cita:</string>
+
+    <!-- Turns Screen Strings -->
+    <string name="turns_title">Turnos de atención</string>
+    <string name="turns_subtitle">Orden de atención en recepción y consultas</string>
+    <string name="search_turns_hint">Buscar turnos de atención...</string>
+    <string name="turns_queue_title">Cola de atención</string>
+    <string name="stat_queue_waiting">12</string>
+    <string name="stat_queue_waiting_label">En espera</string>
+    <string name="stat_queue_in_care">4</string>
+    <string name="stat_queue_in_care_label">En atención</string>
+    <string name="turns_active_title">Sala de espera · Turnos activos</string>
+
+    <string name="turn_1_name">A-021 · María López</string>
+    <string name="turn_1_meta">Cardiología · 09:30 am</string>
+    <string name="turn_2_name">A-022 · Juan Pérez</string>
+    <string name="turn_2_meta">Consulta general · 10:00 am</string>
+    <string name="status_called">Llamado</string>
+    <string name="turn_3_name">A-023 · Ana Herrera</string>
+    <string name="turn_3_meta">Medicina interna · 10:15 am</string>
+    <string name="msg_turn_details">Turno seleccionado:</string>
+
+    <!-- Admissions Screen Strings -->
+    <string name="admissions_title">Ingresos</string>
+    <string name="admissions_subtitle">Admisión, registro y seguimiento hospitalario</string>
+    <string name="search_admissions_hint">Buscar ingresos...</string>
+    <string name="recent_admissions_title">Ingresos recientes</string>
+    <string name="admissions_filter">Estado: Todos  ▾     Fecha: Hoy  ▾</string>
+
+    <string name="adm_1_name">Carlos Mendoza</string>
+    <string name="adm_1_meta">Urgencias · VIP-301</string>
+    <string name="status_admitted">Ingresado</string>
+
+    <string name="adm_2_name">María López</string>
+    <string name="adm_2_meta">Observación · HAB-202 A</string>
+    <string name="status_observation">Observación</string>
+
+    <string name="adm_3_name">Juan Pérez</string>
+    <string name="adm_3_meta">Urgencias · Sin asignar</string>
+    <string name="status_triage">En triage</string>
+
+    <string name="adm_4_name">Lucía García</string>
+    <string name="adm_4_meta">Programado · HAB-204 B</string>
+    <string name="status_admitted_female">Ingresada</string>
+
+    <string name="adm_5_name">Roberto Díaz</string>
+    <string name="adm_5_meta">Urgencias · HAB-201 A</string>
+
+    <string name="btn_new_admission">+ Nuevo ingreso</string>
+    <string name="msg_new_admission">Formulario de registro de nuevo ingreso</string>
+    <string name="msg_admission_details">Detalle de ingreso:</string>
+
+    <!-- Rooms Screen Strings -->
+    <string name="rooms_title">Habitaciones</string>
+    <string name="rooms_subtitle">Habitaciones y camas para asignación</string>
+    <string name="search_rooms_hint">Buscar disponibilidad...</string>
+    <string name="rooms_capacity_title">Capacidad hospitalaria</string>
+    <string name="stat_total_beds">17</string>
+    <string name="stat_total_beds_label">Camas totales</string>
+    <string name="stat_available_beds">7</string>
+    <string name="stat_available_beds_label">Disponibles</string>
+    <string name="rooms_vip_title">VIP · 3ª planta</string>
+    <string name="rooms_semi_title">Semiprivadas · 2ª planta</string>
+    <string name="rooms_semi_meta">HAB-201 a HAB-206 · 2 camas por habitación</string>
+    <string name="rooms_consult_link">Consultar disponibilidad completa   ›</string>
+
+    <string name="status_occupied">Ocupada</string>
+    <string name="status_available">Disponible</string>
+    <string name="msg_room_details">Habitación seleccionada:</string>
+
+    <!-- Nursing Home Screen Strings -->
+    <string name="nursing_greeting">Hola, Laura</string>
+    <string name="nursing_turn_subtitle">Turno de enfermería · 21 octubre</string>
+    <string name="nursing_search_hint">Buscar tareas y pacientes...</string>
+    <string name="nursing_summary_title">Resumen de mi turno</string>
+    <string name="nursing_stat_assigned">Pacientes asignados</string>
+    <string name="nursing_stat_preconsult">Preconsultas</string>
+    <string name="nursing_stat_pending_indications">Indicaciones pendientes</string>
+    <string name="nursing_stat_shift_change">Cambio de turno</string>
+    <string name="nursing_quick_access_title">Accesos rápidos</string>
+    <string name="nursing_action_preconsult">Preconsulta</string>
+    <string name="nursing_action_my_patients">Mis pacientes</string>
+    <string name="nursing_action_rooms">Habitaciones</string>
+    <string name="nursing_action_indications">Indicaciones</string>
+    <string name="nav_nursing_preconsult">Preconsulta</string>
+    <string name="nav_nursing_rooms">Habitaciones</string>
+    <string name="btn_nursing_role">Modo Enfermería (Laura)</string>
+
+    <!-- Nursing Patients Screen Strings -->
+    <string name="nursing_patients_title">Pacientes asignados</string>
+    <string name="nursing_patients_subtitle">Pacientes bajo mi responsabilidad</string>
+    <string name="nursing_search_patients_hint">Buscar pacientes asignados...</string>
+    <string name="nursing_patients_list_title">Mi lista de pacientes</string>
+    <string name="nursing_patients_filters">Turno actual    ▾       Estado: Todos    ▾</string>
+
+    <string name="nursing_pat_1_name">Carlos Mendoza</string>
+    <string name="nursing_pat_1_meta">VIP-301 · Control de signos</string>
+    <string name="status_following">En seguimiento</string>
+
+    <string name="nursing_pat_2_name">María López</string>
+    <string name="nursing_pat_2_meta">HAB-202 · Preconsulta</string>
+
+    <string name="nursing_pat_3_name">Roberto Díaz</string>
+    <string name="nursing_pat_3_meta">HAB-201 · Control de glucosa</string>
+
+    <string name="nursing_pat_4_name">Lucía García</string>
+    <string name="nursing_pat_4_meta">HAB-204 · Evolución favorable</string>
+    <string name="status_stable">Estable</string>
+
+    <string name="nursing_pat_5_name">Ana Herrera</string>
+    <string name="nursing_pat_5_meta">HAB-205 · Medicación</string>
+
+    <string name="msg_nursing_patient_details">Expediente de paciente asignado:</string>
+
+    <!-- Nursing Preconsult Screen Strings -->
+    <string name="nursing_preconsult_title">Preconsulta</string>
+    <string name="nursing_preconsult_subtitle">Signos vitales y evaluación inicial</string>
+    <string name="nursing_search_preconsult_hint">Buscar preconsulta...</string>
+    <string name="nursing_selected_patient_title">Paciente seleccionado</string>
+    <string name="nursing_selected_patient_name">María López · EXP-001285</string>
+    <string name="nursing_selected_patient_meta">67 años · HAB-202 A</string>
+    <string name="nursing_vitals_title">Registrar signos vitales</string>
+
+    <string name="label_bp">Presión arterial</string>
+    <string name="value_bp">120/80 mmHg</string>
+    <string name="label_hr">Frecuencia cardíaca</string>
+    <string name="value_hr">78 lpm</string>
+    <string name="label_temp">Temperatura</string>
+    <string name="value_temp">36.7 °C</string>
+    <string name="label_spo2">Saturación O₂</string>
+    <string name="value_spo2">98%</string>
+    <string name="label_rr">Frecuencia respiratoria</string>
+    <string name="value_rr">18 rpm</string>
+    <string name="label_weight">Peso</string>
+    <string name="value_weight">68 kg</string>
+
+    <string name="btn_save_preconsult">Guardar preconsulta</string>
+    <string name="msg_preconsult_saved">Preconsulta guardada correctamente</string>
+
+    <!-- Nursing Rooms Screen Strings -->
+    <string name="nursing_rooms_title">Habitaciones</string>
+    <string name="nursing_rooms_subtitle">Control y observación de pacientes</string>
+    <string name="nursing_search_rooms_hint">Buscar habitaciones...</string>
+    <string name="nursing_rooms_occupancy_title">Vista de ocupación</string>
+    <string name="nursing_stat_total_beds">17</string>
+    <string name="nursing_stat_total_beds_label">Camas totales</string>
+    <string name="nursing_stat_occupied_beds">10</string>
+    <string name="nursing_stat_occupied_beds_label">Ocupadas</string>
+    <string name="nursing_rooms_vip_title">VIP · Tercera planta</string>
+
+    <string name="nursing_room_1_name">VIP-301</string>
+    <string name="nursing_room_1_patient">Carlos Mendoza</string>
+    <string name="nursing_room_2_name">VIP-302</string>
+    <string name="nursing_room_2_patient">Sin paciente</string>
+    <string name="nursing_room_3_name">VIP-303</string>
+    <string name="nursing_room_3_patient">Paciente asignado</string>
+    <string name="nursing_room_4_name">VIP-304</string>
+    <string name="nursing_room_4_patient">Paciente asignado</string>
+    <string name="nursing_room_5_name">VIP-305</string>
+    <string name="nursing_room_5_patient">Sin paciente</string>
+
+    <string name="nursing_rooms_semi_footer">Semiprivadas: HAB-201 a HAB-206 · 12 camas</string>
+    <string name="msg_nursing_room_details">Habitación de enfermería:</string>
+
+    <!-- Nursing Turns Screen Strings -->
+    <string name="nursing_turns_title">Turnos laborales</string>
+    <string name="nursing_turns_subtitle">Mi horario y guardias asignadas</string>
+    <string name="nursing_search_turns_hint">Buscar turnos laborales...</string>
+    <string name="nursing_next_guard_title">Mi próxima guardia</string>
+    <string name="nursing_next_guard_date">Miércoles 21 de octubre</string>
+    <string name="nursing_next_guard_time">Mañana · 06:00 am a 02:00 pm</string>
+    <string name="status_confirmed_shift">Confirmado</string>
+
+    <string name="nursing_week_title">Semana laboral</string>
+    <string name="day_1_name">Lunes 19</string>
+    <string name="day_1_time">06:00 am–02:00 pm</string>
+    <string name="shift_morning">Mañana</string>
+
+    <string name="day_2_name">Martes 20</string>
+    <string name="day_2_time">06:00 am–02:00 pm</string>
+
+    <string name="day_3_name">Miércoles 21</string>
+    <string name="day_3_time">06:00 am–02:00 pm</string>
+
+    <string name="day_4_name">Jueves 22</string>
+    <string name="day_4_desc">Descanso</string>
+    <string name="shift_free">Libre</string>
+
+    <string name="day_5_name">Viernes 23</string>
+    <string name="day_5_time">02:00 pm–10:00 pm</string>
+    <string name="shift_afternoon">Tarde</string>
+
+    <string name="msg_shift_details">Detalle de turno:</string>
+
+    <!-- Nursing Indications Screen Strings -->
+    <string name="nursing_indications_title">Indicaciones autorizadas</string>
+    <string name="nursing_indications_subtitle">Seguimiento de órdenes médicas asignadas</string>
+    <string name="nursing_search_indications_hint">Buscar indicaciones autorizadas...</string>
+    <string name="nursing_indications_list_title">Indicaciones de mi turno</string>
+    <string name="nursing_indications_filters">Pendientes   ▾       Paciente: Todos   ▾</string>
+
+    <string name="ind_1_name">Carlos Mendoza</string>
+    <string name="ind_1_meta">Control de presión · 10:00 am</string>
+
+    <string name="ind_2_name">María López</string>
+    <string name="ind_2_meta">Verificar signos · 10:30 am</string>
+
+    <string name="ind_3_name">Roberto Díaz</string>
+    <string name="ind_3_meta">Glucemia capilar · 11:00 am</string>
+
+    <string name="ind_4_name">Lucía García</string>
+    <string name="ind_4_meta">Registrar signos · 12:00 pm</string>
+    <string name="status_completed">Completada</string>
+
+    <string name="ind_5_name">Ana Herrera</string>
+    <string name="ind_5_meta">Vigilancia clínica · 01:00 pm</string>
+
+    <string name="nursing_indications_footer">Solo ejecutar indicaciones registradas y autorizadas</string>
+    <string name="msg_indication_details">Detalle de indicación:</string>
+
+    <!-- Doctor Role Strings -->
+    <string name="btn_doctor_role">Modo Doctor (Dr. Ramírez)</string>
+    <string name="doctor_greeting">Buenos días, Dr. Ramírez</string>
+    <string name="doctor_panel_date">Panel médico · Miércoles 21 de octubre</string>
+    <string name="doctor_search_hint">Buscar pacientes y citas...</string>
+    <string name="doctor_stat_appointments">Citas hoy</string>
+    <string name="doctor_stat_inpatients">Internados</string>
+    <string name="doctor_stat_waiting">En espera</string>
+    <string name="doctor_stat_prescriptions">Recetas</string>
+    <string name="nav_doctor_appointments">Mis citas</string>
+    <string name="nav_doctor_consult">Consulta</string>
+    <string name="nav_doctor_records">Expediente</string>
+
+    <!-- Doctor Appointments Screen Strings -->
+    <string name="doctor_appointments_title">Mis citas</string>
+    <string name="doctor_appointments_subtitle">Agenda y consultas programadas del día</string>
+    <string name="doctor_search_appointments_hint">Buscar citas médicas...</string>
+    <string name="doctor_appointments_date_title">Miércoles, 21 de octubre</string>
+    <string name="doctor_appointments_date_nav">‹    Hoy    ›                    Todos  ▾</string>
+
+    <string name="doc_apt_1_time_name">08:00 am · María López</string>
+    <string name="doc_apt_1_meta">Medicina interna · Primera vez</string>
+
+    <string name="doc_apt_2_time_name">09:30 am · Carlos Mendoza</string>
+    <string name="doc_apt_2_meta">Cardiología · Control</string>
+
+    <string name="doc_apt_3_time_name">11:00 am · Lucía García</string>
+    <string name="doc_apt_3_meta">Pediatría · Seguimiento</string>
+
+    <string name="doc_apt_4_time_name">01:30 pm · Juan Pérez</string>
+    <string name="doc_apt_4_meta">Consulta general · Urgencia menor</string>
+
+    <string name="doc_apt_5_time_name">03:00 pm · Roberto Díaz</string>
+    <string name="doc_apt_5_meta">Medicina interna · Control</string>
+
+    <string name="msg_doctor_appointment_details">Detalle de cita médica:</string>
+
+    <!-- Doctor Consult Screen Strings -->
+    <string name="doctor_consult_title">Consulta</string>
+    <string name="doctor_consult_subtitle">Evaluación y diagnóstico clínico</string>
+    <string name="doctor_search_consult_hint">Buscar en consulta...</string>
+    <string name="doctor_consult_patient_section">Paciente en atención</string>
+    <string name="doctor_consult_patient_name">María López · EXP-001285</string>
+    <string name="doctor_consult_patient_meta">67 años · HAB-202 A</string>
+    <string name="doctor_consult_notes_title">Diagnóstico y notas médicas</string>
+    <string name="doctor_consult_notes_hint">Escribe las observaciones clínicas, diagnóstico y tratamiento prescrito...</string>
+    <string name="btn_finish_consult">Finalizar consulta</string>
+    <string name="msg_consult_finished">Consulta finalizada correctamente</string>
+
+    <!-- New Doctor Consult Sections Strings -->
+    <string name="doctor_consult_reason_title">Motivo de consulta</string>
+    <string name="doctor_consult_reason_hint">Dolor torácico leve y control periódico...</string>
+    <string name="doctor_consult_exploration_title">Exploración y valoración</string>
+    <string name="doctor_consult_exploration_hint">Registrar hallazgos de exploración física...</string>
+    <string name="doctor_consult_diagnosis_plan_title">Diagnóstico y plan</string>
+    <string name="doctor_consult_diagnosis_plan_hint">CIE-10 / Diagnóstico clínico ▾</string>
+
+    <!-- Doctor Records Screen Strings (Updated to match Figma 52-853) -->
+    <string name="doctor_records_title">Expediente clínico</string>
+    <string name="doctor_records_subtitle">Historial de un paciente autorizado</string>
+    <string name="doctor_search_records_hint">Buscar expediente clínico...</string>
+    <string name="doctor_records_patient_name">Carlos Mendoza</string>
+    <string name="doctor_records_patient_meta">EXP-001284 · 45 años · O+</string>
+    <string name="doctor_records_badge_confidential">Confidencial</string>
+    <string name="doctor_records_summary_title">Resumen de expediente</string>
+
+    <string name="doc_rec_1_title">Diagnósticos</string>
+    <string name="doc_rec_1_sub">Hipertensión arterial · En seguimiento</string>
+
+    <string name="doc_rec_2_title">Alergias</string>
+    <string name="doc_rec_2_sub">Penicilina · Alerta clínica</string>
+
+    <string name="doc_rec_3_title">Tratamiento activo</string>
+    <string name="doc_rec_3_sub">Losartán 50 mg · Según prescripción</string>
+
+    <string name="doc_rec_4_title">Antecedentes</string>
+    <string name="doc_rec_4_sub">Cirugía abdominal previa</string>
+
+    <string name="doc_rec_5_title">Evolución reciente</string>
+    <string name="doc_rec_5_sub">Último control y observaciones</string>
+
+    <string name="msg_doctor_record_details">Detalle de expediente:</string>
+
+    <!-- Doctor More Screen Strings (Updated to 3 options: Laboratorio, Recetas, Horarios) -->
+    <string name="doctor_more_title">Más opciones</string>
+    <string name="doctor_more_subtitle">Configuración y herramientas médicas</string>
+    <string name="doctor_search_more_hint">Buscar opciones...</string>
+    <string name="doctor_more_section_title">Opciones del sistema</string>
+    <string name="doc_more_opt_lab">Laboratorio</string>
+    <string name="doc_more_opt_prescriptions">Recetas</string>
+    <string name="doc_more_opt_schedule">Horarios</string>
+    <string name="doctor_more_opt_logout">Cerrar sesión</string>
+    <string name="msg_doctor_more_details">Opción seleccionada:</string>
+
+    <!-- Doctor Lab Screen Strings (Figma 52-897) -->
+    <string name="doctor_lab_title">Laboratorio</string>
+    <string name="doctor_lab_subtitle">Órdenes clínicas y resultados</string>
+    <string name="doctor_search_lab_hint">Buscar laboratorio...</string>
+    <string name="doctor_lab_list_title">Órdenes de mis pacientes</string>
+    <string name="doctor_lab_filters">Todas ▾       Estado: Todos ▾</string>
+
+    <string name="lab_1_name">LAB-2048 · Carlos Mendoza</string>
+    <string name="lab_1_meta">Biometría hemática · Urgente</string>
+
+    <string name="lab_2_name">LAB-2049 · María López</string>
+    <string name="lab_2_meta">Química sanguínea</string>
+
+    <string name="lab_3_name">LAB-2050 · Juan Pérez</string>
+    <string name="lab_3_meta">Perfil lipídico</string>
+
+    <string name="lab_4_name">LAB-2051 · Lucía García</string>
+    <string name="lab_4_meta">Uroanálisis</string>
+
+    <string name="lab_5_name">LAB-2052 · Roberto Díaz</string>
+    <string name="lab_5_meta">Proteína C reactiva</string>
+
+    <string name="msg_lab_details">Detalle de orden de laboratorio:</string>
+
+    <!-- Doctor Prescriptions Screen Strings (Figma 52-944) -->
+    <string name="doctor_prescriptions_title">Recetas</string>
+    <string name="doctor_prescriptions_subtitle">Prescripción y seguimiento farmacológico</string>
+    <string name="doctor_search_prescriptions_hint">Buscar recetas...</string>
+    <string name="doctor_prescriptions_list_title">Prescripciones recientes</string>
+    <string name="doctor_prescriptions_filters">Paciente: Todos ▾       Estado: Todos ▾</string>
+
+    <string name="rx_1_name">Carlos Mendoza</string>
+    <string name="rx_1_meta">Losartán 50 mg · Vía oral</string>
+    <string name="status_active">Activa</string>
+
+    <string name="rx_2_name">María López</string>
+    <string name="rx_2_meta">Paracetamol 500 mg · Vía oral</string>
+
+    <string name="rx_3_name">Juan Pérez</string>
+    <string name="rx_3_meta">Medicamento según evaluación</string>
+
+    <string name="rx_4_name">Lucía García</string>
+    <string name="rx_4_meta">Control de tratamiento</string>
+
+    <string name="doctor_prescriptions_allergy_banner">Verificar alergias y contraindicaciones</string>
+    <string name="doctor_prescriptions_new_button">+ Nueva receta</string>
+    <string name="msg_prescription_details">Detalle de receta:</string>
+    <string name="msg_new_prescription">Formulario de nueva receta</string>
+
+    <!-- Doctor Schedule Screen Strings (Figma 52-998 / user image) -->
+    <string name="doctor_schedule_title">Mi horario</string>
+    <string name="doctor_schedule_subtitle">Turnos médicos y disponibilidad</string>
+    <string name="doctor_search_schedule_hint">Buscar mi horario...</string>
+    <string name="doctor_next_shift_title">Próxima jornada</string>
+    <string name="doctor_next_shift_date">Miércoles 21 de octubre</string>
+    <string name="doctor_next_shift_time">Mañana · 07:00 am–03:00 pm</string>
+    <string name="doctor_week_schedule_title">Agenda semanal</string>
+
+    <string name="doc_sch_1_day">Lunes 19</string>
+    <string name="doc_sch_1_time">07:00 am–03:00 pm</string>
+
+    <string name="doc_sch_2_day">Martes 20</string>
+    <string name="doc_sch_2_time">07:00 am–03:00 pm</string>
+
+    <string name="doc_sch_3_day">Miércoles 21</string>
+    <string name="doc_sch_3_time">07:00 am–03:00 pm</string>
+
+    <string name="doc_sch_4_day">Jueves 22</string>
+    <string name="doc_sch_4_desc">Guardia 03:00 pm–11:00 pm</string>
+
+    <string name="doc_sch_5_day">Viernes 23</string>
+    <string name="doc_sch_5_desc">Descanso</string>
+
+    <string name="msg_schedule_details">Detalle de turno médico:</string>
+
+    <string name="status_in_process">En proceso</string>
+    <string name="status_completed_lab">Completado</string>
+
+    <!-- Más Screen Strings (Recepción) -->
+    <string name="reception_more_title">Más opciones</string>
+    <string name="reception_more_subtitle">Configuración y herramientas de recepción</string>
+    <string name="reception_search_more_hint">Buscar opciones...</string>
+    <string name="reception_more_section_title">Opciones del sistema</string>
+    <string name="reception_more_opt_admissions">Ingresos</string>
+    <string name="reception_more_opt_rooms">Habitaciones</string>
+    <string name="reception_more_opt_logout">Cerrar sesión</string>
+    <string name="msg_search_more_options">Búsqueda en opciones del sistema</string>
+
+    <!-- Más Screen Strings (Enfermería) -->
+    <string name="nursing_more_title">Más opciones</string>
+    <string name="nursing_more_subtitle">Configuración y herramientas de enfermería</string>
+    <string name="nursing_search_more_hint">Buscar opciones...</string>
+    <string name="nursing_more_section_title">Opciones del sistema</string>
+    <string name="nursing_more_opt_turns">Turnos laborales</string>
+    <string name="nursing_more_opt_indications">Indicaciones autorizadas</string>
+    <string name="nursing_more_opt_logout">Cerrar sesión</string>
+    <string name="auth_network_error">No se pudo conectar con Supabase. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="auth_server_error">Supabase no pudo completar el acceso. Inténtalo de nuevo.</string>
+    <string name="auth_access_denied">Acceso denegado. Verifica tu cuenta y sus permisos.</string>
+    <string name="auth_no_role">La autenticación fue correcta, pero no tienes un rol activo visible de recepción, doctor o enfermería. Consulta con administración.</string>
+    <string name="auth_rate_limit">Demasiados intentos. Espera un momento antes de volver a intentarlo.</string>
+    <string name="auth_choose_role">Selecciona tu rol</string>
+    <string name="auth_role_reception">Recepción</string>
+    <string name="auth_role_nursing">Enfermería</string>
+    <string name="auth_role_doctor">Doctor</string>
+    <string name="auth_nursing_login">Acceder como Enfermería</string>
+    <string name="auth_doctor_login">Acceder como Doctor</string>
+    <string name="auth_demo_notice">Acceso conectado a Supabase. Los módulos de citas, ingresos y atención clínica todavía usan datos ficticios y no guardan cambios en la base de datos.</string>
+    <string name="patient_status_in_care">En atención</string>
+    <string name="patient_status_unspecified">Sin atención activa visible</string>
+    <string name="patient_conflict">No se pudo guardar: existe un registro duplicado o relacionado.</string>
+    <string name="patient_write_denied">Tu cuenta no tiene permiso para modificar pacientes.</string>
+    <string name="patient_missing">El paciente ya no está disponible o no tienes permiso para editarlo.</string>
+    <string name="patient_first_name">Nombres</string>
+    <string name="patient_last_name">Apellidos</string>
+    <string name="patient_birth_date">Fecha de nacimiento (AAAA-MM-DD, opcional)</string>
+    <string name="patient_dui">DUI (opcional)</string>
+    <string name="patient_city">Ciudad (opcional)</string>
+    <string name="patient_date_error">Introduce una fecha válida con formato AAAA-MM-DD que no sea futura.</string>
+    <string name="patient_dui_error">Usa el formato 00000000-0 o deja el campo vacío.</string>
+    <string name="patient_unknown_age">No registrada</string>
+    <string name="patient_remote_detail">Paciente: %1$s\nCódigo: %2$s\nEstado: %3$s\nEdad: %4$s\nTeléfono: %5$s</string>
+    <string name="patient_age_value">%1$d años</string>
+    <string name="patient_delete_unavailable">La base de datos no permite eliminar pacientes desde esta aplicación.</string>
+    <string name="patient_loading">Cargando pacientes…</string>
+    <string name="patient_save_error">No se pudo guardar el paciente. Tus datos siguen en el formulario.</string>
+    <string name="remote_loading">Consultando Hospital Móviles…</string>
+    <string name="remote_placeholder">—</string>
+    <string name="remote_greeting">Hola, %1$s</string>
+    <string name="remote_reception_date">Panel de recepción · %1$s</string>
+    <string name="remote_number">%1$d</string>
+    <string name="remote_scheduled">Programada</string>
+    <string name="remote_no_show">No asistió</string>
+    <string name="remote_requested">Solicitado</string>
+    <string name="remote_assigned">Asignado</string>
+    <string name="remote_medical_discharge">Alta médica</string>
+    <string name="remote_closed">Cerrado</string>
+    <string name="remote_cleaning">Limpieza</string>
+    <string name="remote_maintenance">Mantenimiento</string>
+    <string name="remote_unknown">Sin información</string>
+    <string name="remote_use_actions">Usa las acciones disponibles para este registro.</string>
+    <string name="remote_operation_error">No se pudo completar la operación. Revisa la conexión, los permisos y el estado del registro.</string>
+    <string name="remote_retry">Volver a consultar</string>
+    <string name="remote_appointment_cancel">Cancelar cita</string>
+    <string name="remote_confirm_action">¿Confirmas esta operación en Hospital Móviles?</string>
+    <string name="remote_confirm">Confirmar</string>
+    <string name="remote_cancel_reason">Motivo de cancelación (opcional)</string>
+    <string name="remote_select_patient">Selecciona un paciente registrado</string>
+    <string name="remote_select_slot">Selecciona un horario disponible</string>
+    <string name="remote_no_slots">No hay horarios disponibles para esta fecha. Revisa la planificación en Hospital Móviles o elige otra fecha.</string>
+    <string name="remote_slot">%1$s–%2$s · %3$s · %4$s</string>
+    <string name="remote_saved">Operación guardada en Hospital Móviles.</string>
+    <string name="remote_assign_bed">Asignar cama</string>
+    <string name="remote_release_bed">Cerrar ingreso y liberar cama</string>
+    <string name="remote_no_beds">No hay camas disponibles del tipo solicitado.</string>
+    <string name="remote_admission_details">%1$s\nEstado: %2$s\nTipo de habitación: %3$s</string>
+    <string name="remote_room_vip">VIP</string>
+    <string name="remote_room_semi">Semiprivada</string>
+    <string name="remote_bed_line">%1$s · %2$s · %3$s</string>
+    <string name="remote_room_capacity">%1$d habitaciones · %2$d camas · %3$d disponibles</string>
+    <string name="remote_vip_title">Habitaciones VIP</string>
+    <string name="remote_semi_title">Habitaciones semiprivadas</string>
+    <string name="remote_rooms_empty">No hay habitaciones visibles para tu cuenta.</string>
+    <string name="remote_rooms_all">Disponibilidad completa</string>
+    <string name="remote_cancel_error">No se pudo cancelar. Actualiza la lista y revisa el estado de la cita.</string>
+    <string name="remote_admission_help">Los ingresos los solicita el médico en Hospital Móviles. Recepción asigna la cama y cierra el ingreso después del alta médica.</string>
+    <string name="remote_appointments_all">Citas registradas en Hospital Móviles</string>
+    <string name="remote_no_waiting_definition">Pendiente de definir el indicador de espera.</string>
+    <string name="auth_config_missing">Falta configurar SUPABASE_PUBLISHABLE_KEY en supabase.properties y volver a compilar.</string>
+    <string name="remote_queue_title">Turno %1$d · %2$s</string>
+    <string name="remote_entry_details">%1$s\nEstado: %2$s</string>
+    <string name="auth_dns_error">Android no pudo resolver la dirección de Supabase. Revisa la conexión y el DNS del dispositivo.</string>
+    <string name="auth_timeout_error">La conexión con Supabase agotó el tiempo de espera.</string>
+    <string name="auth_connect_error">El dispositivo no pudo establecer la conexión con Supabase.</string>
+    <string name="auth_ssl_error">Falló la conexión segura SSL con Supabase. Revisa la fecha y la red del dispositivo.</string>
+    <string name="auth_certificate_error">Android rechazó el certificado de Supabase. Revisa la fecha y hora automáticas del dispositivo.</string>
+    <string name="auth_email_unconfirmed">Debes confirmar tu correo antes de iniciar sesión.</string>
+    <string name="auth_key_rejected">Supabase rechazó la clave pública configurada. Revisa la configuración y recompila.</string>
+    <string name="auth_profile_unavailable">La autenticación fue correcta, pero tu perfil no está disponible. Consulta con administración los permisos de tu perfil.</string>
+    <string name="auth_login_rejected">Supabase rechazó el inicio de sesión. Comprueba el correo, la contraseña y el estado de la cuenta con administración.</string>
+    <string name="auth_account_disabled">La cuenta está deshabilitada. Consulta con administración.</string>
+    <string name="auth_session_expired">La sesión ya no es válida. Vuelve a iniciar sesión.</string>
+</resources>

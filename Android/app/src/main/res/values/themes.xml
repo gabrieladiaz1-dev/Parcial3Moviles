@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Hospital_Universitario" parent="Theme.Material3.DayNight.NoActionBar" />
+    <!-- Módulo Doctor: acentos vino en diálogos, selectores y controles (HospitalTheme.wine). -->
+    <style name="Theme.Doctor" parent="Theme.Hospital_Universitario">
+        <item name="colorPrimary">@color/doctor_wine</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorPrimaryContainer">@color/doctor_rose</item>
+        <item name="colorSecondary">@color/doctor_wine</item>
+        <item name="colorAccent">@color/doctor_wine</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="colorSurfaceContainerHigh">@android:color/white</item>
+        <item name="colorSurfaceContainerHighest">@android:color/white</item>
+        <item name="android:windowBackground">@color/doctor_background</item>
+        <item name="android:textColorHighlight">@color/doctor_rose</item>
+        <item name="colorControlActivated">@color/doctor_wine</item>
+    </style>
+    <style name="ThemeOverlay.Doctor" parent="">
+        <item name="colorPrimary">@color/doctor_wine</item>
+        <item name="colorAccent">@color/doctor_wine</item>
+        <item name="android:colorAccent">@color/doctor_wine</item>
+        <item name="colorControlActivated">@color/doctor_wine</item>
+    </style>
+    <style name="DoctorTab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="DoctorTabIcon">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+    <style name="DoctorTabText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+</resources>

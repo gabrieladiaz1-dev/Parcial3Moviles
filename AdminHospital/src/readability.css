@@ -1,0 +1,27 @@
+/* One readable type scale for the ADMIN, including lazy-loaded modules. */
+html{font-size:16px}
+@theme{--text-xs:.875rem;--text-xs--line-height:1.55;--text-sm:1rem;--text-sm--line-height:1.6;--text-base:1rem;--text-base--line-height:1.65}
+#root{font-size:1rem;line-height:1.65}
+#root :where(.hospital,.walkin,.agenda-workspace,.patient-directory,.panel-ops,.staff-week){font-size:1rem}
+#root :where(p,li,dd,label,input,select,textarea,td,th){font-size:1rem;line-height:1.65}
+#root :where(p){color:inherit}
+#root :where(button){font-size:.9412rem;line-height:1.45;min-height:42px}
+#root :where(small,dt,time,summary){font-size:.8824rem;line-height:1.6}
+#root :where(small,dt){color:#795f6e}
+#root :where(h1){font-size:clamp(1.8rem,2.3vw,2.2rem);line-height:1.3}
+#root :where(h2){font-size:clamp(1.5rem,2vw,1.9rem);line-height:1.35}
+#root :where(h3){font-size:1.1765rem;line-height:1.4}
+#root :where(h4){font-size:1.0588rem;line-height:1.45}
+#root :where([class*="eyebrow"],[class*="-hint"],[class*="-note"],[class*="-badge"],[class*="-tag"],[class*="-state"]){font-size:.8824rem;line-height:1.55}
+#root :where(.employee-field-label,.employee-specialty-option-name,.patient-result-email,.hospital-filter-pills>span,.agenda-status-filter>span){font-size:1rem}
+#root :where([class*="-meta"],[class*="-meta"] span,[class*="-stats"] span,[class*="-counters"] span,[class*="-floor"],[class*="-help"]){font-size:.8824rem;line-height:1.6}
+#root :where(input:not([type=checkbox]):not([type=radio]),select){min-height:46px}
+#root :where(textarea){min-height:110px}
+#root :where(input,textarea,select,button){font-family:inherit}
+#root :where(.hospital-bed-card.ocupada,.assigned-room.is-assigned) :where(small,dt){color:#ffedf4}
+#root :where(.hospital-bed-card.ocupada,.assigned-room.is-assigned) :where(time){color:inherit}
+#root .hospital-sidebar p{color:#fff0f5}
+#root .hospital-sidebar nav{min-height:0}
+#root .hospital-sidebar nav button{min-width:0;white-space:normal;text-align:left;font-size:1rem;line-height:1.4}
+@media(min-width:768px){#root .hospital-sidebar{width:260px}#root .hospital-sidebar nav{overflow-y:auto}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}

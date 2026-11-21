@@ -1,0 +1,86 @@
+// Laboratorio independiente, expediente modal y estado compartido; sin Supabase real.
+import assert from 'node:assert/strict';
+import {createApp} from './test-preview.mjs';
+const settle=()=>new Promise(resolve=>setImmediate(resolve));
+const ui=createApp();await settle();ui.get('design-doctor').listeners.click();await settle();await ui.click('Laboratorios');
+await ui.input('DUI o nombre del paciente','034567890');await ui.click('Seleccionar a Ana Reyes');
+assert.equal(ui.app.all().some(node=>node.attributes['aria-label']==='Tipo de laboratorio'),false,'No se mezclan filtros con búsqueda');
+assert.equal(ui.app.all().some(node=>node.attributes['aria-label']==='Tipo de examen'),false,'El formulario está oculto hasta solicitar');
+assert.ok(ui.button('Solicitar exámenes'));assert.equal(ui.app.all().some(node=>node.tagName==='dialog'),false,'No exige abrir expediente');
+await ui.click('Solicitar exámenes');
+assert.ok(ui.app.all().some(node=>node.className==='clinical-ticket'&&node.attributes['aria-label']==='Solicitar exámenes'));
+assert.equal(ui.app.all().some(node=>node.tagName==='dialog'),false,'Ticket dentro de la app, sin ventana externa');
+assert.equal(ui.app.all().some(node=>node.attributes['aria-label']==='Tipo de laboratorio'),false,'No hay filtros en el formulario');
+assert.equal(ui.button('Solicitar').disabled,true);
+await ui.input('Tipo de examen','urine','change');await ui.input('Motivo del examen','Observación de Ana');
+await ui.input('Peso (kg)','0');await ui.input('Altura (cm)','165');assert.equal(ui.button('Solicitar').disabled,true);
+await ui.input('Peso (kg)','60,5');await ui.input('Altura (cm)','999');assert.equal(ui.button('Solicitar').disabled,true);
+await ui.input('Altura (cm)','165.25');assert.equal(ui.button('Solicitar').disabled,false);
+await ui.submit('Solicitar',true);
+assert.equal(ui.app.all().some(node=>node.tagName==='dialog'),false,'Modal cerrado al guardar');
+assert.match(ui.app.textContent,/Solicitud de ejemplo guardada/);
+assert.equal(ui.app.all().some(node=>node.tagName==='button'&&['Ver expediente','Ver solicitudes y resultados'].includes(node.textContent)),false);
+await ui.click('Más');await ui.click(ui.app.all().find(node=>node.tagName==='button'&&node.textContent.startsWith('Expedientes')).textContent);await ui.click('Abrir expediente completo');
+let badges=()=>ui.app.all().filter(node=>node.className?.startsWith('clinical-lab-state'));
+assert.equal(badges().length,1,'Doble envío bloqueado');assert.equal(badges()[0].textContent,'Pendiente');
+const record=()=>ui.app.all().find(node=>node.className==='clinical-ticket'&&node.attributes['aria-label']==='Expediente completo');assert.ok(record());
+assert.equal(record().all().some(node=>node.tagName==='button'&&/Solicitud de laboratorio|Solicitar exámenes/.test(node.textContent)),false);assert.equal(record().all().filter(node=>node.className==='record-person-field').length,4);assert.equal(record().all().filter(node=>node.className==='record-person-contact').length,3);
+for(const text of ['Ana','Reyes','ana.reyes@ejemplo.test','28 años','0345-67890','7345-6789','Historial y signos vitales','60.5 kg','165.25 cm','Notas y recetas'])assert.ok(record().textContent.includes(text),text);
+await ui.click('Ver detalle');
+const labTicket=ui.app.all().find(node=>node.attributes['aria-label']==='Detalle de examen');const patientCard=labTicket.all().find(node=>node.className?.includes('lab-detail-patient'));assert.ok(patientCard);for(const label of ['Nombre completo','Edad','Teléfono'])assert.ok(patientCard.textContent.includes(label));for(const value of ['DUI','Expediente','Correo','Peso','Altura'])assert.equal(labTicket.textContent.includes(value),false,'No mostrar '+value+' en el detalle del examen');const examCard=labTicket.all().find(node=>node.className?.includes('lab-detail-exam'));assert.ok(labTicket.children.indexOf(patientCard)<labTicket.children.indexOf(examCard),'Paciente antes del examen');
+assert.match(ui.app.textContent,/Observación de Ana/);await ui.click('Volver');
+await ui.click('Añadir observación');await ui.input('Observación','Nota de seguimiento local');await ui.submit('Guardar');
+await ui.click('Abrir expediente completo');assert.match(record().textContent,/Nota de seguimiento local/);
+await ui.click('Añadir receta');await ui.input('Observaciones','Instrucciones de demostración');assert.equal(ui.button('Guardar').disabled,true);
+await ui.input('Medicamento','Medicamento de ejemplo');assert.equal(ui.button('Guardar').disabled,true);
+for(const[label,value]of[['Dosis','1'],['Unidad de dosis','tableta'],['Cada cuántas horas','12'],['Vía','Oral'],['Durante (días)','10'],['Cantidad a dispensar','20']])await ui.input(label,value);
+await ui.submit('Guardar');await ui.click('Abrir expediente completo');assert.match(record().textContent,/Receta local · No emitida/);assert.match(record().textContent,/Medicamento de ejemplo/);for(const text of ['1 tableta','12 horas','Oral','10 días','20','Instrucciones de demostración'])assert.ok(record().textContent.includes(text),text);
+await ui.click('Volver');await ui.input('DUI o nombre del paciente','Carlos');await ui.click('Seleccionar a Carlos Mendoza');assert.ok(record());assert.equal(record().textContent.includes('Observación de Ana'),false);assert.equal(record().textContent.includes('Nota de seguimiento local'),false);
+await ui.click('Volver');await ui.input('DUI o nombre del paciente','Maria');await ui.click('Seleccionar a María López');
+assert.deepEqual([...new Set(badges().map(node=>node.textContent))].sort(),['Completado','En Proceso','Pendiente']);
+assert.equal(record().all().some(node=>node.attributes['aria-label']==='Tipo de laboratorio'),false);
+assert.equal(record().all().some(node=>node.attributes['aria-label']==='Filtrar laboratorios por fecha'),false);
+const cards=record().all().filter(node=>node.className==='clinical-lab-history-card');
+assert.equal(cards.length,3);const dates=cards.map(node=>Date.parse(node.attributes['data-requested-at']));assert.deepEqual(dates,[...dates].sort((a,b)=>b-a));
+const completed=cards.find(node=>node.textContent.includes('Completado'));completed.all().find(node=>node.tagName==='button').listeners.click();await settle();
+assert.match(ui.app.textContent,/Detalle de examen/);assert.match(ui.app.textContent,/Completado/);assert.match(ui.app.textContent,/Hemoglobina de ejemplo/);assert.match(ui.app.textContent,/Referencia/);await ui.click('Volver');assert.ok(record());
+const pending=record().all().find(node=>node.className==='clinical-lab-history-card'&&node.textContent.includes('Pendiente'));pending.all().find(node=>node.tagName==='button').listeners.click();await settle();assert.match(ui.app.textContent,/Todavía no hay resultados publicados/);assert.equal(ui.app.textContent.includes('Hemoglobina de ejemplo'),false);await ui.click('Volver al expediente');assert.ok(record());
+const processing=record().all().find(node=>node.className==='clinical-lab-history-card'&&node.textContent.includes('En Proceso'));processing.all().find(node=>node.tagName==='button').listeners.click();await settle();assert.match(ui.app.textContent,/El examen se está procesando/);assert.equal(ui.app.textContent.includes('Hemoglobina de ejemplo'),false);await ui.click('Volver');assert.ok(record());
+assert.equal(ui.calls.some(call=>call.url.startsWith('https:')),false);
+console.log('OK Doctor: solicitud independiente en ticket interno, peso/altura, expediente compartido, notas/recetas y filtros');
+
+const patient=createApp();await settle();patient.get('design-patient').listeners.click();await settle();await patient.click('Más');await patient.click(patient.app.all().find(node=>node.tagName==='button'&&/^\W*Laboratorio/u.test(node.textContent)).textContent);
+assert.match(patient.app.textContent,/Mis laboratorios/);
+assert.deepEqual([...new Set(patient.app.all().filter(node=>node.className?.startsWith('clinical-lab-state')).map(node=>node.textContent))].sort(),['Completado','En Proceso','Pendiente']);
+assert.equal(patient.app.all().some(node=>node.tagName==='button'&&/Solicitar|Añadir observación|Añadir receta/.test(node.textContent)),false);
+assert.equal(patient.app.textContent.includes('Ana Reyes'),false);assert.equal(patient.calls.some(call=>call.url.startsWith('https:')),false);
+console.log('OK Paciente: resultados propios y estados, sin creación ni edición');
+
+await import('../web-preview/clinical-labs.js');const model=new globalThis.HospitalClinicalLabsDesign({});model.select('p3');model.begin('doctor');model.exam='urine';model.observation='Motivo';model.weight='60';model.height='165';
+const before=model.requests.length;assert.equal(model.submit('patient'),false);assert.equal(model.requests.length,before);
+for(const invalid of ['NaN','Infinity','-1','60kg','1e2','60.123']){model.weight=invalid;assert.equal(model.canSubmit('doctor'),false);}
+model.weight='60.5';model.activeDoctorID='doctor-auth';model.doctorName='Dra. Ana Morales';assert.equal(model.submit('doctor'),true);const created=model.requests[0];assert.equal(created.requestedBy,'doctor-auth');assert.equal(created.doctorName,'Dra. Ana Morales');assert.equal(model.submit('doctor'),false);
+assert.equal(model.applyPublishedResult(created.id,[{name:'Prueba',value:'5',unit:'u',reference:'1–10'}],'Resultado publicado',new Date().toISOString()),true);assert.equal(model.requests[0].state,'Completado');assert.equal(model.requests[0].resultValues[0].value,'5');
+assert.equal(model.applyPublishedResult('unknown',[],'Resultado',new Date().toISOString()),false);assert.equal(model.applyPublishedResult(created.id,[],'Anterior','2000-01-01T00:00:00Z'),false);
+model.entryKind='Observación';model.entryText='Nota';model.linkedRequest=created.id;assert.equal(model.saveEntry('patient'),false);assert.equal(model.saveEntry('doctor'),true);model.select('p2');model.entryKind='Observación';model.entryText='Ajena';model.linkedRequest=created.id;assert.equal(model.saveEntry('doctor'),false);
+console.log('OK Modelo: validación, autor, resultados publicados compartidos, versiones antiguas rechazadas y aislamiento de notas');
+
+// Con sesión, Laboratorios es el módulo conectado (doctor_native_patients / doctor_native_lab_orders), no la vista de diseño.
+const signed=createApp(['doctor']);await signed.login();await signed.click('Laboratorios');await settle();
+assert.match(signed.app.textContent,/Mis órdenes de laboratorio/);assert.ok(signed.button('Actualizar órdenes'));
+assert.ok(signed.app.all().some(node=>node.tagName==='input'&&(node.attributes['aria-label']==='Nombre, DUI o correo'||node.placeholder==='Nombre, DUI o correo')),'Buscador del directorio conectado');
+assert.equal(signed.app.all().some(node=>node.className==='clinical-ticket'),false,'Sin ticket de diseño con sesión');
+assert.equal(signed.app.textContent.includes('Ana Reyes'),false,'Sin pacientes de ejemplo con sesión');
+assert.equal(signed.calls.some(call=>call.url.endsWith('/doctor_issue_lab_order')),false);
+console.log('OK Sesión: módulo de laboratorio conectado, sin datos de diseño');
+
+// Una publicación actualiza la misma lista visible sin duplicar solicitudes.
+const Element=ui.app.constructor,parent=new Element('div');let reactive;
+const el=(tag,text,className)=>{const node=new Element(tag);if(text!==undefined&&text!==null)node.textContent=text;if(className)node.className=className;return node;};
+const button=(text,action,className)=>{const node=el('button',text,className);node.disabled=false;node.addEventListener('click',action);return node;};
+const repaint=()=>{parent.replaceChildren();reactive.render(parent,{role:'doctor',page:'laboratory'});};
+reactive=new globalThis.HospitalClinicalLabsDesign({el,button,repaint,busy:()=>false,go(){}});reactive.select('p3');reactive.begin('doctor');reactive.exam='blood';reactive.observation='Control';reactive.weight='60';reactive.height='165';reactive.submit('doctor');reactive.modal='results';repaint();const count=reactive.requests.length;
+parent.all().find(node=>node.tagName==='button'&&node.className==='clinical-lab-open').listeners.click();
+reactive.applyPublishedResult(reactive.requests[0].id,[{name:'Valor publicado',value:'10',unit:'u',reference:'5–15'}],'Nota del laboratorio',new Date().toISOString());
+assert.match(parent.textContent,/Completado/);assert.match(parent.textContent,/Valor publicado/);assert.match(parent.textContent,/5–15/);assert.equal(reactive.requests.length,count);
+console.log('OK Resultado recibido: actualiza estado, valores y referencia en la vista compartida sin duplicar');

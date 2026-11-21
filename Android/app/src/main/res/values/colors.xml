@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="wine_primary">#770727</color>
+    <color name="pink_light">#FCEEF2</color>
+    <color name="pink_subtitle">#FBE4EA</color>
+    <color name="pink_caption">#F6D5E1</color>
+    <color name="background_main">#FAF8FA</color>
+    <color name="text_primary">#242935</color>
+    <color name="text_secondary">#717585</color>
+    <color name="input_background">#FAF8FA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <!-- Acentos de estado de las tarjetas (borde izquierdo, del maquetado del ADMIN). -->
+    <color name="accent_pending">#D4AA58</color>
+    <color name="accent_review">#8B9FBC</color>
+    <color name="accent_scheduled">#70AD8D</color>
+    <color name="accent_rejected">#CC8B9C</color>
+    <color name="accent_cancelled">#AC93BD</color>
+    <!-- Módulo Doctor: espejo exacto de HospitalTheme (iOS). -->
+    <color name="doctor_wine">#770727</color>
+    <color name="doctor_wine_dark">#4D041A</color>
+    <color name="doctor_background">#F8F8FA</color>
+    <color name="doctor_ink">#242936</color>
+    <color name="doctor_secondary">#757E91</color>
+    <color name="doctor_rose">#FBEAF0</color>
+    <color name="doctor_green">#E3F6EA</color>
+</resources>

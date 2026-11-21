@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="144dp"
+ android:background="@drawable/bg_dashboard_card" android:orientation="vertical" android:padding="18dp"
+ android:clickable="true" android:focusable="true" android:foreground="?attr/selectableItemBackground">
+ <ImageView android:id="@+id/icon" android:layout_width="38dp" android:layout_height="38dp"
+ android:background="@drawable/bg_medical_icon" android:padding="7dp" android:importantForAccessibility="no"/>
+ <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content"
+ android:layout_marginTop="14dp" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+ <TextView android:id="@+id/caption" android:layout_width="match_parent" android:layout_height="wrap_content"
+ android:layout_marginTop="6dp" android:textSize="12sp" android:textColor="@color/text_secondary"/>
+</LinearLayout>

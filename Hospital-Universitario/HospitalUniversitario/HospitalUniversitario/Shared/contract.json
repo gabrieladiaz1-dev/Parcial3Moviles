@@ -1,0 +1,21 @@
+{
+  "url": "https://uvebpsbbwofthucghccc.supabase.co",
+  "publishableKey": "sb_publishable_t7C1yri3iC7-PFixCOnBIQ_o3lHymH2",
+  "models": {
+    "Room": {
+      "id": "UUID",
+      "floor_id": "Int",
+      "kind": "String",
+      "code": "String",
+      "active": "Bool"
+    },
+    "StaffShift": {
+      "id": "UUID",
+      "staff_id": "UUID",
+      "starts_at": "String",
+      "ends_at": "String",
+      "shift_type": "String",
+      "status": "String"
+    }
+  }
+}

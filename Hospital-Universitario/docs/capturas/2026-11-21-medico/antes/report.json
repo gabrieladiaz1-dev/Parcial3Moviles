@@ -1,0 +1,142 @@
+{
+  "checks": [
+    {
+      "name": "Historial · consulta a 393 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":393,\"bad\":[]}"
+    },
+    {
+      "name": "Historial · consulta a 393 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Detalle desplegable disponible (Ver receta / Ver resultado)",
+      "ok": false,
+      "detail": "0"
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 393 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":393,\"bad\":[]}"
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 393 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Agenda a 393 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":393,\"bad\":[]}"
+    },
+    {
+      "name": "Agenda a 393 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Historial · consulta a 375 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":375,\"bad\":[]}"
+    },
+    {
+      "name": "Historial · consulta a 375 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 375 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":375,\"bad\":[]}"
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 375 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Agenda a 375 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":375,\"bad\":[]}"
+    },
+    {
+      "name": "Agenda a 375 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Historial · consulta a 320 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":320,\"bad\":[]}"
+    },
+    {
+      "name": "Historial · consulta a 320 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 320 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":320,\"bad\":[]}"
+    },
+    {
+      "name": "Mis órdenes de laboratorio a 320 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Agenda a 320 pt: sin desbordamiento horizontal",
+      "ok": true,
+      "detail": "{\"scrollWidth\":320,\"bad\":[]}"
+    },
+    {
+      "name": "Agenda a 320 pt: sin textos cortados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Recetas con campos separados (Concentración, Dosis, Cada, Vía, Durante, Cantidad)",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "Resultado con parámetros, unidades y referencias",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "Resultado solo con observación mostrado como observación",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "Agenda NO REALIZADAS con motivo y vencida",
+      "ok": false,
+      "detail": ""
+    },
+    {
+      "name": "Sin errores de JavaScript",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "screenshots": [
+    "01-historial-consulta-393",
+    "02-laboratorio-ordenes-393",
+    "03-agenda-no-realizadas-393",
+    "01-historial-consulta-375",
+    "02-laboratorio-ordenes-375",
+    "03-agenda-no-realizadas-375",
+    "01-historial-consulta-320",
+    "02-laboratorio-ordenes-320",
+    "03-agenda-no-realizadas-320"
+  ],
+  "historial393": "Hospital Universitario\n🔔\nMis pacientes\n\nPacientes asignados y atención reciente\n\n← Volver a la búsqueda\nAP\nEXPEDIENTE CLÍNICO\nAna Paciente\nCódigo PAC-0001\nExpediente EXP-0001\n35 años\nFecha de nacimiento\n1 de enero de 1990\nDUI\n01234567-8\nTeléfono\n7000-0000\nCorreo\nana@example.test\n✚\nInformación clínica\n\nAntecedentes registrados en el expediente\n\nSin antecedentes clínicos registrados.\n\nHospitalización\n\nSin hospitalizaciones registradas.\n\nLaboratorios\nSolicitar ingreso\nOCULTAR HISTORIAL MÉDICO\n\n1 consulta finalizada\n\n← Volver al historial\n🔒 Finalizada · solo lectura\nAna Paciente · miércoles, 11 de noviembre de 2026 · 2:00 a. m. – 2:30 a. m. · 30 min\n🩺 Dra. Ana Médica\nMedicina general\nMotivo: Dolor de garganta\nDatos físicos\nPeso (kg)\n\n61.5\n\nTemperatura (°C)\n\n38.2\n\nEvaluación médica\nSíntomas\n\nFiebre y dolor de garganta\n\nDiagnóstico\n\nFaringitis aguda\n\nCódigo diagnóstico\n\nJ02\n\nObservaciones\n\nFaringe enrojecida\n\nTratamiento\n\nReposo e hidratación\n\nRecetas\nREC-0001 · entregada\n\nAcetaminofén 500 mg 1.00 Tabletas cada 8 horas oral 5 días Tomar con alimentos\nAmoxicilina 500 mg 1.00 cápsulas cada 12 horas oral 7 días\n\nREC-0002 · Pendiente de entrega\n\nLoratadina 10 mg 1.00 Tableta cada 24 horas oral 3 días\n\nExámenes\nHemograma completo · Resultado publicado\n\nLeucocitos levemente elevados; resto dentro de rango.\n\nPrueba rápida de estreptococo · Resultado publicado\n\nNegativo\n\nGlucosa en ayunas · en_proceso\n\nResultado aún no publicado.\n\n⌂\nInicio\n♙\nPacientes\n✚\nConsultas\n⚗\nLaboratorios\n☰\nMás",
+  "agenda": {
+    "hasMissed": false,
+    "text": "Hospital Universitario\n🔔\nConsultas\n\nTu agenda diaria y próximas consultas\n\n⌕\nAGENDA MÉDICA\nConsultas\n\nSábado, 21 De Noviembre\n\n◷\n1\nPENDIENTES\n✓\n0\nFINALIZADAS\n‹\n📅\nHOY\nsáb, 21 nov 2026\n›\nHoy\n⌕\nConsultas pendientes\nPor hora\n04:00–04:30\nAP\nAna Paciente\nPendiente\n\nExpediente EXP-0001\n\nMotivo de la consulta\n\nControl\n\nCita de recepción · Consultorio C-3\n\nVer detalle\n⌂\nInicio\n♙\nPacientes\n✚\nConsultas\n⚗\nLaboratorios\n☰\nMás"
+  },
+  "historial375": "Hospital Universitario\n🔔\nMis pacientes\n\nPacientes asignados y atención reciente\n\n← Volver a la búsqueda\nAP\nEXPEDIENTE CLÍNICO\nAna Paciente\nCódigo PAC-0001\nExpediente EXP-0001\n35 años\nFecha de nacimiento\n1 de enero de 1990\nDUI\n01234567-8\nTeléfono\n7000-0000\nCorreo\nana@example.test\n✚\nInformación clínica\n\nAntecedentes registrados en el expediente\n\nSin antecedentes clínicos registrados.\n\nHospitalización\n\nSin hospitalizaciones registradas.\n\nLaboratorios\nSolicitar ingreso\nOCULTAR HISTORIAL MÉDICO\n\n1 consulta finalizada\n\n← Volver al historial\n🔒 Finalizada · solo lectura\nAna Paciente · miércoles, 11 de noviembre de 2026 · 2:00 a. m. – 2:30 a. m. · 30 min\n🩺 Dra. Ana Médica\nMedicina general\nMotivo: Dolor de garganta\nDatos físicos\nPeso (kg)\n\n61.5\n\nTemperatura (°C)\n\n38.2\n\nEvaluación médica\nSíntomas\n\nFiebre y dolor de garganta\n\nDiagnóstico\n\nFaringitis aguda\n\nCódigo diagnóstico\n\nJ02\n\nObservaciones\n\nFaringe enrojecida\n\nTratamiento\n\nReposo e hidratación\n\nRecetas\nREC-0001 · entregada\n\nAcetaminofén 500 mg 1.00 Tabletas cada 8 horas oral 5 días Tomar con alimentos\nAmoxicilina 500 mg 1.00 cápsulas cada 12 horas oral 7 días\n\nREC-0002 · Pendiente de entrega\n\nLoratadina 10 mg 1.00 Tableta cada 24 horas oral 3 días\n\nExámenes\nHemograma completo · Resultado publicado\n\nLeucocitos levemente elevados; resto dentro de rango.\n\nPrueba rápida de estreptococo · Resultado publicado\n\nNegativo\n\nGlucosa en ayunas · en_proceso\n\nResultado aún no publicado.\n\n⌂\nInicio\n♙\nPacientes\n✚\nConsultas\n⚗\nLaboratorios\n☰\nMás",
+  "historial320": "Hospital Universitario\n🔔\nMis pacientes\n\nPacientes asignados y atención reciente\n\n← Volver a la búsqueda\nAP\nEXPEDIENTE CLÍNICO\nAna Paciente\nCódigo PAC-0001\nExpediente EXP-0001\n35 años\nFecha de nacimiento\n1 de enero de 1990\nDUI\n01234567-8\nTeléfono\n7000-0000\nCorreo\nana@example.test\n✚\nInformación clínica\n\nAntecedentes registrados en el expediente\n\nSin antecedentes clínicos registrados.\n\nHospitalización\n\nSin hospitalizaciones registradas.\n\nLaboratorios\nSolicitar ingreso\nOCULTAR HISTORIAL MÉDICO\n\n1 consulta finalizada\n\n← Volver al historial\n🔒 Finalizada · solo lectura\nAna Paciente · miércoles, 11 de noviembre de 2026 · 2:00 a. m. – 2:30 a. m. · 30 min\n🩺 Dra. Ana Médica\nMedicina general\nMotivo: Dolor de garganta\nDatos físicos\nPeso (kg)\n\n61.5\n\nTemperatura (°C)\n\n38.2\n\nEvaluación médica\nSíntomas\n\nFiebre y dolor de garganta\n\nDiagnóstico\n\nFaringitis aguda\n\nCódigo diagnóstico\n\nJ02\n\nObservaciones\n\nFaringe enrojecida\n\nTratamiento\n\nReposo e hidratación\n\nRecetas\nREC-0001 · entregada\n\nAcetaminofén 500 mg 1.00 Tabletas cada 8 horas oral 5 días Tomar con alimentos\nAmoxicilina 500 mg 1.00 cápsulas cada 12 horas oral 7 días\n\nREC-0002 · Pendiente de entrega\n\nLoratadina 10 mg 1.00 Tableta cada 24 horas oral 3 días\n\nExámenes\nHemograma completo · Resultado publicado\n\nLeucocitos levemente elevados; resto dentro de rango.\n\nPrueba rápida de estreptococo · Resultado publicado\n\nNegativo\n\nGlucosa en ayunas · en_proceso\n\nResultado aún no publicado.\n\n⌂\nInicio\n♙\nPacientes\n✚\nConsultas\n⚗\nLaboratorios\n☰\nMás"
+}

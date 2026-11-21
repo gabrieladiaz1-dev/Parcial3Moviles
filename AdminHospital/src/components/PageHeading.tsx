@@ -1,0 +1,51 @@
+import { Icon } from './Icon'
+import type { Page } from '../types'
+
+export function PageHeading({ page }: { page: Page }) {
+  const descriptions: Record<Page, string> = {
+    'Laboratorios': 'Procesa exámenes, valida resultados y gestiona su publicación autorizada.',
+    'Mi perfil': 'Consulta tu cuenta y actualiza tus datos de contacto.',
+    'Acerca del hospital': 'Información institucional registrada por administración.',
+    'Cómo llegar': 'Consulta la ubicación oficial del hospital.',
+    'Recepción': 'Revisa solicitudes, verifica expedientes y programa citas.',
+    'Resumen general': 'Vista general de la operación hospitalaria, pacientes, personal y servicios.',
+    'Personal hospitalario': 'Registra doctores y recepcionistas, gestiona sus datos, especialidades y estado.',
+    'Pacientes e ingresos': 'Controla ingresos, hospitalización y seguimiento de pacientes.',
+    'Expediente Clínico': 'Consulta y gestiona el historial clínico integral del paciente.',
+    'Citas y Turnos': 'Gestiona la programación de consultas y los turnos de atención.',
+    'Habitaciones y Camas': 'Controla la ocupación, disponibilidad y asignación de camas hospitalarias.',
+    'Horarios y turnos': 'Planifica horarios, cobertura y disponibilidad del personal hospitalario.',
+    'Farmacia': 'Busca pacientes y gestiona el estado de sus recetas.',
+    'Inventario y Recursos': 'Controla suministros médicos, equipos y niveles de existencias.',
+    'Ambulancia': 'Monitorea la unidad hospitalaria, su disponibilidad y los despachos de emergencia.',
+    'Reportes y Analítica': 'Indicadores estratégicos, estadísticas clínicas y reportes de gestión hospitalaria.',
+    'Configuración': 'Personaliza el sistema, protege la información y gestiona preferencias institucionales.',
+  }
+  if (page === 'Resumen general') {
+    return (
+      <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h1 className="text-xl font-semibold tracking-tight text-[#870b30] sm:text-2xl">Panel general</h1>
+          <p className="mt-1 text-xs text-slate-500">{descriptions[page]}</p>
+        </div>
+        <p className="text-[10px] text-slate-400">
+          Hoy · Vista operativa
+        </p>
+      </div>
+    )
+  }
+  return (
+    <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+      <div>
+        <div className="mb-1 flex items-center gap-2 text-[10px] text-slate-400">
+          <span>Administración</span><Icon name="chevron" size={11} /><span>{page}</span>
+        </div>
+        <h1 className="text-xl font-bold tracking-tight text-[#870b30] sm:text-2xl">{page}</h1>
+        <p className="mt-1 text-xs text-slate-500">{descriptions[page]}</p>
+      </div>
+      <div className="hidden items-center gap-2 text-[10px] text-slate-400 sm:flex">
+        <span className="h-2 w-2 rounded-full bg-emerald-500" /> Sistema operativo
+      </div>
+    </div>
+  )
+}
